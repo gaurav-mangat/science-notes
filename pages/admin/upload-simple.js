@@ -6,6 +6,8 @@ export default function UploadSimple() {
   const [notesFile, setNotesFile] = useState(null);
   const [solutionsFile, setSolutionsFile] = useState(null);
   const [isUploading, setIsUploading] = useState(false);
+  const [uploadedChapter, setUploadedChapter] = useState(null);
+  const [storeOnGithub, setStoreOnGithub] = useState(false);
 
   const notesRef = useRef(null);
   const solutionsRef = useRef(null);
@@ -32,13 +34,15 @@ export default function UploadSimple() {
     try {
       const fd = new FormData();
       Object.entries(form).forEach(([k, v]) => fd.append(k, v));
+      fd.append('storeOnGithub', String(storeOnGithub));
       if (notesFile) fd.append('notes', notesFile);
       if (solutionsFile) fd.append('solutions', solutionsFile);
 
       const resp = await fetch('/api/upload', { method: 'POST', body: fd });
       const data = await resp.json();
       if (!resp.ok) throw new Error(data.error || 'Upload failed');
-      alert('Uploaded successfully');
+
+      setUploadedChapter(data.chapter || null);
       setForm({ title: '', class: '', subject: '', chapterNumber: '', description: '', tags: '' });
       setNotesFile(null); setSolutionsFile(null);
       if (notesRef.current) notesRef.current.value = '';
@@ -57,6 +61,30 @@ export default function UploadSimple() {
           <h1 className="text-2xl font-semibold">Upload Chapter</h1>
           <Link href="/" className="text-blue-600 hover:underline">Back to Home</Link>
         </div>
+
+        {uploadedChapter && (
+          <div className="mb-6 rounded-lg border border-green-200 bg-green-50 p-4">
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <div className="font-semibold text-green-800">Chapter uploaded successfully</div>
+                <div className="text-sm text-green-700 mt-1">
+                  {uploadedChapter.title} • Class {uploadedChapter.class} • {uploadedChapter.subject}
+                </div>
+              </div>
+              <button onClick={() => setUploadedChapter(null)} className="text-green-700 text-sm hover:underline">Dismiss</button>
+            </div>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {uploadedChapter.notesUrl && (
+                <Link href={`/chapters/${uploadedChapter.id}/notes`} className="px-3 py-1.5 rounded-md bg-blue-600 text-white text-xs hover:bg-blue-700">View Notes</Link>
+              )}
+              {uploadedChapter.solutionsUrl && (
+                <Link href={`/chapters/${uploadedChapter.id}/solutions`} className="px-3 py-1.5 rounded-md bg-green-600 text-white text-xs hover:bg-green-700">View Solutions</Link>
+              )}
+              <Link href="/" className="px-3 py-1.5 rounded-md border text-xs">Go to Home</Link>
+            </div>
+          </div>
+        )}
+
         <form onSubmit={submit} className="bg-white rounded-xl shadow p-6 space-y-5">
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
@@ -83,6 +111,14 @@ export default function UploadSimple() {
               </select>
             </div>
           </div>
+
+          <div>
+            <label className="inline-flex items-center gap-2 text-sm">
+              <input type="checkbox" checked={storeOnGithub} onChange={(e) => setStoreOnGithub(e.target.checked)} />
+              Store on GitHub (CDN via jsDelivr)
+            </label>
+          </div>
+
           <div>
             <label className="block text-sm font-medium mb-1">Description</label>
             <textarea name="description" value={form.description} onChange={onChange} rows={3} className="w-full border rounded px-3 py-2" />

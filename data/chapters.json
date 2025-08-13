@@ -16,18 +16,18 @@
   },
   "8s1": {
     "id": "8s1",
-    "title": "gjhg",
+    "title": "Crop",
     "class": 8,
     "subject": "Science",
-    "chapterNumber": "",
+    "chapterNumber": "1",
     "description": "",
     "tags": [
       ""
     ],
-    "notesUrl": "/notes/class8/science/-notes.pdf",
-    "solutionsUrl": "/notes/class8/science/-solutions.pdf",
-    "createdAt": "2025-08-12T19:11:23.118Z",
-    "updatedAt": "2025-08-12T19:11:23.118Z"
+    "notesUrl": "https://cdn.jsdelivr.net/gh/gaurav-mangat/Pdf-store@main/pdfs/class8/science/1-notes.pdf",
+    "solutionsUrl": "https://cdn.jsdelivr.net/gh/gaurav-mangat/Pdf-store@main/pdfs/class8/science/1-solutions.pdf",
+    "createdAt": "2025-08-13T07:02:02.659Z",
+    "updatedAt": "2025-08-13T07:02:02.659Z"
   },
   "7s1": {
     "id": "7s1",
