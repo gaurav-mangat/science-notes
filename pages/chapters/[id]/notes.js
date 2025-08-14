@@ -76,9 +76,9 @@ export default function ChapterNotes() {
     <div className="min-h-screen bg-gray-50 p-6">
       <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow">
         <div className="mb-6">
-          <Link href="/" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
-            ← Back to Home
-          </Link>
+          <button onClick={() => router.back()} className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
+            ← Back
+          </button>
           <h1 className="text-2xl font-bold mb-2">{chapter.title} - Notes</h1>
           <p className="text-gray-600 mb-2">Class {chapter.class} • {chapter.subject}</p>
           {chapter.description && (

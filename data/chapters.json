@@ -58,5 +58,20 @@
     "solutionsUrl": "/notes/class6/mathematics/2-solutions.pdf",
     "createdAt": "2025-08-12T19:27:27.347Z",
     "updatedAt": "2025-08-12T19:27:27.348Z"
+  },
+  "8s2": {
+    "id": "8s2",
+    "title": "Microorganisms : Friend and Foe",
+    "class": 8,
+    "subject": "Science",
+    "chapterNumber": "2",
+    "description": "no description",
+    "tags": [
+      ""
+    ],
+    "notesUrl": "https://cdn.jsdelivr.net/gh/gaurav-mangat/Pdf-store@main/pdfs/class8/science/2-notes.pdf",
+    "solutionsUrl": "https://cdn.jsdelivr.net/gh/gaurav-mangat/Pdf-store@main/pdfs/class8/science/2-solutions.pdf",
+    "createdAt": "2025-08-14T06:31:11.986Z",
+    "updatedAt": "2025-08-14T06:31:11.987Z"
   }
 }
