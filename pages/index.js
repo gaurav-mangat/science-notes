@@ -129,6 +129,7 @@ export default function Home() {
             {/* Keep header clean for students; no extra buttons */}
           </div>
         </div>
+        
       </nav>
 
       {/* Top Ad Banner */}

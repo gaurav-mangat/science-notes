@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import Link from 'next/link';
 
-export default function UploadSimple() {
+function UploadSimple() {
   const [form, setForm] = useState({ title: '', class: '', subject: '', chapterNumber: '', description: '', tags: '' });
   const [notesFile, setNotesFile] = useState(null);
   const [solutionsFile, setSolutionsFile] = useState(null);
@@ -55,11 +55,41 @@ export default function UploadSimple() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
-      <div className="max-w-3xl mx-auto">
+    <div className="min-h-screen bg-gray-50">
+      {/* Admin Navigation Header */}
+      <div className="bg-white shadow-sm border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center space-x-8">
+              <h1 className="text-xl font-semibold text-gray-900">EduSphere Admin</h1>
+              <nav className="flex space-x-4">
+                <Link href="/admin/dashboard" className="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">
+                  Dashboard
+                </Link>
+                <Link href="/admin/upload-simple" className="px-3 py-2 rounded-md text-sm font-medium text-blue-600 bg-blue-50">
+                  Upload Content
+                </Link>
+                <Link href="/admin/upload" className="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">
+                  Advanced Upload
+                </Link>
+              </nav>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Link href="/" className="text-sm text-gray-600 hover:text-gray-900">
+                View Site
+              </Link>
+              <Link href="/api/auth/logout" className="text-sm text-red-600 hover:text-red-900">
+                Logout
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-3xl mx-auto p-6">
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-2xl font-semibold">Upload Chapter</h1>
-          <Link href="/" className="text-blue-600 hover:underline">Back to Home</Link>
+          <Link href="/admin/dashboard" className="text-blue-600 hover:underline">Back to Dashboard</Link>
         </div>
 
         {uploadedChapter && (
@@ -153,3 +183,4 @@ export default function UploadSimple() {
     </div>
   );
 } 
+export default UploadSimple;

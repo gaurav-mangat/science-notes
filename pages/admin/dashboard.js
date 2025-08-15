@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { chapters } from '../../data/chapters';
+import Router from 'next/router';
 
-export default function AdminDashboard() {
+function AdminDashboard() {
   const [stats, setStats] = useState({
     totalChapters: 0,
     totalClasses: 0,
@@ -154,7 +155,7 @@ export default function AdminDashboard() {
             </div>
             <div className="flex items-center space-x-4">
               <Link 
-                href="/admin/upload"
+                href="/admin/upload-simple"
                 className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
               >
                 Upload Content
@@ -165,6 +166,15 @@ export default function AdminDashboard() {
               >
                 View Site
               </Link>
+              <button 
+                onClick={async () => {
+                  await fetch('/api/auth/logout', { method: 'POST' });
+                  Router.replace('/admin/login');
+                }}
+                className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition"
+              >
+                Sign Out
+              </button>
             </div>
           </div>
         </div>
@@ -216,7 +226,7 @@ export default function AdminDashboard() {
           <QuickAction
             title="Upload New Chapter"
             description="Add notes and solutions for any class"
-            href="/admin/upload"
+            href="/admin/upload-simple"
             icon={<svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
             </svg>}
@@ -285,5 +295,7 @@ export default function AdminDashboard() {
     </div>
   );
 }
+
+export default AdminDashboard;
 
 

@@ -46,7 +46,7 @@
   },
   "6m2": {
     "id": "6m2",
-    "title": "number",
+    "title": "gdsg",
     "class": 6,
     "subject": "Mathematics",
     "chapterNumber": "2",
@@ -56,8 +56,8 @@
     ],
     "notesUrl": "/notes/class6/mathematics/2-notes.pdf",
     "solutionsUrl": "/notes/class6/mathematics/2-solutions.pdf",
-    "createdAt": "2025-08-12T19:27:27.347Z",
-    "updatedAt": "2025-08-12T19:27:27.348Z"
+    "createdAt": "2025-08-14T07:16:48.043Z",
+    "updatedAt": "2025-08-14T07:16:48.043Z"
   },
   "8s2": {
     "id": "8s2",
