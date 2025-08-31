@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2: The Invisible Living World - Detailed Study Notes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #333;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .section {
+            background: #f8f9fa;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            padding: 25px;
+            border-left: 5px solid #3498db;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+        
+        .section h3 {
+            color: #34495e;
+            font-size: 1.4rem;
+            margin: 20px 0 10px 0;
+        }
+        
+        .section h4 {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin: 15px 0 8px 0;
+        }
+        
+        .key-point {
+            background: #e8f4fd;
+            border: 1px solid #3498db;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .definition {
+            background: #f0f8e8;
+            border: 1px solid #27ae60;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .image-placeholder {
+            background: #ecf0f1;
+            border: 2px dashed #95a5a6;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            color: #7f8c8d;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        
+        .fun-fact {
+            background: #f8d7da;
+            border: 1px solid #dc3545;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .fun-fact h4 {
+            color: #721c24;
+            margin-bottom: 8px;
+        }
+        
+        .heritage-box {
+            background: #e2e3e5;
+            border: 1px solid #6c757d;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .heritage-box h4 {
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        
+        .scientist-box {
+            background: #d4edda;
+            border: 1px solid #28a745;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .scientist-box h4 {
+            color: #155724;
+            margin-bottom: 8px;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        
+        th {
+            background: #34495e;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .questions-section {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+        
+        .questions-section h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        
+        .question-type {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .question-type h3 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .question {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .answer {
+            background: #e8f5e8;
+            padding: 12px;
+            border-radius: 5px;
+            margin-top: 8px;
+            border-left: 4px solid #27ae60;
+            display: none;
+        }
+        
+        .answer.show {
+            display: block;
+        }
+        
+        .answer-label {
+            font-weight: bold;
+            color: #27ae60;
+            margin-bottom: 5px;
+        }
+        
+        .show-answer-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 5px;
+            transition: background 0.3s;
+        }
+        
+        .show-answer-btn:hover {
+            background: #2980b9;
+        }
+        
+        .hide-answer-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 5px;
+            transition: background 0.3s;
+        }
+        
+        .hide-answer-btn:hover {
+            background: #c0392b;
+        }
+        
+        .comparison-table {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 15px 0;
+        }
+                .image-container {
+            width: 100%;
+            margin: 20px auto;
+            padding: 15px;
+        }
+        
+        .image-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        /* Media Query for Mobile Devices */
+        @media screen and (max-width: 768px) {
+            .image-container {
+                padding: 10px;
+            }
+            
+            .image-wrapper {
+                width: 100%;
+            }
+        }
+        /* .section {
+    background: #f9f9fc;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+} */
+
+/* .section h2 {
+    color: #2a7ae4;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+} */
+
+/* .definition, .key-point {
+    background: #fff;
+    padding: 15px;
+    border-left: 6px solid #2a7ae4;
+    border-radius: 8px;
+    margin: 15px 0;
+    font-size: 1.1em;
+} */
+
+.highlight-box {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+h3 {
+    color: #333;
+    margin-top: 20px;
+}
+
+.styled-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.styled-list li {
+    background: #eef5ff;
+    margin: 6px 0;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 1.05em;
+}
+
+.example {
+    color: #666;
+    font-size: 0.9em;
+    margin-left: 8px;
+    font-style: italic;
+}
+
+/* After types of microbes*/
+.microbe-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    gap: 15px;
+}
+
+.microbe-block .text {
+    flex: 2;
+}
+
+.microbe-block .image {
+    flex: 1;
+    text-align: center;
+}
+
+.microbe-block img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .microbe-block {
+        flex-direction: column;
+        text-align: left;
+    }
+}
+
+    </style>
+    <script>
+        function showAnswer(button) {
+            const answer = button.nextElementSibling;
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                button.textContent = 'Show Answer';
+            } else {
+                answer.style.display = 'block';
+                button.textContent = 'Hide Answer';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Chapter 2: The Invisible Living World</h1>
+            <p>Beyond Our Naked Eye - Class 8 Science (Detailed Notes)</p>
+        </div>
+        
+        <div class="content">
+            <!-- Introduction Section -->
+            <div class="section">
+                <h2>🌍 Introduction: The Hidden World Around Us</h2>
+                
+                <p>The human eye can only see objects that are above a certain size. For a long time, many tiny things around us remained unknown. Long ago, people discovered that a curved piece of glass could make small things look bigger. The piece of glass was shaped like a lentil seed — thick in the middle and thin at the edge — hence they called it a <strong>lens</strong>.</p>
+                
+                <p>Over time, lenses were improved to become more powerful. Each new tool, from simple magnifying glasses to microscopes, helped humans see what their eyes could not. The invention of the microscope opened a fascinating hidden world filled with tiny living creatures.</p>
+                
+                <div class="definition">
+                    <strong>Organism:</strong> All living beings, whether plants or animals, are called organisms. They differ in structure, shape, size, color, and many other features.
+                </div>
+                
+               
+            </div>
+
+            <!-- Historical Discoveries -->
+            <div class="section">
+                <h2>📚 Historical Milestones in Microscopy</h2>
+                
+                <h3>Robert Hooke (1665)</h3>
+                <div class="fun-fact">
+                    <h4>The Birth of Cell Biology</h4>
+                    <ul>
+                        <li>Published <em>"Micrographia"</em> - a groundbreaking book</li>
+                        <li>He was both a careful observer and skilled artist</li>
+                        <li>His microscope magnified objects 200-300 times</li>
+                        <li>Observed cork slice and saw many small, empty spaces</li>
+                        <li>These compartments reminded him of honeycomb</li>
+                        <li><strong>First used the word "cell"</strong> in science to describe basic unit of life</li>
+                    </ul>
+                </div>
+                
+                <div class="image-container">
+                     <div class="image-wrapper">
+                        <img src="images/Fig2.2.png" alt="Three scientific illustrations: (a) circular microscope view showing cork cells with honeycomb-like structure, (b) antique microscope and spherical lens setup on a wooden base, and (c) feather and leaf drawings. Below, text reads: Fig 2.2: (a) Micrographia book; (b) Microscope of Robert Hooke; (c) Cork cells as published in the Micrographia. The scene is educational and historical, highlighting early discoveries in cell biology.">
+                     </div>
+                </div>
+                
+                <h3>Antonie van Leeuwenhoek (1660s)</h3>
+                <div class="scientist-box">
+                    <h4>Father of Microbiology</h4>
+                    <ul>
+                        <li>Dutch scientist who made better lenses</li>
+                        <li>Built more powerful microscopes</li>
+                        <li>First person to clearly see and describe tiny living things</li>
+                        <li>Observed bacteria and blood cells for the first time</li>
+                        <li>His discoveries opened the door to microbiology</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cell Structure -->
+            <div class="section">
+                <h2>🏗️ What is a Cell? - Detailed Structure</h2>
+                
+                <div class="definition">
+                    <strong>Cell:</strong> A cell is the basic structural and functional unit of life. All living organisms are composed of one or more cells, similar to how bricks form the structure of a wall.
+                </div>
+                
+                <p>When we observe onion peel under a microscope, we see nearly rectangular structures closely arranged without any space between them. These are plant cells. Similarly, when we observe our cheek cells under a microscope, we see polygon-shaped structures that form the inner lining of our mouth.</p>
+                
+                <div class="image-container">
+    <div class="image-wrapper">
+        <img src="images/Fig2.3&2.4.png" alt="(a) Microscopic view of onion peel cells showing rectangular shapes closely packed together; (b) Microscopic view of human cheek cells showing polygonal shapes forming the inner lining of the mouth. Both images highlight the cellular structure of plants and animals, emphasizing the basic unit of life - the cell.">
+    </div>
+</div>
+                
+                <h3>Basic Components of a Cell</h3>
+                <div class="key-point">
+                    <strong>Three Main Parts of Every Cell:</strong>
+                    <ol>
+                        <li><strong>Cell Membrane:</strong> Thin outer lining that encloses cytoplasm and nucleus</li>
+                        <li><strong>Cytoplasm:</strong> Space between cell membrane and nucleus, filled with various substances</li>
+                        <li><strong>Nucleus:</strong> Small round structure covered by thin membrane</li>
+                    </ol>
+                </div>
+                
+                <h4>Functions of Cell Components:</h4>
+                <ul>
+                    <li><strong>Cell Membrane:</strong>
+                        <ul>
+                            <li>Separates one cell from another</li>
+                            <li>Porous structure allows entry of essential materials</li>
+                            <li>Allows exit of waste materials</li>
+                        </ul>
+                    </li>
+                    <li><strong>Cytoplasm:</strong>
+                        <ul>
+                            <li>Contains carbohydrates, proteins, fats, mineral salts</li>
+                            <li>Most life processes take place within cytoplasm</li>
+                        </ul>
+                    </li>
+                    <li><strong>Nucleus:</strong>
+                        <ul>
+                            <li>Regulates all activities within the cell</li>
+                            <li>Controls growth</li>
+                        </ul>
+                    </li>
+                    <li><strong>Cell Wall (Plants only):</strong>
+                        <ul>
+                            <li>Provides rigidity and strength</li>
+                            <li>Keeps cells arranged compactly</li>
+                            <li>Gives firm structure to plants</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Advanced Cell Structures -->
+            <div class="section">
+                <h2>🔬 Advanced Cell Structures</h2>
+                
+                <div class="key-point">
+                    <strong>Additional Plant Cell Components:</strong>
+                    <ul>
+                        <li><strong>Plastids:</strong> Tiny rod-shaped structures in all plant parts</li>
+                        <li><strong>Chloroplasts:</strong> Special plastids containing chlorophyll for photosynthesis</li>
+                        <li><strong>Vacuole:</strong> Large, empty-looking space for storage, waste removal, and maintaining cell shape</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-table">
+                    <table>
+                        <tr>
+                            <th>Component</th>
+                            <th>Plant Cell</th>
+                            <th>Animal Cell</th>
+                        </tr>
+                        <tr>
+                            <td>Cell Wall</td>
+                            <td>Present - provides rigidity</td>
+                            <td>Absent</td>
+                        </tr>
+                        <tr>
+                            <td>Chloroplasts</td>
+                            <td>Present - for photosynthesis</td>
+                            <td>Absent</td>
+                        </tr>
+                        <tr>
+                            <td>Vacuole</td>
+                            <td>Large - for storage and support</td>
+                            <td>Small or absent</td>
+                        </tr>
+                        <tr>
+                            <td>Cell Membrane</td>
+                            <td>Present</td>
+                            <td>Present</td>
+                        </tr>
+                        <tr>
+                            <td>Nucleus</td>
+                            <td>Present</td>
+                            <td>Present</td>
+                        </tr>
+                        <tr>
+                            <td>Cytoplasm</td>
+                            <td>Present</td>
+                            <td>Present</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="image-placeholder">
+                    [Insert image: Detailed comparison of plant cell and animal cell with all labeled components]
+                </div>
+            </div>
+
+            <!-- Cell Shape Variations -->
+            <div class="section">
+                <h2>🎨 Why Cells Have Different Shapes - Form Follows Function</h2>
+                
+                <p>The unique shape, size, and structure of cells help them carry out their specific functions. Different cells have different shapes based on the work they perform.</p>
+                
+                <h3>Examples of Cell Shape-Function Relationship:</h3>
+                
+                <h4>1. Human Cheek Cells</h4>
+                <ul>
+                    <li><strong>Shape:</strong> Thin and flat</li>
+                    <li><strong>Function:</strong> Form protective lining on inner cheek surface</li>
+                    <li><strong>Why this shape:</strong> Flat shape provides effective barrier protection</li>
+                </ul>
+                
+                <h4>2. Nerve Cells (Neurons)</h4>
+                <ul>
+                    <li><strong>Shape:</strong> Very long with branched structure</li>
+                    <li><strong>Function:</strong> Carry messages throughout the body</li>
+                    <li><strong>Why this shape:</strong> Length helps reach different body parts; branches enable quick message transmission</li>
+                </ul>
+                
+                <h4>3. Muscle Cells</h4>
+                <ul>
+                    <li><strong>Shape:</strong> Spindle-shaped (thick in middle, pointed at ends)</li>
+                    <li><strong>Function:</strong> Contract and relax for movement</li>
+                    <li><strong>Why this shape:</strong> Flexible shape allows contraction in wave-like manner</li>
+                </ul>
+                
+                <div class="image-container">
+    <div class="image-wrapper">
+<img src="images/Fig2.6.png" alt="Two scientific drawings showing different human cells. The top illustration depicts
+ a red spindle-shaped muscle cell labeled as (a) Muscle cell. Below, a nerve cell is shown with a round central body, branching extensions, and a segmented yellow axon, labeled as (b) Nerve cell. Underneath both drawings, the text reads: Fig 2.6: Different cells in humans." >           
+                    </div>
+</div>
+                <h3>Plant Cell Variations:</h3>
+                <ul>
+                    <li><strong>Rectangular cells:</strong> Provide structural support</li>
+                    <li><strong>Elongated cells:</strong> Form tissues for flexibility</li>
+                    <li><strong>Tube-like cells:</strong> Form long tubes for water transport throughout plant</li>
+                </ul>
+                
+                <h3>Digestive System Example:</h3>
+                <div class="key-point">
+                    <strong>How Different Cell Types Work Together:</strong>
+                    <ul>
+                        <li><strong>Food pipe muscle cells:</strong> Contract and relax in waves to push food down</li>
+                        <li><strong>Stomach muscle cells:</strong> Help churn and mix food</li>
+                        <li><strong>Stomach lining cells:</strong> Produce digestive juices and acid</li>
+                    </ul>
+                    All these specialized cells work together to make digestion possible!
+                </div>
+            </div>
+
+            <!-- Levels of Organization -->
+            <div class="section">
+                <h2>📊 Levels of Organization in Living Organisms</h2>
+                
+                <p>The body of a living organism is organized in a complex, hierarchical way. Just like a building is constructed from bricks, living organisms are built from cells in an organized manner.</p>
+                
+                <div class="key-point">
+                    <strong>The Organization Hierarchy:</strong>
+                    <br><br>
+                    <center>
+                    <strong style="font-size: 1.5em; color: #006d9c;">Cell → Tissue → Organ → Organ System → Organism</strong>
+                    </center>
+                </div>
+                
+                <h3>Detailed Explanation:</h3>
+                
+                <h4>1. Cell (Basic Unit)</h4>
+                <ul>
+                    <li>Smallest functional unit of life</li>
+                    <li>Like a single brick in a wall</li>
+                    <li>Performs basic life functions</li>
+                </ul>
+                
+                <h4>2. Tissue (Group of Similar Cells)</h4>
+                <ul>
+                    <li>Collection of similar cells working together</li>
+                    <li>Example: Muscle tissue made of muscle cells</li>
+                    <li>Performs specific function as a group</li>
+                </ul>
+                
+                <h4>3. Organ (Different Tissues Together)</h4>
+                <ul>
+                    <li>Different types of tissues organized together</li>
+                    <li>Example: Heart (muscle tissue + nerve tissue + connective tissue)</li>
+                    <li>Performs complex functions</li>
+                </ul>
+                
+                <h4>4. Organ System (Multiple Organs)</h4>
+                <ul>
+                    <li>Several organs working together</li>
+                    <li>Example: Digestive system (mouth + stomach + intestines + liver)</li>
+                    <li>Performs major body functions</li>
+                </ul>
+                
+                <h4>5. Organism (Complete Living Being)</h4>
+                <ul>
+                    <li>All organ systems working together</li>
+                    <li>Example: Complete plant or animal</li>
+                    <li>Can survive independently</li>
+                </ul>
+                
+                <div class="image-container">
+    <div class="image-wrapper">
+        <img src="images/Fig2.7.png" alt="Diagram showing the levels of organization in living organisms: cell, tissue, organ, organ system, and organism, with arrows connecting each stage. The environment is clean and educational, and the tone is informative.">
+    </div>
+</div>
+                
+                <div class="fun-fact">
+                    <h4>Amazing Fact!</h4>
+                    <p>The life of complex living organisms begins with a single cell - the 'egg'. This single cell has the amazing ability to divide repeatedly to form a complete living being made up of billions of cells. Such organisms are called <strong>multicellular organisms</strong>.</p>
+                </div>
+                
+                <div class="fun-fact">
+                    <h4>World's Largest Single Cell</h4>
+                    <p>The yolk (yellow part) of an ostrich egg is the largest known single cell in the living world, measuring about 130-170 mm in diameter!</p>
+                </div>
+            </div>
+
+           <!-- Microorganisms Introduction -->
+<div class="section">
+    <h2>🦠 Introduction to Microorganisms</h2>
+    
+    <div class="definition highlight-box">
+        <strong>Microorganisms (Microbes):</strong> Tiny living organisms that are so small they cannot be seen with the naked eye. They usually require a microscope for observation.  
+        <em>(Micro = very small, Organisms = living beings)</em>
+    </div>
+    
+    <h3>📌 Classification by Cell Number:</h3>
+    <ul class="styled-list">
+        <li><strong>Unicellular:</strong> Made up of a single cell  
+            <span class="example">(Examples: Bacteria, Amoeba)</span>
+        </li>
+        <li><strong>Multicellular:</strong> Composed of many cells  
+            <span class="example">(Examples: Some fungi, algae)</span>
+        </li>
+    </ul>
+    
+    <h3>🌍 Where Are They Found?</h3>
+    <p>Microorganisms exist almost everywhere in nature:</p>
+    <ul class="styled-list">
+        <li>💧 Water (rivers, ponds, oceans, stagnant water)</li>
+        <li>🌱 Soil and soil suspension</li>
+        <li>🌬 Air</li>
+        <li>🧍 Inside our bodies (especially gut)</li>
+        <li>🍃 On plant surfaces (leaves, stems, roots)</li>
+        <li>🥗 In food items</li>
+        <li>🔥❄ Extreme environments (hot springs, snow-cold zones)</li>
+    </ul>
+    
+    <div class="key-point highlight-box">
+        <h4>🔍 Observation Tools:</h4>
+        <ul class="styled-list">
+            <li><strong>Microscope:</strong> Traditional tool, magnifies 100–400 times</li>
+            <li><strong>Foldscope:</strong> Low-cost, paper-based microscope accessible for all</li>
+            <li><strong>Electron Microscope:</strong> High-power microscope, magnifies up to <strong>1,000,000 times</strong></li>
+        </ul>
+    </div>
+</div>
+
+
+            <!-- Types of Microorganisms -->
+<div class="section">
+    <h2>🧬 Types of Microorganisms – Detailed Classification</h2>
+
+    <!-- 1. Protozoa -->
+    <div class="microbe-block">
+        <div class="text">
+            <h3>1. Protozoa (Animal-like Microorganisms)</h3>
+            <p>Protozoa are simple, single-celled organisms that often behave like tiny animals. They can move and feed actively.</p>
+            
+            <h4>Amoeba:</h4>
+            <ul>
+                <li><strong>Shape:</strong> Irregular and constantly changing</li>
+                <li><strong>Movement:</strong> By <em>pseudopodia</em> (extensions of the cell body)</li>
+                <li><strong>Habitat:</strong> Ponds, lakes, moist soil</li>
+                <li><strong>Special Feature:</strong> Engulfs food using pseudopodia</li>
+            </ul>
+
+            <h4>Paramecium:</h4>
+            <ul>
+                <li><strong>Shape:</strong> Slipper-shaped</li>
+                <li><strong>Movement:</strong> Uses tiny hair-like structures called <em>cilia</em></li>
+                <li><strong>Habitat:</strong> Fresh water</li>
+                <li><strong>Special Feature:</strong> Cilia also help in pushing food into its mouth-like opening</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="images/Protozoa.png" alt="Protozoa Examples: Amoeba and Paramecium">
+        </div>
+    </div>
+
+    <!-- 2. Algae -->
+    <div class="microbe-block">
+        <div class="text">
+            <h3>2. Algae (Plant-like Microorganisms)</h3>
+            <p>Algae are green microbes that can make their own food through photosynthesis. They are important producers in aquatic ecosystems.</p>
+            <ul>
+                <li><strong>Structure:</strong> Can be single-celled (Chlamydomonas) or multicellular (Spirogyra)</li>
+                <li><strong>Color:</strong> Green due to chlorophyll pigment</li>
+                <li><strong>Nutrition:</strong> Autotrophic (photosynthesis)</li>
+                <li><strong>Importance:</strong> Produce oxygen and serve as food for aquatic animals</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="images/algae.png" alt="Examples of Algae">
+        </div>
+    </div>
+
+    <!-- 3. Fungi -->
+    <div class="microbe-block">
+        <div class="text">
+            <h3>3. Fungi</h3>
+            <p>Fungi are non-green organisms that feed on dead or decaying matter. They do not have chlorophyll and cannot make their own food.</p>
+
+            <h4>Bread Mold:</h4>
+            <ul>
+                <li><strong>Structure:</strong> Thread-like structures called <em>hyphae</em></li>
+                <li><strong>Nutrition:</strong> Saprophytic (feeds on dead matter)</li>
+                <li><strong>Special Feature:</strong> Produces spores for reproduction</li>
+            </ul>
+
+            <h4>Other Examples:</h4>
+            <ul>
+                <li>Mushrooms and yeast</li>
+                <li>Found in soil, food, and decaying matter</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="images/fungi.png" alt="Examples of Fungi">
+        </div>
+    </div>
+
+    <!-- 4. Bacteria -->
+    <div class="microbe-block">
+        <div class="text">
+            <h3>4. Bacteria</h3>
+            <p>Bacteria are single-celled organisms found everywhere — soil, water, air, and even inside our bodies.</p>
+            <ul>
+                <li><strong>Shapes:</strong> Spherical (cocci), Rod-shaped (bacilli), Spiral, Comma-shaped</li>
+                <li><strong>Cell Structure:</strong> No true nucleus, only nucleoid region</li>
+                <li><strong>Movement:</strong> Some move using a long tail-like structure called <em>flagellum</em></li>
+                <li><strong>Importance:</strong> Some are helpful (nitrogen fixation, digestion), others cause diseases</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="images/bacteria.png" alt="Examples of Bacteria">
+        </div>
+    </div>
+
+    <!-- 5. Viruses -->
+    <div class="microbe-block">
+        <div class="text">
+            <h3>5. Viruses</h3>
+            <p>Viruses are the smallest microbes and are unique because they are neither fully living nor fully non-living.</p>
+            <ul>
+                <li><strong>Structure:</strong> Tiny particles without cell structure</li>
+                <li><strong>Reproduction:</strong> Only inside a living host cell</li>
+                <li><strong>Hosts:</strong> Infect plants, animals, bacteria (bacteriophages)</li>
+                <li><strong>Effect:</strong> Cause diseases like flu, measles, COVID-19</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="images/virus.jpg" alt="Structure of Virus">
+        </div>
+    </div>
+</div>
+
+
+            <!-- Microorganisms and Food -->
+            <div class="section">
+                <h2>🍞 Microorganisms and Food Production</h2>
+                
+                <p>Microorganisms play vital roles in food preparation and processing. Let's explore how these tiny helpers work in our kitchens.</p>
+                
+                <h3>1. Role of Yeast in Food</h3>
+                
+                <h4>What is Yeast?</h4>
+                <ul>
+                    <li>A type of microorganism belonging to fungi group</li>
+                    <li>Single-celled organism (unicellular fungus)</li>
+                    <li>Grows well in warm conditions</li>
+                    <li>Feeds on sugar and releases energy</li>
+                </ul>
+                
+                <h4>How Yeast Works in Bread Making:</h4>
+                <div class="key-point">
+                    <strong>The Fermentation Process:</strong>
+                    <ol>
+                        <li>Yeast feeds on sugar in the dough</li>
+                        <li>During respiration, it breaks down sugar</li>
+                        <li>Releases carbon dioxide gas as byproduct</li>
+                        <li>CO₂ forms bubbles that make dough rise and become fluffy</li>
+                        <li>Also produces small amount of alcohol (evaporates during baking)</li>
+                        <li>Gives bread its characteristic smell and soft texture</li>
+                    </ol>
+                </div>
+                
+                <h4>Other Uses of Yeast:</h4>
+                <ul>
+                    <li>Making cakes and pastries</li>
+                    <li>Preparation of idli and dosa batter (with Lactobacillus bacteria)</li>
+                    <li>Making bhatura dough</li>
+                </ul>
+                
+                <h3>2. Role of Bacteria in Food</h3>
+                
+                <h4>Lactobacillus Bacteria:</h4>
+                <ul>
+                    <li><strong>Main function:</strong> Converts milk into curd</li>
+                    <li><strong>Process:</strong> Feeds on lactose (milk sugar)</li>
+                    <li><strong>Product:</strong> Produces lactic acid instead of alcohol</li>
+                    <li><strong>Result:</strong> Makes curd sour and thick</li>
+                    <li><strong>Condition:</strong> Works best in warm temperatures</li>
+                </ul>
+                
+                <div class="key-point">
+                    <strong>Curd Formation Process:</strong>
+                    <ul>
+                        <li>Curd contains several types of beneficial bacteria</li>
+                        <li>Lactobacillus multiplies and ferments milk</li>
+                        <li>Warm conditions promote faster curd formation</li>
+                        <li>Cold conditions slow down or prevent curd formation</li>
+                    </ul>
+                </div>
+                
+                <div class="image-placeholder">
+                    [Insert image: Bread making process with yeast and curd formation process]
+                </div>
+            </div>
+
+            <!-- Agricultural Benefits -->
+            <div class="section">
+                <h2>🌾 Microorganisms in Agriculture</h2>
+                
+                <h3>Rhizobium Bacteria - Nature's Fertilizer Factory</h3>
+                
+                <h4>What is Rhizobium?</h4>
+                <ul>
+                    <li>Special type of bacteria that lives in plant roots</li>
+                    <li>Forms swollen regions called <strong>root nodules</strong></li>
+                    <li>Lives symbiotically with legume plants</li>
+                </ul>
+                
+                <h4>Where is Rhizobium Found?</h4>
+                <ul>
+                    <li>Root nodules of legumes like:</li>
+                    <ul>
+                        <li>Beans</li>
+                        <li>Peas</li>
+                        <li>Lentils</li>
+                        <li>Cowpea</li>
+                        <li>Other leguminous crops</li>
+                    </ul>
+                </ul>
+                
+                <h4>How Rhizobium Helps Plants:</h4>
+                <div class="key-point">
+                    <strong>Nitrogen Fixation Process:</strong>
+                    <ol>
+                        <li>Rhizobium bacteria trap nitrogen gas from air</li>
+                        <li>Convert atmospheric nitrogen into useful compounds</li>
+                        <li>Make nitrogen available for plant nutrition</li>
+                        <li>Help plants grow better without chemical fertilizers</li>
+                        <li>Increase soil fertility naturally</li>
+                    </ol>
+                </div>
+                
+                <h4>Benefits for Farmers:</h4>
+                <ul>
+                    <li>Reduces need for expensive chemical fertilizers</li>
+                    <li>Farmers grow legumes in rotation with other crops</li>
+                    <li>Naturally increases nitrogen content in soil</li>
+                    <li>Keeps soil healthy for next crop</li>
+                    <li>Sustainable farming practice</li>
+                </ul>
+                
+                <div class="image-placeholder">
+                    [Insert image: Root nodules of legume plants containing Rhizobium bacteria]
+                </div>
+            </div>
+
+            <!-- Microalgae -->
+            <div class="section">
+                <h2>🌊 Amazing Microalgae: Tiny Helpers in Water</h2>
+                
+                <div class="definition">
+                    <strong>Microalgae:</strong> Microscopic plant-like organisms that live in water, soil, air, and even on trees. They make their own food using sunlight through photosynthesis.
+                </div>
+                
+                <h3>Where Microalgae Live:</h3>
+                <ul>
+                    <li>Water bodies (rivers, lakes, oceans)</li>
+                    <li>Soil</li>
+                    <li>Air</li>
+                    <li>On tree surfaces</li>
+                    <li>Various aquatic environments</li>
+                </ul>
+                
+                <h3>Importance of Microalgae:</h3>
+                
+                <h4>1. Oxygen Production</h4>
+                <ul>
+                    <li>Produce more than half of Earth's oxygen supply</li>
+                    <li>Essential for maintaining oxygen balance</li>
+                    <li>Support all aerobic life on Earth</li>
+                </ul>
+                
+                <h4>2. Food Source</h4>
+                <ul>
+                    <li>Rich in nutrients</li>
+                    <li>Serve as food for many aquatic animals</li>
+                    <li>Form base of aquatic food chains</li>
+                </ul>
+                
+                <h4>3. Human Applications</h4>
+                <ul>
+                    <li>Used as health supplements and medicines</li>
+                    <li>Examples: Spirulina, Chlorella, Diatoms</li>
+                    <li>Help in water cleaning processes</li>
+                    <li>Used to make biofuel</li>
+                </ul>
+                
+                <h3>Spirulina - The Superfood</h3>
+                <div class="fun-fact">
+                    <h4>Why Spirulina is Called Superfood:</h4>
+                    <ul>
+                        <li><strong>High protein content:</strong> More than 60% of body weight</li>
+                        <li><strong>Vitamin B12:</strong> Essential vitamin, especially for vegetarians</li>
+                        <li><strong>Low fat and sugar:</strong> Healthy nutritional profile</li>
+                        <li><strong>Rich in minerals:</strong> Contains essential nutrients</li>
+                        <li><strong>Antioxidants:</strong> Helps fight diseases</li>
+                    </ul>
+                </div>
+                
+                <h4>Spirulina Farming - A Livelihood Opportunity:</h4>
+                <div class="key-point">
+                    <strong>Simple Cultivation Steps:</strong>
+                    <ol>
+                        <li>Set up clear glass tank in bright place (avoid direct sunlight)</li>
+                        <li>Cover tank with shade net for temperature control</li>
+                        <li>Fill tank with pond water</li>
+                        <li>Add living Spirulina collected from pond</li>
+                        <li>Stir growing Spirulina twice a week</li>
+                        <li>Harvest after 3-6 weeks by filtering through fine cloth</li>
+                    </ol>
+                </div>
+                
+                <h3>Conservation of Microalgae:</h3>
+                <div class="key-point">
+                    <strong>Threats:</strong>
+                    <ul>
+                        <li>Pollution</li>
+                        <li>Climate change</li>
+                        <li>Habitat destruction</li>
+                    </ul>
+                    <strong>Why Conservation is Important:</strong>
+                    <ul>
+                        <li>Protect environment</li>
+                        <li>Maintain oxygen balance</li>
+                        <li>Ensure food security</li>
+                        <li>Support livelihood development</li>
+                    </ul>
+                </div>
+                
+                <div class="image-placeholder">
+                    [Insert image: Spirulina cultivation setup and harvested Spirulina]
+                </div>
+            </div>
+
+            <!-- Why Cell is Basic Unit -->
+            <div class="section">
+                <h2>🧬 Why is Cell Considered the Basic Unit of Life?</h2>
+                
+                <p>The cell is considered the basic unit of life because all living organisms are made up of cells, and cells contain all the components necessary for life processes.</p>
+                
+                <h3>Key Reasons:</h3>
+                
+                <h4>1. Universal Presence</h4>
+                <ul>
+                    <li>Bodies of all plants and animals are made up of cells</li>
+                    <li>Even microorganisms are made of one or more cells</li>
+                    <li>No living organism exists without cells</li>
+                </ul>
+                
+                <h4>2. Functional Independence</h4>
+                <ul>
+                    <li>Single cell can carry out all life processes</li>
+                    <li>Contains components for survival and reproduction</li>
+                    <li>Can perform metabolism, growth, and response to environment</li>
+                </ul>
+                
+                <h3>Classification Based on Cell Number:</h3>
+                
+                <h4>Multicellular Organisms (Many-celled):</h4>
+                <ul>
+                    <li>Made up of many cells</li>
+                    <li>Cells carry out specialized functions</li>
+                    <li>Cells cooperate to increase survival chances</li>
+                    <li>Examples: Plants, animals, humans</li>
+                </ul>
+                
+                <h4>Unicellular Organisms (Single-celled):</h4>
+                <ul>
+                    <li>Made up of just one cell</li>
+                    <li>Single cell performs all necessary functions</li>
+                    <li>Examples: Bacteria, protozoa (Amoeba, Paramecium)</li>
+                </ul>
+                
+                <h4>Variable Cell Number:</h4>
+                <ul>
+                    <li><strong>Algae and Fungi:</strong> Can be unicellular or multicellular</li>
+                    <li><strong>Yeast:</strong> Unicellular fungus</li>
+                    <li><strong>Mold:</strong> Multicellular fungus</li>
+                </ul>
+                
+                <h3>Cell Structure in Different Organisms:</h3>
+                
+                <h4>Common Features:</h4>
+                <ul>
+                    <li>All cells surrounded by cell membrane</li>
+                    <li>All contain cytoplasm</li>
+                    <li>Most have genetic material</li>
+                </ul>
+                
+                <h4>Special Features:</h4>
+                <ul>
+                    <li><strong>Fungi cells:</strong> Have cell wall but no chloroplasts</li>
+                    <li><strong>Bacterial cells:</strong> No well-defined nucleus, have nucleoid region</li>
+                    <li><strong>Plant cells:</strong> Have cell wall and chloroplasts</li>
+                    <li><strong>Animal cells:</strong> No cell wall, small or no vacuoles</li>
+                </ul>
+                
+                <div class="image-placeholder">
+                    [Insert image: Bacterial cell showing nucleoid region and comparison of different cell types]
+                </div>
+                
+                <h3>Advanced Microscopy:</h3>
+                <div class="key-point">
+                    <strong>Levels of Magnification:</strong>
+                    <ul>
+                        <li><strong>Light microscope:</strong> 100-400x magnification</li>
+                        <li><strong>Electron microscope:</strong> Up to 10,00,000x magnification</li>
+                        <li>High magnification reveals more cellular structures</li>
+                        <li>Helps understand detailed cell organization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Connection to Next Chapter -->
+            <div class="section">
+                <h2>🔗 Looking Ahead</h2>
+                
+                <p>In this chapter, we have learned about beneficial microorganisms and their important roles in our lives. However, there are some microbes that cause diseases in plants, animals, and humans. We will learn about disease-causing microbes and their effects in the next chapter.</p>
+                
+                <div class="key-point">
+                    <strong>Key Takeaway:</strong>
+                    <p>Not all microorganisms are harmful. Many are beneficial and essential for life on Earth. Understanding microorganisms helps us appreciate their role in maintaining ecological balance and supporting human activities.</p>
+                </div>
+            </div>
+
+            <!-- Chapter Summary -->
+            <div class="section">
+                <h2>📝 Chapter Summary - Key Points</h2>
+                
+                <div class="key-point">
+                    <strong>Important Points to Remember:</strong>
+                    <ul>
+                        <li><strong>Cell:</strong> Basic unit of life, discovered by Robert Hooke</li>
+                        <li><strong>Microorganisms:</strong> Small organisms not visible to naked eye</li>
+                        <li><strong>Types:</strong> Bacteria, protozoa, fungi, algae, viruses</li>
+                        <li><strong>Cell types:</strong> Unicellular or multicellular</li>
+                        <li><strong>Habitats:</strong> Found everywhere - water, soil, air, inside organisms</li>
+                        <li><strong>Benefits:</strong> Environmental cleaning, food production, agriculture</li>
+                        <li><strong>Cell structure:</strong> Cell membrane, cytoplasm, nucleus</li>
+                        <li><strong>Plant vs Animal cells:</strong> Plants have cell wall and chloroplasts</li>
+                        <li><strong>Organization levels:</strong> Cell → Tissue → Organ → Organ System → Organism</li>
+                        <li><strong>Shape-function relationship:</strong> Cell shape matches its function</li>
+                        <li><strong>Microscopes:</strong> Tools to observe microscopic world</li>
+                        <li><strong>Applications:</strong> Bread making, curd formation, nitrogen fixation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Practice Questions Section -->
+        <div class="questions-section">
+            <h2>📚 Practice Questions</h2>
+            
+            <!-- Objective Questions -->
+            <div class="question-type">
+                <h3>A. Objective Questions (Multiple Choice)</h3>
+                
+                <div class="question">
+                    <strong>1.</strong> Which scientist first used the term "cell"?
+                    <br>a) Antonie van Leeuwenhoek &nbsp;&nbsp; b) Robert Hooke &nbsp;&nbsp; c) Louis Pasteur &nbsp;&nbsp; d) Alexander Fleming
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        b) Robert Hooke - He observed cork under microscope in 1665 and called the small compartments "cells" because they reminded him of honeycomb.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <strong>2.</strong> Which part of the cell controls all cellular activities?
+                    <br>a) Cell membrane &nbsp;&nbsp; b) Cytoplasm &nbsp;&nbsp; c) Nucleus &nbsp;&nbsp; d) Cell wall
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        c) Nucleus - It acts as the control center and regulates all activities within the cell including growth and metabolism.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <strong>3.</strong> Which microorganism is used in bread making?
+                    <br>a) Lactobacillus &nbsp;&nbsp; b) Rhizobium &nbsp;&nbsp; c) Yeast &nbsp;&nbsp; d) Spirulina
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        c) Yeast - It produces carbon dioxide gas during respiration that makes bread fluffy and soft.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <strong>4.</strong> The largest single cell in the world is:
+                    <br>a) Amoeba &nbsp;&nbsp; b) Ostrich egg yolk &nbsp;&nbsp; c) Human egg &nbsp;&nbsp; d) Paramecium
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        b) Ostrich egg yolk - It measures about 130-170 mm in diameter and is the largest known single cell.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <strong>5.</strong> Which bacteria helps in nitrogen fixation in legume plants?
+                    <br>a) Lactobacillus &nbsp;&nbsp; b) Rhizobium &nbsp;&nbsp; c) Streptococcus &nbsp;&nbsp; d) E.coli
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        b) Rhizobium - It lives in root nodules of legumes and converts atmospheric nitrogen into useful compounds for plants.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <strong>6.</strong> Antonie van Leeuwenhoek is known as:
+                    <br>a) Father of Botany &nbsp;&nbsp; b) Father of Microbiology &nbsp;&nbsp; c) Father of Genetics &nbsp;&nbsp; d) Father of Ecology
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        b) Father of Microbiology - He was the first to clearly observe and describe bacteria and blood cells using improved microscopes.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <strong>7.</strong> Which of the following is NOT found in animal cells?
+                    <br>a) Cell membrane &nbsp;&nbsp; b) Nucleus &nbsp;&nbsp; c) Cell wall &nbsp;&nbsp; d) Cytoplasm
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        c) Cell wall - Animal cells do not have cell walls; only plant cells, fungal cells, and bacterial cells have cell walls.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <strong>8.</strong> Spirulina is rich in:
+                    <br>a) Carbohydrates &nbsp;&nbsp; b) Proteins &nbsp;&nbsp; c) Fats &nbsp;&nbsp; d) Water
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        b) Proteins - Spirulina contains more than 60% protein by weight and is also rich in vitamin B12.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fill in the blanks -->
+            <div class="question-type">
+                <h3>B. Fill in the Blanks</h3>
+                
+                <div class="question">
+                    <strong>1.</strong> The jelly-like substance inside a cell is called __________.
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        Cytoplasm - It fills the space between cell membrane and nucleus and contains various cellular components.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <strong>2.</strong> __________ is known as the "Father of Microbiology".
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        Antonie van Leeuwenhoek - He was first to clearly observe and describe bacteria and blood cells.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <strong>3.</strong> __________ is a microalga called superfood due to its high protein content.
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        Spirulina - It contains more than 60% protein and is rich in vitamin B12.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <strong>4.</strong> Plant cells have an extra layer called __________ which is absent in animal cells.
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        Cell wall - It provides rigidity and strength to plant cells.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <strong>5.</strong> The hierarchy of organization is: Cell → __________ → Organ → __________ → Organism.
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        Cell → Tissue → Organ → Organ System → Organism
+                    </div>
+                </div>
+
+                <div class="question">
+                    <strong>6.</strong> Bacteria do not have a well-defined nucleus; instead they have a __________.
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        Nucleoid - This feature distinguishes bacterial cells from plant, animal, and fungal cells.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <strong>7.</strong> __________ bacteria converts milk into curd by producing lactic acid.
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        Lactobacillus - It feeds on lactose in milk and ferments it to form curd.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <strong>8.</strong> Microorganisms produce more than __________ of Earth's oxygen supply.
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        Half - Microalgae through photosynthesis produce more than half of Earth's oxygen supply.
+                    </div>
+                </div>
+            </div>
+
+            <!-- True/False Questions -->
+            <div class="question-type">
+                <h3>C. True or False</h3>
+                
+                <div class="question">
+                    <strong>1.</strong> Viruses can reproduce independently outside living cells.
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        False - Viruses can only multiply when they enter a living cell. They are acellular and require host cells for reproduction.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <strong>2.</strong> All microorganisms are harmful to humans.
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        False - Many microorganisms are beneficial. They help in food production, environmental cleaning, and maintaining ecological balance.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <strong>3.</strong> Cell wall is present in both plant and animal cells.
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        False - Cell wall is present only in plant cells, not in animal cells. It provides rigidity and strength to plants.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <strong>4.</strong> Rhizobium bacteria help increase soil fertility.
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        True - Rhizobium bacteria fix atmospheric nitrogen and convert it into compounds that enrich soil fertility.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <strong>5.</strong> An electron microscope can magnify objects up to 10,00,000 times.
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        True - Electron microscopes provide very high magnification and can reveal detailed cellular structures.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subjective Questions -->
+            <div class="question-type">
+                <h3>D. Subjective Questions</h3>
+                
+                <div class="question">
+                    <strong>1.</strong> Explain why the shape of a cell is related to its function. Give three examples with detailed explanation.
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        The shape of a cell is directly related to its function because form follows function in biology. This relationship ensures maximum efficiency in performing specific tasks.
+                        <br><br>
+                        <strong>Examples:</strong>
+                        <br>• <strong>Nerve cells:</strong> Long and branched to carry messages quickly across long distances in the body. The elongated shape helps reach different body parts efficiently.
+                        <br>• <strong>Muscle cells:</strong> Spindle-shaped and flexible to contract and relax for movement. This shape allows effective contraction in wave-like manner.
+                        <br>• <strong>Cheek cells:</strong> Flat and thin to form a protective lining on the inner surface of the mouth. The flat shape provides effective barrier protection.
+                        <br><br>
+                        This specialization helps each cell perform its specific function with maximum efficiency while working together with other cells.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <strong>2.</strong> Describe the role of microorganisms in environmental cleaning. How do they help maintain ecological balance?
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        Microorganisms play a crucial role in environmental cleaning and maintaining ecological balance:
+                        <br><br>
+                        <strong>Environmental Cleaning:</strong>
+                        <br>• <strong>Decomposition:</strong> Bacteria and fungi break down dead plants and animals into simpler substances
+                        <br>• <strong>Waste recycling:</strong> Convert organic waste into nutrient-rich compost/manure
+                        <br>• <strong>Pollution control:</strong> Special bacteria can break down oil spills and other pollutants
+                        <br>• <strong>Biogas production:</strong> Some bacteria produce methane from organic waste for fuel
+                        <br><br>
+                        <strong>Ecological Balance:</strong>
+                        <br>• <strong>Nutrient cycling:</strong> Return essential nutrients like nitrogen and phosphorus to soil
+                        <br>• <strong>Oxygen production:</strong> Microalgae produce more than half of Earth's oxygen
+                        <br>• <strong>Food chain support:</strong> Serve as food for many aquatic organisms
+                        <br><br>
+                        Without microorganisms, dead matter would accumulate, nutrients wouldn't be recycled, and ecosystems would collapse.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <strong>3.</strong> Compare and contrast unicellular and multicellular organisms. Give examples and explain their advantages.
+                    <button class="show-answer-btn" onclick="showAnswer(this)">Show Answer</button>
+                    <div class="answer">
+                        <div class="answer-label">Answer:</div>
+                        <strong>Unicellular Organisms:</strong>
+                        <br>• Made of only ONE cell
+                        <br>• All life functions performed by single cell
+                        <br>• Generally microscopic in size
+                        <br>• Reproduce quickly and adapt fast
+                        <br>• Examples: Bacteria, Amoeba, Paramecium, Yeast
+                        <br><br>
+                        <strong>Multicellular Organisms:</strong>
+                        <br>• Made of MANY cells
+                        <br>• Different cells have specialized functions
+                        <br>• Show levels of organization (cell→tissue→organ→system)
+                        <br>• Can grow to large sizes
+                        <br>• Examples: Plants, Animals, Humans, Some fungi
+                        <br><br>
+                        <strong>Advantages of Unicellular:</strong> Simple structure, quick reproduction, can survive in extreme conditions
+                        <br><br>
+                        <strong>Advantages of Multicellular:</strong> Cell specialization, larger size, complex functions, better survival in complex environments
+                        <br><br>
+                        <strong>Similarities:</strong> Both have cells as basic units, carry out life processes, and can reproduce.
+                    </div>
+            </div>
+                
+

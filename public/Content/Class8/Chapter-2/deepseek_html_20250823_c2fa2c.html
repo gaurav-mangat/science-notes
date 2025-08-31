@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2: The Invisible Living World</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e9ecef;
+        }
+        
+        .header h1 {
+            color: #495057;
+            font-size: 3em;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #495057, #6c757d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: #6c757d;
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+        
+        .content {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e9ecef;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+        
+        h2 {
+            color: #343a40;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, #6c757d, #495057);
+            border-radius: 2px;
+        }
+        
+        h3 {
+            color: #495057;
+            font-size: 1.6em;
+            margin: 35px 0 20px 0;
+            position: relative;
+            padding-left: 25px;
+            font-weight: 600;
+        }
+        
+        h3:before {
+            content: '▸';
+            color: #6c757d;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        h4 {
+            color: #495057;
+            font-size: 1.3em;
+            margin: 20px 0 15px 0;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            text-align: justify;
+            color: #495057;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.1em;
+            color: #495057;
+        }
+        
+        .definition-box {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-left: 5px solid #6c757d;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .definition-box strong {
+            color: #495057;
+            font-size: 1.2em;
+        }
+        
+        .image-placeholder {
+            background: linear-gradient(135deg, #f1f3f4, #e8eaed);
+            border: 2px dashed #9aa0a6;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 25px 0;
+            text-align: center;
+            color: #5f6368;
+            font-style: italic;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .image-placeholder::before {
+            content: '🖼️';
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .key-points {
+            background: linear-gradient(135deg, #f1f3f4, #e8eaed);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #dee2e6;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+        }
+        
+        .key-points h4 {
+            color: #495057;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .point-item {
+            display: flex;
+            align-items: start;
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f1f3f4;
+        }
+        
+        .point-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-color: #dee2e6;
+        }
+        
+        .point-icon {
+            background: linear-gradient(45deg, #6c757d, #495057);
+            color: white;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        
+        .disease-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .disease-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 5px solid #6c757d;
+            border: 1px solid #f1f3f4;
+        }
+        
+        .disease-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            border-color: #dee2e6;
+        }
+        
+        .disease-type {
+            background: linear-gradient(45deg, #6c757d, #495057);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.95em;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .scientist-highlight {
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border-left: 6px solid #ffc107;
+            box-shadow: 0 8px 25px rgba(255, 193, 7, 0.15);
+            border: 1px solid #ffe8a1;
+        }
+        
+        .scientist-highlight h4 {
+            color: #856404;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #6c757d, #495057);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(108, 117, 125, 0.2);
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .expandable-content {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #dee2e6;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 25px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        
+        th {
+            background: linear-gradient(45deg, #6c757d, #495057);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #dee2e6;
+            color: #495057;
+        }
+        
+        tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+            color: #721c24;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 8px 25px rgba(220, 53, 69, 0.15);
+            border: 1px solid #f1aeb5;
+        }
+        
+        .warning-box h4 {
+            color: #721c24;
+            margin-bottom: 15px;
+        }
+        
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #6c757d, #495057);
+            z-index: 1000;
+            transition: width 0.1s ease;
+        }
+        
+        .practice-section {
+            background: linear-gradient(135deg, #e8f4fd, #d1ecf1);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px 0;
+            border: 2px solid #bee5eb;
+            box-shadow: 0 10px 30px rgba(23, 162, 184, 0.1);
+        }
+        
+        .practice-section h2 {
+            color: #0c5460;
+        }
+        
+        .question-container {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #d1ecf1;
+        }
+        
+        .question-type {
+            background: linear-gradient(45deg, #17a2b8, #138496);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .question {
+            color: #495057;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .options {
+            margin: 15px 0;
+        }
+        
+        .option {
+            background: #f8f9fa;
+            padding: 10px 15px;
+            margin: 8px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid #dee2e6;
+        }
+        
+        .option:hover {
+            background: #e9ecef;
+            border-color: #ced4da;
+        }
+        
+        .answer {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            display: none;
+        }
+        
+        .answer.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .show-answer-btn {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        .show-answer-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2.2em;
+            }
+            
+            .disease-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .practice-section {
+                padding: 25px;
+            }
+            
+            h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>The Invisible Living World: Beyond Our Naked Eye</h1>
+            <p class="subtitle">Chapter 2 - Complete Study Notes for Grade 8 Science</p>
+        </div>
+
+        <div class="content">
+            <!-- Section 1: Introduction -->
+            <div class="section">
+                <h2>Introduction to the Microscopic World</h2>
+                
+                <div class="definition-box">
+                    <strong>Microscope Definition:</strong> An instrument that uses lenses to make small objects appear larger, allowing us to see the invisible world of microorganisms.
+                </div>
+
+                <div class="image-placeholder">
+                    <div>Fig. 2.1: Early microscope and lens demonstration</div>
+                </div>
+
+                <div class="key-points">
+                    <h4>Key Discoveries in Microscopy</h4>
+                    <div class="point-item">
+                        <div class="point-icon">🔍</div>
+                        <div><strong>Lens Discovery:</strong> Curved glass pieces (lenses) were discovered to magnify small objects</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">📖</div>
+                        <div><strong>Micrographia (1665):</strong> Robert Hooke published detailed drawings of microscopic observations</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">👨‍🔬</div>
+                        <div><strong>Antonie van Leeuwenhoek:</strong> Created powerful lenses and first observed bacteria - "Father of Microbiology"</div>
+                    </div>
+                </div>
+
+                <h3>Robert Hooke's Discoveries</h3>
+                <div class="scientist-highlight">
+                    <p><strong>Robert Hooke</strong> made groundbreaking discoveries using early microscopes:</p>
+                    <ul>
+                        <li>First to use the term "cell" when observing cork tissue</li>
+                        <li>Published Micrographia with detailed drawings of microscopic observations</li>
+                        <li>His microscope could magnify objects 200-300 times</li>
+                    </ul>
+                </div>
+
+                <h3>Understanding Magnification</h3>
+                <div class="disease-grid">
+                    <div class="disease-card">
+                        <h4>Simple Magnification</h4>
+                        <p><strong>Method:</strong> Using a single lens to enlarge objects</p>
+                        <p><strong>Examples:</strong> Reading glasses, magnifying glasses</p>
+                        <p><strong>Limitation:</strong> Limited magnification power</p>
+                    </div>
+                    <div class="disease-card">
+                        <h4>Compound Microscopes</h4>
+                        <p><strong>Method:</strong> Using multiple lenses for greater magnification</p>
+                        <p><strong>Examples:</strong> Modern laboratory microscopes</p>
+                        <p><strong>Advantage:</strong> Much higher magnification capabilities</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: What is a Cell? -->
+            <div class="section">
+                <h2>What is a Cell?</h2>
+
+                <div class="definition-box">
+                    <strong>Cell Definition:</strong> The basic structural and functional unit of all living organisms. Cells are the building blocks of life.
+                </div>
+
+                <div class="image-placeholder">
+                    <div>Fig. 2.2: Robert Hooke's microscope and cork cell drawings</div>
+                </div>
+
+                <div class="key-points">
+                    <h4>Basic Cell Structure</h4>
+                    <div class="point-item">
+                        <div class="point-icon">🧱</div>
+                        <div><strong>Cell Membrane:</strong> Thin outer lining that encloses the cell contents</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">🧬</div>
+                        <div><strong>Nucleus:</strong> Control center of the cell that regulates all activities</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">🧪</div>
+                        <div><strong>Cytoplasm:</strong> Jelly-like substance where life processes occur</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">🌿</div>
+                        <div><strong>Cell Wall:</strong> Additional outer layer in plant cells providing strength</div>
+                    </div>
+                </div>
+
+                <h3>Observing Onion Cells</h3>
+                <div class="scientist-highlight">
+                    <h4>Activity 2.2: Studying Plant Cells</h4>
+                    <p>Steps to prepare onion cell slides:</p>
+                    <ol>
+                        <li>Take onion bulb and cut vertically</li>
+                        <li>Remove thin transparent layer (onion peel) with forceps</li>
+                        <li>Stain with safranin for 30 seconds</li>
+                        <li>Rinse with water and mount in glycerin on slide</li>
+                        <li>Cover with coverslip avoiding air bubbles</li>
+                        <li>Observe under microscope</li>
+                    </ol>
+                    <p><strong>Observation:</strong> Rectangular cells closely arranged without spaces</p>
+                </div>
+
+                <h3>Observing Animal Cells</h3>
+                <div class="scientist-highlight">
+                    <h4>Activity 2.3: Studying Cheek Cells</h4>
+                    <p>Steps to prepare human cheek cell slides:</p>
+                    <ol>
+                        <li>Gently scrape inside of cheek with toothpick</li>
+                        <li>Spread material on slide with water drop</li>
+                        <li>Add methylene blue stain for contrast</li>
+                        <li>Add glycerin to prevent drying</li>
+                        <li>Cover with coverslip and observe</li>
+                    </ol>
+                    <p><strong>Observation:</strong> Irregular polygon-shaped cells with visible nucleus</p>
+                </div>
+
+                <div class="image-placeholder">
+                    <div>Fig. 2.3: Comparison of plant and animal cell structures</div>
+                </div>
+            </div>
+
+            <!-- Section 3: Cell Structure and Function -->
+            <div class="section">
+                <h2>Cell Structure and Function</h2>
+
+                <div class="definition-box">
+                    <strong>Organelle Definition:</strong> Specialized structures within cells that perform specific functions necessary for cellular life.
+                </div>
+
+                <div class="disease-grid">
+                    <div class="disease-card">
+                        <div class="disease-type">Plant Cell</div>
+                        <h4>Plant Cell Components</h4>
+                        <p><strong>Cell Wall:</strong> Provides rigidity and strength</p>
+                        <p><strong>Chloroplasts:</strong> Contain chlorophyll for photosynthesis</p>
+                        <p><strong>Vacuole:</strong> Large storage space for substances</p>
+                        <p><strong>Plastids:</strong> Store pigments and other materials</p>
+                    </div>
+                    
+                    <div class="disease-card">
+                        <div class="disease-type">Animal Cell</div>
+                        <h4>Animal Cell Components</h4>
+                        <p><strong>Cell Membrane:</strong> Flexible outer boundary</p>
+                        <p><strong>Nucleus:</strong> Control center with genetic material</p>
+                        <p><strong>Cytoplasm:</strong> Site of metabolic activities</p>
+                        <p><strong>Small Vacuoles:</strong> Storage compartments (if present)</p>
+                    </div>
+                </div>
+
+                <h3>Cell Specialization</h3>
+                <p>Cells have different shapes and structures based on their functions:</p>
+
+                <div class="key-points">
+                    <h4>Specialized Cells in Humans</h4>
+                    <div class="point-item">
+                        <div class="point-icon">💪</div>
+                        <div><strong>Muscle Cells:</strong> Spindle-shaped for contraction and movement</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">🧠</div>
+                        <div><strong>Nerve Cells (Neurons):</strong> Long with branches for transmitting signals</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">🩸</div>
+                        <div><strong>Red Blood Cells:</strong> Disc-shaped for oxygen transport</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">🛡️</div>
+                        <div><strong>Skin Cells:</strong> Flat and layered for protection</div>
+                    </div>
+                </div>
+
+                <h3>Levels of Organization</h3>
+                <div class="scientist-highlight">
+                    <p>Living organisms are organized in hierarchical levels:</p>
+                    <ol>
+                        <li><strong>Cells:</strong> Basic unit of life</li>
+                        <li><strong>Tissues:</strong> Groups of similar cells</li>
+                        <li><strong>Organs:</strong> Structures made of different tissues</li>
+                        <li><strong>Organ Systems:</strong> Groups of organs working together</li>
+                        <li><strong>Organism:</strong> Complete living being</li>
+                    </ol>
+                </div>
+
+                <div class="image-placeholder">
+                    <div>Fig. 2.4: Levels of organization from cells to organism</div>
+                </div>
+            </div>
+
+            <!-- Section 4: Microorganisms -->
+            <div class="section">
+                <h2>Microorganisms: The Invisible World</h2>
+
+                <div class="definition-box">
+                    <strong>Microorganism Definition:</strong> Tiny living organisms that are too small to be seen with the naked eye, including bacteria, fungi, protozoa, and some algae.
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">1M+</div>
+                        <div class="stat-label">bacteria on a pinhead</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">60%</div>
+                        <div class="stat-label">of Earth's biomass is microbial</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10T</div>
+                        <div class="stat-label">microbial cells in human body</div>
+                    </div>
+                </div>
+
+                <h3>Types of Microorganisms</h3>
+
+                <div class="disease-grid">
+                    <div class="disease-card">
+                        <div class="disease-type">Bacteria</div>
+                        <h4>Bacteria</h4>
+                        <p><strong>Characteristics:</strong> Single-celled, no nucleus, various shapes</p>
+                        <p><strong>Examples:</strong> Lactobacillus, Rhizobium, E. coli</p>
+                        <p><strong>Habitat:</strong> Everywhere - soil, water, air, inside organisms</p>
+                    </div>
+                    
+                    <div class="disease-card">
+                        <div class="disease-type">Fungi</div>
+                        <h4>Fungi</h4>
+                        <p><strong>Characteristics:</strong> Single or multicellular, cell walls, no chlorophyll</p>
+                        <p><strong>Examples:</strong> Yeast, mold, mushrooms</p>
+                        <p><strong>Habitat:</strong> Soil, decaying matter, some pathogenic</p>
+                    </div>
+                    
+                    <div class="disease-card">
+                        <div class="disease-type">Protozoa</div>
+                        <h4>Protozoa</h4>
+                        <p><strong>Characteristics:</strong> Single-celled, move with specialized structures</p>
+                        <p><strong>Examples:</strong> Amoeba, Paramecium, Euglena</p>
+                        <p><strong>Habitat:</strong> Water, soil, inside other organisms</p>
+                    </div>
+                    
+                    <div class="disease-card">
+                        <div class="disease-type">Algae</div>
+                        <h4>Algae</h4>
+                        <p><strong>Characteristics:</strong> Single or multicellular, photosynthetic</p>
+                        <p><strong>Examples:</strong> Chlorella, Spirulina, diatoms</p>
+                        <p><strong>Habitat:</strong> Water, moist surfaces</p>
+                    </div>
+                </div>
+
+                <h3>Observing Microorganisms</h3>
+                <div class="scientist-highlight">
+                    <h4>Activity 2.4: Pond Water Observation</h4>
+                    <p>Steps to observe microorganisms in pond water:</p>
+                    <ol>
+                        <li>Collect pond or stagnant water</li>
+                        <li>Place drop on slide with dropper</li>
+                        <li>Add coverslip and observe under microscope</li>
+                        <li>Identify different microorganisms</li>
+                    </ol>
+                </div>
+
+                <div class="scientist-highlight">
+                    <h4>Activity 2.5: Soil Microbe Observation</h4>
+                    <p>Steps to observe microorganisms in soil:</p>
+                    <ol>
+                        <li>Collect moist soil (use gloves)</li>
+                        <li>Add water and stir to create suspension</li>
+                        <li>Let settle, then take drop from top layer</li>
+                        <li>Place on slide, cover, and observe</li>
+                    </ol>
+                </div>
+
+                <div class="image-placeholder">
+                    <div>Fig. 2.5: Common microorganisms found in pond water and soil</div>
+                </div>
+            </div>
+
+            <!-- Section 5: Beneficial Microorganisms -->
+            <div class="section">
+                <h2>Beneficial Microorganisms</h2>
+
+                <div class="definition-box">
+                    <strong>Decomposition Definition:</strong> The process where microorganisms break down dead organic matter into simpler substances, recycling nutrients back into the environment.
+                </div>
+
+                <h3>Environmental Roles of Microbes</h3>
+                <div class="key-points">
+                    <h4>Ecological Importance</h4>
+                    <div class="point-item">
+                        <div class="point-icon">♻️</div>
+                        <div><strong>Decomposition:</strong> Break down dead plants and animals into nutrients</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">🌱</div>
+                        <div><strong>Nitrogen Fixation:</strong> Convert atmospheric nitrogen to usable forms</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">💨</div>
+                        <div><strong>Oxygen Production:</strong> Photosynthetic microbes produce oxygen</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">🔄</div>
+                        <div><strong>Biogeochemical Cycles:</strong> Drive carbon, nitrogen, and other cycles</div>
+                    </div>
+                </div>
+
+                <h3>Microbes in Food Production</h3>
+                <div class="scientist-highlight">
+                    <h4>Activity 2.8: Yeast Fermentation</h4>
+                    <p>Experiment showing yeast activity:</p>
+                    <ol>
+                        <li>Take two bowls with flour and sugar</li>
+                        <li>Add yeast to only one bowl</li>
+                        <li>Knead both with warm water</li>
+                        <li>Keep in warm place and observe</li>
+                    </ol>
+                    <p><strong>Observation:</strong> Yeast-containing dough rises due to CO₂ production</p>
+                </div>
+
+                <div class="scientist-highlight">
+                    <h4>Activity 2.9: Curd Formation</h4>
+                    <p>Experiment showing bacterial fermentation:</p>
+                    <ol>
+                        <li>Take two bowls with milk</li>
+                        <li>Add curd starter to both</li>
+                        <li>Keep one warm, one cold</li>
+                        <li>Observe differences</li>
+                    </ol>
+                    <p><strong>Observation:</strong> Warm milk curdles due to Lactobacillus activity</p>
+                </div>
+
+                <h3>Agricultural Benefits</h3>
+                <div class="disease-grid">
+                    <div class="disease-card">
+                        <h4>Rhizobium Bacteria</h4>
+                        <p><strong>Function:</strong> Live in root nodules of legumes</p>
+                        <p><strong>Benefit:</strong> Convert atmospheric nitrogen to usable form</p>
+                        <p><strong>Application:</strong> Natural fertilizer for crops</p>
+                    </div>
+                    
+                    <div class="disease-card">
+                        <h4>Composting</h4>
+                        <p><strong>Function:</strong> Microbes break down organic waste</p>
+                        <p><strong>Benefit:</strong> Produce nutrient-rich compost</p>
+                        <p><strong>Application:</strong> Natural soil enrichment</p>
+                    </div>
+                </div>
+
+                <div class="image-placeholder">
+                    <div>Fig. 2.6: Root nodules containing Rhizobium bacteria</div>
+                </div>
+            </div>
+
+            <!-- Section 6: Microbes and Biotechnology -->
+            <div class="section">
+                <h2>Microbes in Biotechnology</h2>
+
+                <div class="definition-box">
+                    <strong>Biotechnology Definition:</strong> The use of living systems and organisms to develop or make products, especially through genetic manipulation.
+                </div>
+
+                <h3>Important Microbial Applications</h3>
+                <div class="key-points">
+                    <h4>Industrial Uses</h4>
+                    <div class="point-item">
+                        <div class="point-icon">💊</div>
+                        <div><strong>Medicine Production:</strong> Antibiotics, vaccines, insulin</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">🍞</div>
+                        <div><strong>Food Processing:</strong> Bread, cheese, yogurt, fermented foods</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">🛢️</div>
+                        <div><strong>Biofuel Production:</strong> Ethanol, methane from organic waste</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">🌊</div>
+                        <div><strong>Bioremediation:</strong> Cleaning pollutants from environment</div>
+                    </div>
+                </div>
+
+                <h3>Notable Scientists</h3>
+                <div class="scientist-highlight">
+                    <h4>Dr. Ananda Mohan Chakrabarty (1938-2020)</h4>
+                    <p>Indian-American microbiologist who developed a special bacterium that could break down crude oil to help clean up oil spills. His work demonstrated how microorganisms could be engineered to solve environmental problems.</p>
+                </div>
+
+                <div class="scientist-highlight">
+                    <h4>Alexander Fleming (1881-1955)</h4>
+                    <p>Discovered penicillin in 1928 when he noticed that mold (Penicillium) prevented bacterial growth. This discovery revolutionized medicine and began the antibiotic era.</p>
+                </div>
+
+                <h3>Microalgae: Superfood of the Future</h3>
+                <div class="disease-grid">
+                    <div class="disease-card">
+                        <h4>Spirulina</h4>
+                        <p><strong>Properties:</strong> Rich in protein, vitamins, minerals</p>
+                        <p><strong>Benefits:</strong> Nutritional supplement, health food</p>
+                        <p><strong>Production:</strong> Can be cultivated in ponds or tanks</p>
+                    </div>
+                    
+                    <div class="disease-card">
+                        <h4>Chlorella</h4>
+                        <p><strong>Properties:</strong> High chlorophyll content, detoxifying</p>
+                        <p><strong>Benefits:</strong> Health supplement, potential biofuel source</p>
+                        <p><strong>Production:</strong> Grows quickly in various conditions</p>
+                    </div>
+                </div>
+
+                <div class="image-placeholder">
+                    <div>Fig. 2.7: Spirulina cultivation and products</div>
+                </div>
+            </div>
+
+            <!-- Section 7: Cell as Basic Unit of Life -->
+            <div class="section">
+                <h2>Cell: The Basic Unit of Life</h2>
+
+                <div class="definition-box">
+                    <strong>Unicellular vs Multicellular:</strong> Organisms made of one cell (unicellular) perform all functions in that cell, while organisms made of many cells (multicellular) have specialized cells for different functions.
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">1</div>
+                        <div class="stat-label">cell in unicellular organisms</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">37.2T</div>
+                        <div class="stat-label">cells in adult human body</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">0.1-0.3mm</div>
+                        <div class="stat-label">diameter of ostrich egg cell</div>
+                    </div>
+                </div>
+
+                <h3>Cell Theory</h3>
+                <div class="key-points">
+                    <h4>Fundamental Principles</h4>
+                    <div class="point-item">
+                        <div class="point-icon">1️⃣</div>
+                        <div><strong>First Principle:</strong> All living organisms are composed of one or more cells</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">2️⃣</div>
+                        <div><strong>Second Principle:</strong> The cell is the basic unit of structure and organization in organisms</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">3️⃣</div>
+                        <div><strong>Third Principle:</strong> Cells arise from pre-existing cells</div>
+                    </div>
+                </div>
+
+                <h3>Microscopy Advances</h3>
+                <div class="scientist-highlight">
+                    <p><strong>Electron Microscopes:</strong> Modern technology allows us to see cellular structures in incredible detail:</p>
+                    <ul>
+                        <li>Can magnify up to 10,000,000x</li>
+                        <li>Reveal organelles and subcellular structures</li>
+                        <li>Allow study of viruses and large molecules</li>
+                        <li>Have revolutionized our understanding of cell biology</li>
+                    </ul>
+                </div>
+
+                <div class="image-placeholder">
+                    <div>Fig. 2.8: Comparison of light microscope vs electron microscope images</div>
+                </div>
+            </div>
+
+            <!-- Practice Questions Section -->
+            <div class="practice-section">
+                <h2>Practice Questions</h2>
+                <p>Test your understanding with these practice questions. Click "Show Answer" to reveal the solutions.</p>
+
+                <!-- Objective Questions -->
+                <div class="question-container">
+                    <div class="question-type">Multiple Choice</div>
+                    <div class="question">1. Who is known as the "Father of Microbiology"?</div>
+                    <div class="options">
+                        <div class="option">a) Robert Hooke</div>
+                        <div class="option">b) Antonie van Leeuwenhoek</div>
+                        <div class="option">c) Alexander Fleming</div>
+                        <div class="option">d) Louis Pasteur</div>
+                    </div>
+                    <button class="show-answer-btn" onclick="toggleAnswer('answer1')">Show Answer</button>
+                    <div class="answer" id="answer1">
+                        <strong>Answer: b) Antonie van Leeuwenhoek</strong><br>
+                        Explanation: Antonie van Leeuwenhoek is called the Father of Microbiology because he was the first to observe and describe bacteria and other microorganisms using powerful lenses he created.
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-type">Multiple Choice</div>
+                    <div class="question">2. Which of these is NOT a part of a basic cell structure?</div>
+                    <div class="options">
+                        <div class="option">a) Cell membrane</div>
+                        <div class="option">b) Cytoplasm</div>
+                        <div class="option">c) Nucleus</div>
+                        <div class="option">d) Chlorophyll</div>
+                    </div>
+                    <button class="show-answer-btn" onclick="toggleAnswer('answer2')">Show Answer</button>
+                    <div class="answer" id="answer2">
+                        <strong>Answer: d) Chlorophyll</strong><br>
+                        Explanation: While chlorophyll is present in plant cells (inside chloroplasts), it is not a universal component of all cells. The cell membrane, cytoplasm, and nucleus are fundamental parts of most cells.
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-type">Multiple Choice</div>
+                    <div class="question">3. Which microorganism is used in making bread rise?</div>
+                    <div class="options">
+                        <div class="option">a) Bacteria</div>
+                        <div class="option">b) Virus</div>
+                        <div class="option">c) Yeast</div>
+                        <div class="option">d) Algae</div>
+                    </div>
+                    <button class="show-answer-btn" onclick="toggleAnswer('answer3')">Show Answer</button>
+                    <div class="answer" id="answer3">
+                        <strong>Answer: c) Yeast</strong><br>
+                        Explanation: Yeast is a fungus that ferments sugars, producing carbon dioxide gas that causes bread dough to rise and become fluffy.
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-type">True/False</div>
+                    <div class="question">4. All cells have a cell wall.</div>
+                    <button class="show-answer-btn" onclick="toggleAnswer('answer4')">Show Answer</button>
+                    <div class="answer" id="answer4">
+                        <strong>Answer: False</strong><br>
+                        Explanation: Only plant cells, fungal cells, and bacterial cells have cell walls. Animal cells do not have cell walls; they only have cell membranes.
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-type">Fill in the Blank</div>
+                    <div class="question">5. The control center of the cell that regulates all activities is called the __________.</div>
+                    <button class="show-answer-btn" onclick="toggleAnswer('answer5')">Show Answer</button>
+                    <div class="answer" id="answer5">
+                        <strong>Answer: nucleus</strong><br>
+                        Explanation: The nucleus contains the cell's genetic material and controls all cellular activities, acting as the command center of the cell.
+                    </div>
+                </div>
+
+                <!-- Subjective Questions -->
+                <div class="question-container">
+                    <div class="question-type">Short Answer</div>
+                    <div class="question">6. Explain the difference between unicellular and multicellular organisms with examples.</div>
+                    <button class="show-answer-btn" onclick="toggleAnswer('answer6')">Show Answer</button>
+                    <div class="answer" id="answer6">
+                        <strong>Answer:</strong><br>
+                        <strong>Unicellular Organisms:</strong> Made of a single cell that performs all life functions.<br>
+                        Examples: Bacteria, Amoeba, Paramecium, Euglena<br><br>
+                        <strong>Multicellular Organisms:</strong> Made of many cells that are specialized for different functions.<br>
+                        Examples: Humans, plants, animals, fungi
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-type">Short Answer</div>
+                    <div class="question">7. Describe the process of curd formation and the role of microorganisms in it.</div>
+                    <button class="show-answer-btn" onclick="toggleAnswer('answer7')">Show Answer</button>
+                    <div class="answer" id="answer7">
+                        <strong>Answer:</strong> Curd formation involves the fermentation of milk by bacteria:<br>
+                        1. Lactobacillus bacteria are added to warm milk (as starter culture)<br>
+                        2. Bacteria feed on lactose (milk sugar)<br>
+                        3. They produce lactic acid through fermentation<br>
+                        4. The acid causes milk proteins to coagulate, forming curd<br>
+                        5. The process works best at warm temperatures (around 37°C)
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-type">Long Answer</div>
+                    <div class="question">8. Explain how microorganisms help in maintaining soil fertility.</div>
+                    <button class="show-answer-btn" onclick="toggleAnswer('answer8')">Show Answer</button>
+                    <div class="answer" id="answer8">
+                        <strong>Answer:</strong><br>
+                        Microorganisms play crucial roles in maintaining soil fertility through several processes:<br><br>
+                        1. <strong>Decomposition:</strong> Bacteria and fungi break down dead organic matter, releasing nutrients back into the soil<br>
+                        2. <strong>Nitrogen Fixation:</strong> Certain bacteria (like Rhizobium) convert atmospheric nitrogen into forms plants can use<br>
+                        3. <strong>Nutrient Cycling:</strong> Microbes drive biogeochemical cycles of carbon, nitrogen, phosphorus, and other elements<br>
+                        4. <strong>Soil Structure:</strong> Fungal hyphae help bind soil particles together, improving soil texture<br>
+                        5. <strong>Disease Suppression:</strong> Some microbes protect plants from pathogenic organisms<br>
+                        These processes ensure that soil remains fertile and capable of supporting plant growth.
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-type">Application</div>
+                    <div class="question">9. Design an experiment to show that microorganisms are present in the air around us.</div>
+                    <button class="show-answer-btn" onclick="toggleAnswer('answer9')">Show Answer</button>
+                    <div class="answer" id="answer9">
+                        <strong>Answer:</strong><br>
+                        <strong>Experiment to show microorganisms in air:</strong><br>
+                        1. Prepare nutrient agar plates or simply use slices of potato or bread as growth medium<br>
+                        2. Leave some plates exposed to air for different time periods (15 min, 30 min, 1 hour)<br>
+                        3. Keep one plate covered as a control<br>
+                        4. Seal all plates and keep in a warm place for 2-3 days<br>
+                        5. Observe growth of colonies (visible as spots) on exposed plates<br>
+                        6. The control plate should show little or no growth<br>
+                        The colonies that appear represent microorganisms that were present in the air and settled on the plates.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Scroll indicator
+        window.onscroll = function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("scrollIndicator").style.width = scrolled + "%";
+        };
+        
+        // Toggle answer visibility
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            answer.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

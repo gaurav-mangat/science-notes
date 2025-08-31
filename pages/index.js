@@ -46,12 +46,10 @@ export default function Home() {
   }, []);
 
   // Get unique classes and subjects
-  const classes = [...new Set(Object.values(chapters).map(chap => chap.class))];
-  const subjects = [...new Set(
-    Object.values(chapters)
-      .filter(chap => chap.class === selectedClass)
-      .map(chap => chap.subject)
-  )];
+  const classes = [6, 7, 8];
+  const subjects = ['Science', 'Mathematics'].filter(subject =>
+    Object.values(chapters).some(chap => chap.class === selectedClass && chap.subject === subject)
+  );
 
   // Filter chapters
   const filteredChapters = Object.entries(chapters).filter(([_, chap]) => 
@@ -398,7 +396,7 @@ export default function Home() {
                               <div className="flex space-x-3">
                                 {chapter.notesUrl && (
                                   <a
-                                    href={`/chapters/${id}/notes`}
+                                    href={chapter.notesUrl}
                                     className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-full shadow-sm text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
                                   >
                                     View Notes
