@@ -16,7 +16,7 @@
             line-height: 1.6;
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             color: #333;
-            padding: 20px;
+            padding: 15px;
         }
         
         .container {
@@ -31,35 +31,35 @@
         .header {
             background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
-            padding: 30px;
+            padding: 20px;
             text-align: center;
         }
         
         .header h1 {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             margin-bottom: 10px;
         }
         
         .header p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             opacity: 0.9;
         }
         
         .content {
-            padding: 30px;
+            padding: 20px;
         }
         
         .section {
             background: #f8f9fa;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             border-radius: 10px;
-            padding: 25px;
+            padding: 20px;
             border-left: 5px solid #3498db;
         }
         
         .section h2 {
             color: #2c3e50;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             margin-bottom: 15px;
             border-bottom: 2px solid #ecf0f1;
             padding-bottom: 10px;
@@ -67,37 +67,37 @@
         
         .section h3 {
             color: #34495e;
-            font-size: 1.4rem;
-            margin: 20px 0 10px 0;
+            font-size: 1.3rem;
+            margin: 15px 0 10px 0;
         }
         
         .section h4 {
             color: #2c3e50;
-            font-size: 1.2rem;
-            margin: 15px 0 8px 0;
+            font-size: 1.1rem;
+            margin: 12px 0 8px 0;
+        }
+        
+        .key-point, .definition, .fun-fact, .heritage-box, .scientist-box {
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
         }
         
         .key-point {
             background: #e8f4fd;
             border: 1px solid #3498db;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 15px 0;
         }
         
         .definition {
             background: #f0f8e8;
             border: 1px solid #27ae60;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 15px 0;
         }
         
         .image-placeholder {
             background: #ecf0f1;
             border: 2px dashed #95a5a6;
             border-radius: 8px;
-            padding: 30px;
+            padding: 20px;
             text-align: center;
             color: #7f8c8d;
             margin: 15px 0;
@@ -107,9 +107,6 @@
         .fun-fact {
             background: #f8d7da;
             border: 1px solid #dc3545;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 15px 0;
         }
         
         .fun-fact h4 {
@@ -120,9 +117,6 @@
         .heritage-box {
             background: #e2e3e5;
             border: 1px solid #6c757d;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 15px 0;
         }
         
         .heritage-box h4 {
@@ -133,9 +127,6 @@
         .scientist-box {
             background: #d4edda;
             border: 1px solid #28a745;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 15px 0;
         }
         
         .scientist-box h4 {
@@ -178,7 +169,7 @@
         .questions-section {
             background: #f8f9fa;
             border-radius: 10px;
-            padding: 25px;
+            padding: 20px;
             margin-top: 30px;
         }
         
@@ -186,13 +177,13 @@
             color: #2c3e50;
             text-align: center;
             margin-bottom: 20px;
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
         
         .question-type {
             background: white;
             border-radius: 8px;
-            padding: 20px;
+            padding: 15px;
             margin-bottom: 20px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
@@ -202,6 +193,7 @@
             border-bottom: 2px solid #3498db;
             padding-bottom: 8px;
             margin-bottom: 15px;
+            font-size: 1.3rem;
         }
         
         .question {
@@ -230,15 +222,20 @@
             margin-bottom: 5px;
         }
         
-        .show-answer-btn {
-            background: #3498db;
+        .show-answer-btn, .hide-answer-btn {
             color: white;
             border: none;
-            padding: 8px 15px;
+            padding: 10px 15px;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 5px;
+            margin-top: 8px;
             transition: background 0.3s;
+            font-size: 1rem;
+            min-width: 120px;
+        }
+        
+        .show-answer-btn {
+            background: #3498db;
         }
         
         .show-answer-btn:hover {
@@ -247,13 +244,6 @@
         
         .hide-answer-btn {
             background: #e74c3c;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 5px;
-            transition: background 0.3s;
         }
         
         .hide-answer-btn:hover {
@@ -266,10 +256,11 @@
             overflow: hidden;
             margin: 15px 0;
         }
-                .image-container {
+        
+        .image-container {
             width: 100%;
             margin: 20px auto;
-            padding: 15px;
+            padding: 10px;
         }
         
         .image-wrapper {
@@ -288,103 +279,131 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
-        /* Media Query for Mobile Devices */
+        .microbe-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            background: #fff;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            gap: 15px;
+        }
+        
+        .microbe-block .text {
+            flex: 2;
+        }
+        
+        .microbe-block .image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .microbe-block img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        
+        /* Mobile-specific styles */
         @media screen and (max-width: 768px) {
-            .image-container {
+            body {
                 padding: 10px;
             }
             
-            .image-wrapper {
+            .header {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .content {
+                padding: 15px;
+            }
+            
+            .section {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+            
+            .section h2 {
+                font-size: 1.3rem;
+            }
+            
+            .section h3 {
+                font-size: 1.2rem;
+            }
+            
+            .key-point, .definition, .fun-fact, .heritage-box, .scientist-box {
+                padding: 12px;
+            }
+            
+            table {
+                font-size: 0.9rem;
+            }
+            
+            th, td {
+                padding: 8px;
+            }
+            
+            .questions-section {
+                padding: 15px;
+            }
+            
+            .questions-section h2 {
+                font-size: 1.4rem;
+            }
+            
+            .question-type {
+                padding: 12px;
+            }
+            
+            .question-type h3 {
+                font-size: 1.2rem;
+            }
+            
+            .show-answer-btn, .hide-answer-btn {
                 width: 100%;
+                padding: 12px;
+            }
+            
+            .microbe-block {
+                flex-direction: column;
+            }
+            
+            .image-container {
+                padding: 5px;
+            }
+            
+            ul, ol {
+                margin-left: 15px;
             }
         }
-        /* .section {
-    background: #f9f9fc;
-    padding: 20px;
-    border-radius: 12px;
-    margin: 20px 0;
-    font-family: Arial, sans-serif;
-    color: #333;
-} */
-
-/* .section h2 {
-    color: #2a7ae4;
-    font-size: 1.8em;
-    margin-bottom: 15px;
-} */
-
-/* .definition, .key-point {
-    background: #fff;
-    padding: 15px;
-    border-left: 6px solid #2a7ae4;
-    border-radius: 8px;
-    margin: 15px 0;
-    font-size: 1.1em;
-} */
-
-.highlight-box {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-h3 {
-    color: #333;
-    margin-top: 20px;
-}
-
-.styled-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.styled-list li {
-    background: #eef5ff;
-    margin: 6px 0;
-    padding: 10px;
-    border-radius: 6px;
-    font-size: 1.05em;
-}
-
-.example {
-    color: #666;
-    font-size: 0.9em;
-    margin-left: 8px;
-    font-style: italic;
-}
-
-/* After types of microbes*/
-.microbe-block {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    background: #fff;
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    gap: 15px;
-}
-
-.microbe-block .text {
-    flex: 2;
-}
-
-.microbe-block .image {
-    flex: 1;
-    text-align: center;
-}
-
-.microbe-block img {
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-@media screen and (max-width: 768px) {
-    .microbe-block {
-        flex-direction: column;
-        text-align: left;
-    }
-}
-
+        
+        @media screen and (max-width: 480px) {
+            .header h1 {
+                font-size: 1.3rem;
+            }
+            
+            .section h2 {
+                font-size: 1.2rem;
+            }
+            
+            .section h3 {
+                font-size: 1.1rem;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .header p {
+                font-size: 0.9rem;
+            }
+        }
     </style>
     <script>
         function showAnswer(button) {
@@ -392,9 +411,13 @@ h3 {
             if (answer.style.display === 'block') {
                 answer.style.display = 'none';
                 button.textContent = 'Show Answer';
+                button.classList.remove('hide-answer-btn');
+                button.classList.add('show-answer-btn');
             } else {
                 answer.style.display = 'block';
                 button.textContent = 'Hide Answer';
+                button.classList.remove('show-answer-btn');
+                button.classList.add('hide-answer-btn');
             }
         }
     </script>
@@ -476,7 +499,8 @@ h3 {
                 
                 <h3>Basic Components of a Cell</h3>
                 <div class="key-point">
-                    <strong>Three Main Parts of Every Cell:</strong>
+                    <strong>Three Main Parts of Every Cell:</strong> <br><br>
+
                     <ol>
                         <li><strong>Cell Membrane:</strong> Thin outer lining that encloses cytoplasm and nucleus</li>
                         <li><strong>Cytoplasm:</strong> Space between cell membrane and nucleus, filled with various substances</li>
@@ -520,7 +544,7 @@ h3 {
                 <h2>🔬 Advanced Cell Structures</h2>
                 
                 <div class="key-point">
-                    <strong>Additional Plant Cell Components:</strong>
+                    <strong>Additional Plant Cell Components:</strong><br><br>
                     <ul>
                         <li><strong>Plastids:</strong> Tiny rod-shaped structures in all plant parts</li>
                         <li><strong>Chloroplasts:</strong> Special plastids containing chlorophyll for photosynthesis</li>
@@ -587,14 +611,14 @@ h3 {
                     <li><strong>Function:</strong> Form protective lining on inner cheek surface</li>
                     <li><strong>Why this shape:</strong> Flat shape provides effective barrier protection</li>
                 </ul>
-                
+                <br>
                 <h4>2. Nerve Cells (Neurons)</h4>
                 <ul>
                     <li><strong>Shape:</strong> Very long with branched structure</li>
                     <li><strong>Function:</strong> Carry messages throughout the body</li>
                     <li><strong>Why this shape:</strong> Length helps reach different body parts; branches enable quick message transmission</li>
                 </ul>
-                
+                <br>
                 <h4>3. Muscle Cells</h4>
                 <ul>
                     <li><strong>Shape:</strong> Spindle-shaped (thick in middle, pointed at ends)</li>
@@ -614,10 +638,11 @@ h3 {
                     <li><strong>Elongated cells:</strong> Form tissues for flexibility</li>
                     <li><strong>Tube-like cells:</strong> Form long tubes for water transport throughout plant</li>
                 </ul>
-                
+                <br>
                 <h3>Digestive System Example:</h3>
                 <div class="key-point">
                     <strong>How Different Cell Types Work Together:</strong>
+                    <br><br>
                     <ul>
                         <li><strong>Food pipe muscle cells:</strong> Contract and relax in waves to push food down</li>
                         <li><strong>Stomach muscle cells:</strong> Help churn and mix food</li>
@@ -713,17 +738,17 @@ h3 {
             <span class="example">(Examples: Some fungi, algae)</span>
         </li>
     </ul>
-    
+    <br>
     <h3>🌍 Where Are They Found?</h3>
     <p>Microorganisms exist almost everywhere in nature:</p>
     <ul class="styled-list">
-        <li>💧 Water (rivers, ponds, oceans, stagnant water)</li>
-        <li>🌱 Soil and soil suspension</li>
-        <li>🌬 Air</li>
-        <li>🧍 Inside our bodies (especially gut)</li>
-        <li>🍃 On plant surfaces (leaves, stems, roots)</li>
-        <li>🥗 In food items</li>
-        <li>🔥❄ Extreme environments (hot springs, snow-cold zones)</li>
+        <li>Water (rivers, ponds, oceans)</li>
+        <li>Soil and soil suspension</li>
+        <li>Air</li>
+        <li>Inside our bodies (especially gut)</li>
+        <li>On plant surfaces (leaves, stems, roots)</li>
+        <li>In food items</li>
+        <li>Extreme environments (hot springs, snow-cold zones)</li>
     </ul>
     
     <div class="key-point highlight-box">
@@ -880,7 +905,7 @@ h3 {
                     <li>Preparation of idli and dosa batter (with Lactobacillus bacteria)</li>
                     <li>Making bhatura dough</li>
                 </ul>
-                
+                <br>
                 <h3>2. Role of Bacteria in Food</h3>
                 
                 <h4>Lactobacillus Bacteria:</h4>
@@ -1011,18 +1036,7 @@ h3 {
                     </ul>
                 </div>
                 
-                <h4>Spirulina Farming - A Livelihood Opportunity:</h4>
-                <div class="key-point">
-                    <strong>Simple Cultivation Steps:</strong>
-                    <ol>
-                        <li>Set up clear glass tank in bright place (avoid direct sunlight)</li>
-                        <li>Cover tank with shade net for temperature control</li>
-                        <li>Fill tank with pond water</li>
-                        <li>Add living Spirulina collected from pond</li>
-                        <li>Stir growing Spirulina twice a week</li>
-                        <li>Harvest after 3-6 weeks by filtering through fine cloth</li>
-                    </ol>
-                </div>
+                
                 
                 <h3>Conservation of Microalgae:</h3>
                 <div class="key-point">
@@ -1067,10 +1081,10 @@ h3 {
                     <li>Contains components for survival and reproduction</li>
                     <li>Can perform metabolism, growth, and response to environment</li>
                 </ul>
-                
+                <br>
                 <h3>Classification Based on Cell Number:</h3>
                 
-                <h4>Multicellular Organisms (Many-celled):</h4>
+                <h4>Multicellular Organisms:</h4>
                 <ul>
                     <li>Made up of many cells</li>
                     <li>Cells carry out specialized functions</li>
@@ -1078,7 +1092,7 @@ h3 {
                     <li>Examples: Plants, animals, humans</li>
                 </ul>
                 
-                <h4>Unicellular Organisms (Single-celled):</h4>
+                <h4>Unicellular Organisms:</h4>
                 <ul>
                     <li>Made up of just one cell</li>
                     <li>Single cell performs all necessary functions</li>
@@ -1091,7 +1105,7 @@ h3 {
                     <li><strong>Yeast:</strong> Unicellular fungus</li>
                     <li><strong>Mold:</strong> Multicellular fungus</li>
                 </ul>
-                
+                <br>
                 <h3>Cell Structure in Different Organisms:</h3>
                 
                 <h4>Common Features:</h4>
@@ -1125,17 +1139,7 @@ h3 {
                 </div>
             </div>
 
-            <!-- Connection to Next Chapter -->
-            <div class="section">
-                <h2>🔗 Looking Ahead</h2>
-                
-                <p>In this chapter, we have learned about beneficial microorganisms and their important roles in our lives. However, there are some microbes that cause diseases in plants, animals, and humans. We will learn about disease-causing microbes and their effects in the next chapter.</p>
-                
-                <div class="key-point">
-                    <strong>Key Takeaway:</strong>
-                    <p>Not all microorganisms are harmful. Many are beneficial and essential for life on Earth. Understanding microorganisms helps us appreciate their role in maintaining ecological balance and supporting human activities.</p>
-                </div>
-            </div>
+         
 
             <!-- Chapter Summary -->
             <div class="section">
