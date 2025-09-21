@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curiosity Exercise | Electricity: Magnetic and Heating Effects Class 8</title>
+    <meta name="description" content="Curiosity Class 8 Science Exercise of Chapter 4 – Electricity: Magnetic and Heating Effects. Neatly written, notebook-ready answers with clear explanations to make exam preparation simple and effective.">
+  <style>
+    /* ===== WEBSITE HEADER STYLES ===== */
+    .website-header {
+        background: linear-gradient(135deg, #059669 0%, #0f766e 100%);
+        color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .header-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    /* Match site navbar spacing under fixed header */
+    body {
+        padding-top: 6rem;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 4rem;
+    }
+
+    .logo-section {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .logo-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: white;
+        transition: opacity 0.2s;
+    }
+
+    .logo-link:hover {
+        opacity: 0.8;
+    }
+
+    .logo-icon {
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+    }
+
+    .logo-text {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.2s;
+        font-weight: 500;
+    }
+
+    .nav-links a:hover {
+        color: #e0f2fe;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    .mobile-menu-btn:focus {
+        outline: none;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 4rem;
+        right: 1rem;
+        background: #10b981;
+        border-radius: 0.375rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        min-width: 8rem;
+        padding: 0.5rem 0;
+    }
+
+    .mobile-menu.show {
+        display: block;
+    }
+
+    .mobile-menu a {
+        display: block;
+        padding: 0.75rem 1rem;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.2s;
+        font-weight: 500;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-menu a:last-child {
+        border-bottom: none;
+    }
+
+    .mobile-menu a:hover {
+        background-color: #059669;
+    }
+
+    @media (min-width: 768px) {
+        .nav-links {
+            display: flex;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+        }
+
+        .mobile-menu {
+            display: none !important;
+        }
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      padding-top: 6rem;
+      line-height: 1.6;
+      background-color: #f8f9fa;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #FF6B35, #F7931E);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .question-container {
+      background: white;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      border-left: 4px solid #FF6B35;
+    }
+
+    .question {
+      background: #fff3e0;
+      padding: 15px 20px;
+      font-weight: bold;
+      color: #e65100;
+      border-bottom: 2px solid #FF6B35;
+    }
+
+    .answer {
+      padding: 20px;
+      background: white;
+    }
+
+    .image-container {
+      width: 100%;
+      margin: 20px auto;
+      padding: 10px;
+    }
+
+    .image-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-wrapper img {
+      width: 70%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .table-container {
+      overflow-x: auto;
+      margin: 15px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background: #FF6B35;
+      color: white;
+      font-weight: bold;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    .sub-question {
+      margin: 10px 0;
+      font-weight: bold;
+      color: #1976d2;
+    }
+
+    .answer-point {
+      margin: 8px 0;
+      padding-left: 15px;
+    }
+
+    .highlight {
+      background: #fff3cd;
+      padding: 15px;
+      border-left: 4px solid #ffc107;
+      margin: 15px 0;
+      border-radius: 0 5px 5px 0;
+    }
+
+    .fill-blank {
+      background: #e3f2fd;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border-left: 3px solid #2196F3;
+    }
+
+    .true-false {
+      background: #f3e5f5;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border-left: 3px solid #9c27b0;
+    }
+
+    .match-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px;
+      margin: 5px 0;
+      background: #f5f5f5;
+      border-radius: 5px;
+    }
+
+    /* 📱 Mobile responsiveness */
+    @media (max-width: 768px) {
+      body {
+        padding-top: 6.5rem;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+      }
+
+      .header {
+        padding: 15px;
+      }
+      .header h1 {
+        font-size: 1.2rem;
+      }
+      .header p {
+        font-size: 1rem;
+
+      .question {
+        font-size: 1rem;
+        padding: 12px;
+      }
+
+      .answer {
+        font-size: 0.95rem;
+        padding: 15px;
+      }
+
+      th, td {
+        padding: 8px;
+        font-size: 0.9rem;
+      }
+
+      .image-wrapper img {
+        width: 90%;
+      }
+
+      .match-item {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+    @media (max-width: 480px) {
+      .header {
+        padding: 12px;
+      }
+      .header h1 {
+        font-size: 1.2rem;
+      }
+      .header p {
+        font-size: 0.9rem;
+      }
+
+      .question {
+        font-size: 0.95rem;
+      }
+
+      .answer {
+        font-size: 0.9rem;
+        padding: 12px;
+      }
+
+      th, td {
+        font-size: 0.85rem;
+      }
+
+      .image-wrapper img {
+        width: 100%;
+      }
+
+      .match-item {
+        font-size: 0.85rem;
+        padding: 6px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+    <!-- Website Header -->
+    <header class="website-header">
+        <div class="header-container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <a href="/" class="logo-link">
+                        <svg class="logo-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                        <span class="logo-text">myCBSEnotes</span>
+                    </a>
+                </div>
+                <nav class="nav-links">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-btn" id="mobile-menu-button" aria-label="Toggle menu">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <div class="mobile-menu" id="mobile-menu">
+                    <a href="#" onclick="navigateToHome()">Home</a>
+                    <a href="#" onclick="navigateToAbout()">About</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="header">
+        <h1>Chapter 4 <br> Electricity: Magnetic and Heating Effects</h1>
+        <p>Curiosity Book - Exercises</p>
+    </div>
+    <div class="question-container">
+        <div class="question">1. Fill in the blanks:</div>
+        <div class="answer">
+            <div class="sub-question">(i) The solution used in a Voltaic cell is called ______.</div>
+            <div class="fill-blank">
+                <strong>Answer:</strong> electrolyte
+            </div>
+<br>
+            <div class="sub-question">(ii) A current carrying coil behaves like a ______.</div>
+            <div class="fill-blank">
+                <strong>Answer:</strong> magnet
+            </div>
+        </div>
+    </div>
+
+    <div class="question-container">
+        <div class="question">2. Choose the correct option:</div>
+        <div class="answer">
+            <div class="sub-question">(i) Dry cells are less portable compared to Voltaic cells. (True/False)</div>
+            <div class="true-false">
+                <strong>Answer:</strong> False<br>
+                <strong>Explanation:</strong> Dry cells are more portable than Voltaic cells because they do not contain liquid electrolyte and are sealed units.
+            </div>
+<br>
+            <div class="sub-question">(ii) A coil becomes an electromagnet only when electric current flows through it. (True/False)</div>
+            <div class="true-false">
+                <strong>Answer:</strong> True<br>
+                <strong>Explanation:</strong> An electromagnet works only when current passes through the coil. Without current, it loses its magnetic properties.
+            </div>
+<br>
+            <div class="sub-question">(iii) An electromagnet, using a single cell, attracts more iron paper clips than the same electromagnet with a battery of 2 cells. (True/False)</div>
+            <div class="true-false">
+                <strong>Answer:</strong> False<br>
+                <strong>Explanation:</strong> More cells provide more current, making the electromagnet stronger and able to attract more iron clips.
+            </div>
+        </div>
+    </div>
+
+    <div class="question-container">
+        <div class="question">3. An electric current flows through a nichrome wire for a short time. (i) The wire becomes warm. (ii) A magnetic compass placed below the wire is deflected. Choose the correct option:
+            <p>
+            (a) Only (i) is correct<br>
+            (b) Only (ii) is correct<br>
+            (c) Both (i) and (ii) are correct<br>
+            (d) Both (i) and (ii) are not correct</p>
+        </div>
+        <div class="answer">
+            
+            
+            <div class="highlight">
+                <strong>Answer:</strong> (c) Both (i) and (ii) are correct
+            </div>
+            
+            <p><strong>Explanation:</strong> When current flows through nichrome wire, it produces both heating effect (wire becomes warm) and magnetic effect (compass needle deflects due to magnetic field around current-carrying conductor).</p>
+        </div>
+    </div>
+
+    <div class="question-container">
+        <div class="question">4. Match the items in Column A with those in Column B.</div>
+        <div class="answer">
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Column A</th>
+                        <th>Column B</th>
+                    </tr>
+                    <tr>
+                        <td>(i) Voltaic cell</td>
+                        <td>(a) Best suited for electric heater</td>
+                    </tr>
+                    <tr>
+                        <td>(ii) Electric iron</td>
+                        <td>(b) Works on magnetic effect of electric current</td>
+                    </tr>
+                    <tr>
+                        <td>(iii) Nichrome wire</td>
+                        <td>(c) Works on heating effect of electric current</td>
+                    </tr>
+                    <tr>
+                        <td>(iv) Electromagnet</td>
+                        <td>(d) Generates electricity by chemical reactions</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="highlight">
+                <strong>Answers:</strong><br>
+                (i) Voltaic cell → (d) Generates electricity by chemical reactions<br>
+                (ii) Electric iron → (a) Best suited for electric heater<br>
+                (iii) Nichrome wire → (a) Best suited for electric heater<br>
+                (iv) Electromagnet → (b) Works on magnetic effect of electric current
+            </div>
+        </div>
+    </div>
+
+    <div class="question-container">
+        <div class="question">5. Nichrome wire is commonly used in electrical heating devices because it:
+             <p>
+            (i) is a good conductor of electricity<br>
+            (ii) generates more heat for a given current<br>
+            (iii) is cheaper than copper<br>
+            (iv) is an insulator of electricity</p>
+        </div>
+        <div class="answer">
+           
+            
+            <div class="highlight">
+                <strong>Answer:</strong> (ii) generates more heat for a given current
+            </div>
+            
+            <p><strong>Explanation:</strong> Nichrome has high resistance, so when current passes through it, more electrical energy is converted to heat energy. This makes it ideal for heating devices like electric heaters, toasters, and irons.</p>
+        </div>
+    </div>
+
+    <div class="question-container">
+        <div class="question">6. Electric heating devices (like an electric heater or a stove) are often considered more convenient than traditional heating methods (like burning firewood or charcoal). Give reason(s) to support this statement considering societal impact.</div>
+        <div class="answer">
+            <div class="answer-point">
+                <strong>Reasons why electric heating devices are more convenient:</strong><br><br>
+                
+                • <strong>Clean and Pollution-free:</strong> No smoke, ash, or harmful gases are produced, reducing air pollution<br>
+                
+                • <strong>Easy to Control:</strong> Temperature can be easily controlled with switches and thermostats<br>
+                
+                • <strong>Safe to Use:</strong> No open flames, reducing fire hazards and accidents<br>
+                
+                • <strong>No Fuel Storage:</strong> No need to store wood, coal, or charcoal<br>
+                
+                • <strong>Instant Operation:</strong> Can be turned on/off immediately without waiting for fuel to burn<br>
+                
+                • <strong>Environmental Benefits:</strong> Reduces deforestation and prevents indoor air pollution<br>
+                
+                • <strong>Health Benefits:</strong> No harmful smoke inhalation, especially beneficial for children and elderly
+            </div>
+        </div>
+    </div>
+
+    <div class="question-container">
+        <div class="question">7. Look at the Fig. 4.4a. If the compass placed near the coil deflects:</div>
+        <div class="answer">
+
+            
+            <div class="sub-question">(i) Draw an arrow on the diagram to show the path of the electric current.</div>
+            <div class="answer-point">
+            <strong>Answer:</strong> The positive terminal of the battery is on the right side, and the negative terminal is on the left side. Therefore, the current flows from the positive terminal of the battery → through the wire to end B → passes through the coil → comes out at end A → back to the negative terminal.
+            <div class="image-container">
+                     <div class="image-wrapper">           
+            <img src="images/Q7.png" alt=" Curiosity Class 8 Chapter 4 Exercise Answer 7">
+                     </div>
+                </div>
+            </div>
+
+            <div class="sub-question">(ii) Explain why the compass needle moves when current flows.</div>
+            <div class="answer-point">
+                <strong>Answer:</strong> When current flows through the coil, it creates a magnetic field around it. This magnetic field interacts with the magnetic field of the compass needle, causing it to deflect from its original north-south direction.
+            </div>
+
+            <div class="sub-question">(iii) Predict what would happen to the deflection if you reverse the battery terminals.</div>
+            <div class="answer-point">
+                <strong>Answer:</strong> If we reverse the battery terminals, the direction of current flow will reverse. This will reverse the direction of the magnetic field created by the coil, causing the compass needle to deflect in the opposite direction.
+            </div>
+        </div>
+    </div>
+
+    <div class="question-container">
+        <div class="question">8. Suppose Sunaina forgets to move the switch of her lifting electromagnet model to OFF position (in the demonstration story). After some time, the iron nail no longer picks up the iron paper clips, but the wire wrapped around the iron nail is still warm. Why did the lifting electromagnet stop lifting the clips? Give possible reasons.</div>
+        <div class="answer">
+            <div class="answer-point">
+                <strong>Possible reasons why electromagnet stopped working:</strong><br><br>
+                
+                • <strong>Battery Discharge:</strong> The battery ran out of power due to continuous current flow, so no current passes through the coil<br>
+                
+                • <strong>Overheating:</strong> Continuous current flow caused overheating, which may have damaged the wire insulation or connections<br>
+                
+                • <strong>Loose Connections:</strong> Heat expansion may have loosened wire connections, breaking the circuit<br>
+                
+                • <strong>Wire Damage:</strong> Excessive heat may have damaged the wire, creating a break in the circuit<br><br>
+                
+                <strong>Why wire is still warm:</strong> The wire retains heat from the continuous current that was flowing earlier, even after the current stops.
+            </div>
+        </div>
+    </div>
+
+    <div class="question-container">
+        <div class="question">9. In Fig. 4.11, in which case the LED will glow when the switch is closed?
+            <div class="image-container">
+                     <div class="image-wrapper">           
+            <img src="images/Q9.png" alt=" Curiosity Class 8 Chapter 4 Exercise Answer 9">
+                     </div>
+                </div>
+        </div>
+        <div class="answer">
+            
+            
+            <div class="highlight">
+                <strong>Answer:</strong> The LED will glow in case (a) - Iron nail and Copper strip in Lemon juice
+            </div>
+            
+            <div class="answer-point">
+                <strong>Explanation:</strong><br>
+                • Lemon juice contains citric acid, which acts as an electrolyte<br>
+                • Iron nail and copper strip act as different electrodes<br>
+                • This creates a simple voltaic cell that generates electricity<br>
+                • Pure water (case b) does not conduct electricity well as it lacks ions<br>
+                • The chemical reaction between different metals and acid produces electric current
+            </div>
+        </div>
+    </div>
+
+    <div class="question-container">
+        <div class="question">10. Neha keeps the coil exactly the same as in Activity 4.4 but slides the iron nail out, leaving only the copper coil. Will the coil still deflect the compass? If yes, will the deflection be more or less than before?</div>
+        <div class="answer">
+            <div class="answer-point">
+                <strong>Answer:</strong> Yes, the coil will still deflect the compass, but the deflection will be less than before.<br><br>
+                
+                <strong>Explanation:</strong><br>
+                • A current-carrying coil always creates a magnetic field, even without an iron core<br>
+                • The iron nail acts as a magnetic core that strengthens the magnetic field<br>
+                • Without the iron core, the magnetic field is weaker<br>
+                • Therefore, the compass deflection will be less compared to when the iron nail was present<br>
+                • The iron core concentrates and amplifies the magnetic field lines
+            </div>
+        </div>
+    </div>
+
+    <div class="question-container">
+        <div class="question">11. We have four coils, of similar shape and size, made up from iron, copper, aluminium, and nichrome as shown in Fig. 4.12. When current is passed through the coils, compass needles placed near the coils will show deflection.
+        
+            <div class="image-container">
+                     <div class="image-wrapper">           
+            <img src="images/Q11.png" alt=" Curiosity Class 8 Chapter 4 Exercise Answer 11">
+                     </div>
+                </div>
+                <p>
+            (i) Only in circuit (a)<br>
+            (ii) Only in circuits (a) and (b)<br>
+            (iii) Only in circuits (a), (b), and (c)<br>
+            (iv) In all four circuits</p>
+                </div>
+                <div class="answer">            
+            
+            <div class="highlight">
+                <strong>Answer:</strong> (d) In all four circuits
+            </div>
+            
+            <div class="answer-point">
+                <strong>Explanation:</strong><br>
+                • Any current-carrying conductor creates a magnetic field around it<br>
+                • The material of the coil (iron, copper, aluminium, or nichrome) does not matter for creating magnetic field<br>
+                • As long as current flows through any of these coils, they will all create magnetic fields<br>
+                • Therefore, compass needles placed near all four coils will show deflection<br>
+                • The strength of deflection may vary depending on the resistance and current flow, but all will show some deflection
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobile-menu');
+            const button = document.getElementById('mobile-menu-button');
+            if (!menu.contains(event.target) && !button.contains(event.target)) {
+                menu.style.display = 'none';
+            }
+        });
+
+        function navigateToHome() {
+            // Check if we're running locally (file:// protocol) or on a server
+            if (window.location.protocol === 'file:') {
+                // If opened as local file, try to open the Next.js app
+                window.open('http://localhost:3001', '_blank');
+            } else {
+                // If on a server, navigate normally
+                window.location.href = '/';
+            }
+            // Close mobile menu
+            document.getElementById('mobile-menu').style.display = 'none';
+        }
+
+        function navigateToAbout() {
+            // Check if we're running locally (file:// protocol) or on a server
+            if (window.location.protocol === 'file:') {
+                // If opened as local file, try to open the Next.js app
+                window.open('http://localhost:3001/about', '_blank');
+            } else {
+                // If on a server, navigate normally
+                window.location.href = '/about';
+            }
+            // Close mobile menu
+            document.getElementById('mobile-menu').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

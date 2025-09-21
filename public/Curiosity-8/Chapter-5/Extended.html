@@ -1,0 +1,1667 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5 - Exploring Forces - Comprehensive Notes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #2d3436;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(45, 52, 54, 0.12);
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 12px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .content-section {
+            background: white;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 12px rgba(45, 52, 54, 0.06);
+            border: 1px solid #e9ecef;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(45, 52, 54, 0.1);
+        }
+
+        .section-title {
+            color: #2d3436;
+            font-size: 1.7em;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #ddd;
+            font-weight: 600;
+        }
+
+        .subsection {
+            margin-bottom: 25px;
+        }
+
+        .subsection h3 {
+            color: #636e72;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            padding: 12px 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid #b2bec3;
+            font-weight: 600;
+        }
+
+        .subsection h4 {
+            color: #2d3436;
+            font-size: 1.2em;
+            margin: 18px 0 12px 0;
+            font-weight: 600;
+        }
+
+        .definition-box, .important-note, .example-box, .step-further-box, .probe-questions, .story-box {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 6px;
+            font-weight: 500;
+            color: #2d3436;
+        }
+
+        .definition-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 1px solid #dee2e6;
+            border-left: 5px solid #636e72;
+        }
+
+        .important-note {
+            background: linear-gradient(135deg, #ffffff 0%, #f1f3f4 100%);
+            border: 1px solid #ddd;
+            border-left: 5px solid #74b9ff;
+        }
+
+        .example-box {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 1px solid #e9ecef;
+            border-left: 5px solid #2d3436;
+        }
+
+        .step-further-box {
+            background: linear-gradient(135deg, #f1f3f4 0%, #e9ecef 100%);
+            border: 1px solid #dee2e6;
+            border-left: 5px solid #636e72;
+        }
+
+        .image-placeholder {
+            background: #f8f9fa;
+            border: 2px dashed #b2bec3;
+            padding: 30px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 6px;
+            color: #636e72;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .image-placeholder i {
+            font-size: 2.5em;
+            margin-bottom: 12px;
+            opacity: 0.6;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(45, 52, 54, 0.06);
+            border: 1px solid #e9ecef;
+        }
+
+        th {
+            background: linear-gradient(135deg, #636e72 0%, #2d3436 100%);
+            color: white;
+            padding: 15px;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e9ecef;
+            color: #2d3436;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .quiz-section {
+            background: linear-gradient(135deg, #636e72 0%, #2d3436 100%);
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 40px;
+            color: white;
+        }
+
+        .question {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 6px;
+            margin: 18px 0;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .answer {
+            background: rgba(255,255,255,0.95);
+            color: #2d3436;
+            padding: 18px;
+            border-radius: 6px;
+            margin-top: 12px;
+            display: none;
+            line-height: 1.6;
+            border: 1px solid #e9ecef;
+        }
+
+        .show-answer {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 12px;
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .show-answer:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-1px);
+        }
+
+        .force-comparison {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .force-card {
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 12px rgba(45, 52, 54, 0.06);
+            border: 1px solid #e9ecef;
+            border-top: 4px solid #636e72;
+        }
+
+        .formula-box {
+            background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+            margin: 18px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #2d3436;
+        }
+
+        .probe-questions {
+            background: linear-gradient(135deg, #f1f3f4 0%, #e9ecef 100%);
+            border: 1px solid #dee2e6;
+            border-left: 5px solid #636e72;
+        }
+
+        .story-box {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 1px solid #e9ecef;
+            border-left: 5px solid #2d3436;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .weight-comparison-table {
+            margin: 20px 0;
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 18px;
+            border: 1px solid #e9ecef;
+        }
+
+        .toc {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border: 1px solid #e9ecef;
+        }
+
+        .toc h3 {
+            color: #2d3436;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .toc a {
+            color: #636e72;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .toc a:hover {
+            color: #2d3436;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #2d3436;
+        }
+
+        /* Mobile-specific improvements */
+        @media (min-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .header {
+                padding: 30px;
+                border-radius: 12px;
+            }
+            
+            .header h1 {
+                font-size: 2.5em;
+            }
+            
+            .header p {
+                font-size: 1.2em;
+            }
+            
+            .content-section {
+                padding: 30px;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+            
+            .force-comparison {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 25px;
+            }
+            
+            .formula-box {
+                font-size: 1.3em;
+                padding: 25px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .header h1 {
+                font-size: 2.8em;
+            }
+        }
+
+        /* Prevent horizontal scrolling on mobile */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        /* Improve touch targets for mobile */
+        .show-answer {
+            min-height: 44px;
+        }
+
+        /* Better text readability on mobile */
+        p, li {
+            line-height: 1.7;
+        }
+
+        /* Table responsiveness */
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+            border-radius: 6px;
+            box-shadow: 0 2px 12px rgba(45, 52, 54, 0.06);
+        }
+        
+        table {
+            min-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📖 Exploring Forces</h1>
+            <p>Class 8 Science - Chapter 5 - Comprehensive Study Notes</p>
+        </div>
+
+       
+
+       
+
+                <!-- Section 5.1 -->
+        <div class="content-section" id="introduction">
+            <h2 class="section-title"> What Is a Force?</h2>
+            
+            <p>Let us try to experience the push and the pull by thinking about how we move objects in our daily life. When we want to move a large cardboard box, we can move it in different ways - we can push it, pull it, lift it, or carry it.</p>
+
+            <div class="image-placeholder">
+                <div>📷</div>
+                <div>Figure 5.1: Moving a box in different ways<br>(a) Pushing (b) Pulling (c) Lifting (pulling up) and carrying</div>
+            </div>
+
+            <p>In all the ways that we might use to move the box, we have to apply a <strong>push or pull</strong> to the box. This brings us to our fundamental understanding of force:</p>
+
+            <div class="definition-box">
+                <strong>Force:</strong> Generally, the push or pull applied on an object is called force in science.
+            </div>
+
+
+            <div class="example-box">
+                <strong>Common Examples of Forces in Daily Life:</strong>
+                <ul>
+                    <li><strong>Opening a drawer:</strong> We apply a pulling force</li>
+                    <li><strong>Kicking a football:</strong> We apply a pushing force with our foot</li>
+                    <li><strong>Stretching a rubber band:</strong> We apply pulling forces at both ends</li>
+                    <li><strong>Rolling chapati:</strong> We apply pushing force with a rolling pin</li>
+                    <li><strong>Turning steering handle:</strong> We apply pushing/pulling forces to change direction</li>
+                    <li><strong>Writing with a pen:</strong> We apply pushing force on paper</li>
+                    <li><strong>Lifting a school bag:</strong> We apply upward pulling force</li>
+                </ul>
+            </div>
+        </div>
+
+       <!-- Section 5.2 -->
+<div class="content-section" id="effects">
+    <h2 class="section-title">5.2 What Can a Force Do to the Bodies on Which It Is Applied?</h2>
+
+    <p>We experience push or pull in our daily lives all the time, often without realising it. These pushes or pulls are called forces. Let us understand what happens when forces are applied to different objects.</p>
+
+    <p><strong>Effects of Force on Objects:</strong></p>
+    
+    <style>
+        .effects-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .effect-item {
+            background-color: #f8f9fa;
+            padding: 15px 20px;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+        
+        .effect-item:nth-child(1) { background-color: #e3f2fd; }
+        .effect-item:nth-child(2) { background-color: #e8f5e9; }
+        .effect-item:nth-child(3) { background-color: #fff3e0; }
+        .effect-item:nth-child(4) { background-color: #f3e5f5; }
+        .effect-item:nth-child(5) { background-color: #e0f2f1; }
+        .effect-item:nth-child(6) { background-color: #fce4ec; }
+        
+        .effect-item:hover {
+            transform: translateY(-2px);
+        }
+        
+        .effect-item strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+            color: #2d3436;
+        }
+        
+        .effect-item p {
+            margin: 0;
+            color: #2d3436;
+        }
+        
+        .effect-item em {
+            display: block;
+            margin-top: 8px;
+            color: #636e72;
+            font-style: italic;
+        }
+    </style>
+
+    <div class="effects-list">
+        <div class="effect-item">
+            <strong>💫 Make an object move from rest</strong>
+            <p>A stationary object starts moving when a force is applied.</p>
+            <em>Example: Pushing a parked car to make it move.</em>
+        </div>
+
+        <div class="effect-item">
+            <strong>🛑 Stop a moving object</strong>
+            <p>A moving object can be brought to rest by applying force.</p>
+            <em>Example: Catching a flying cricket ball.</em>
+        </div>
+
+        <div class="effect-item">
+            <strong>⚡ Change the speed of an object</strong>
+            <p>A moving object can speed up or slow down when force is applied.</p>
+            <em>Examples: Pressing the accelerator pedal in a car (increase speed), applying brakes while cycling (decrease speed).</em>
+        </div>
+
+        <div class="effect-item">
+            <strong>↪️ Change the direction of motion</strong>
+            <p>The path of a moving object can be altered by applying force.</p>
+            <em>Example: Hitting a tennis ball with a racket during a match.</em>
+        </div>
+
+        <div class="effect-item">
+            <strong>🔄 Change the shape of an object</strong>
+            <p>The physical form of an object can be modified.</p>
+            <em>Example: Squeezing a piece of clay or dough.</em>
+        </div>
+
+        <div class="effect-item">
+            <strong>✨ Cause multiple effects simultaneously</strong>
+            <p>Forces can create multiple changes at once.</p>
+            <em>Example: When a batsman hits a ball, its speed and direction both change.</em>
+        </div>
+    </div>
+
+    <div class="important-note">
+        <strong>Key Point:</strong> Whenever there is a change in speed, direction, or shape of an object, a force is acting on it. None of these changes can occur without the application of force.
+    </div>
+</div>
+
+
+        <!-- Section 5.3 -->
+        <div class="content-section" id="interaction">
+            <h2 class="section-title">5.3 Are Forces an Interaction Between Two or More Objects?</h2>
+
+            <p>To understand the nature of forces better, let's think about what happens when we apply force. When you push a table, your hand is one object applying force on another object — the table. Here, we say that your hand and the table are two objects interacting with each other.</p>
+
+            <p>If we think carefully about all the examples we discussed earlier, we will notice an important pattern. In every case, there are always at least two objects involved. Forces don't exist in isolation - they always result from the interaction between objects.</p>
+
+            <div class="important-note">
+                <strong>Key Observation:</strong> Forces result only when two or more objects are interacting in some way. From all our examples, we can conclude that at least two objects must interact for a force to come into play.
+            </div>
+
+            <div class="definition-box">
+                <strong>Complete Scientific Definition of Force:</strong><br><br>
+                A force is a push or pull on an object resulting from the object's interaction with another object. The SI unit of force is newton (written with a small 'n') and its symbol is N.
+            </div>
+
+            <div class="example-box">
+                <strong>Examples of Two-Object Interactions:</strong>
+                <ul>
+                    <li><strong>Walking:</strong> Your foot (object 1) pushes against the ground (object 2)</li>
+                    <li><strong>Writing:</strong> The pen (object 1) applies force on paper (object 2)</li>
+                    <li><strong>Opening a door:</strong> Your hand (object 1) applies force on the door handle (object 2)</li>
+                    <li><strong>Kicking a ball:</strong> Your foot (object 1) applies force on the ball (object 2)</li>
+                    <li><strong>Throwing a stone:</strong> Your hand (object 1) applies force on the stone (object 2)</li>
+                </ul>
+            </div>
+
+            <div class="step-further-box">
+                <h4>🤔 A Step Further - Understanding Balanced Forces</h4>
+                <p><strong>Question:</strong> If an object is at rest, does it mean that no force is acting on this object?</p>
+                <p><strong>Answer:</strong> Not necessarily! It could mean that the forces acting on the object are balancing one another. For example, when a book rests on a table, gravity is pulling it down, but the table is pushing it up with equal force. These balanced forces result in no net change, so the book remains at rest. You will learn more about balanced and unbalanced forces in higher grades.</p>
+            </div>
+
+            <div class="step-further-box">
+                <h4>🤔 Newton's Third Law - A Preview</h4>
+                <p>Here's something interesting to observe: When you push a table with your hand, do you feel a force on your hand too? The moment you stop pushing, that force on your hand disappears.</p>
+                <p><strong>Important Principle:</strong> Whenever two objects interact, each object experiences a force from the other. This means forces always occur in pairs. As soon as the interaction stops, both objects no longer experience the force.</p>
+                <p><strong>Examples:</strong></p>
+                <ul>
+                    <li>When you walk, you push the ground backward, and the ground pushes you forward</li>
+                    <li>When you swim, you push water backward, and water pushes you forward</li>
+                    <li>When you sit on a chair, you push down on it, and it pushes up on you</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 5.4 -->
+        <div class="content-section" id="types">
+            <h2 class="section-title">5.4 What Are the Different Types of Forces?</h2>
+
+            <p>Forces can be broadly classified into two main categories based on whether physical contact is required between the objects or not.</p>
+
+            <div class="force-comparison">
+                <div class="force-card">
+                    <h2 style="color: #2d3436;">🤝 Contact Forces</h2><br>
+                    <p><strong>Definition:</strong> Forces that act only when there is physical contact between the objects applying and receiving the force.</p>
+                    
+                    <p><strong>Types of Contact:</strong></p>
+                    <ul>
+                        <li><strong>Direct contact:</strong> Using hands, feet, or other body parts</li>
+                        <li><strong>Indirect contact:</strong> Using tools like sticks, ropes, or other instruments</li>
+                    </ul>
+                    
+                    <p><strong>Main Examples:</strong></p>
+                    <ul>
+                        <li>Muscular Force</li>
+                        <li>Friction</li>
+                    </ul>
+                </div>
+
+                <div class="force-card">
+                    <h2 style="color: #2d3436;">🌟 Non-Contact Forces</h2>
+                    <br>
+                    <p><strong>Definition:</strong> Forces that can act even when objects are not physically touching each other. These forces can work across empty space.</p>
+                    
+                    <p><strong>Characteristics:</strong></p>
+                    <ul>
+                        <li>Objects can be separated by distance</li>
+                        <li>Force acts through space without any physical connection</li>
+                        <li>The strength usually depends on distance between objects</li>
+                    </ul>
+                    
+                    <p><strong>Main Examples:</strong></p>
+                    <ul>
+                        <li>Magnetic Force</li>
+                        <li>Electrostatic Force</li>
+                        <li>Gravitational Force</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Section 5.4.1 Contact Forces -->
+        <div class="content-section" id="contact-forces">
+            <h2 class="section-title">5.4.1 Contact Forces</h2>
+
+            <p>In many situations in our daily life, to apply a force on an object, physical contact is necessary between our body and the object. This contact can be direct (like using our hands) or indirect (like using a stick or rope to move something).</p>
+
+            <div class="definition-box">
+                <strong>Contact Forces:</strong> Forces that act only when there is physical contact between the objects are called contact forces.
+            </div>
+
+            <br>
+                <h3>💪 Muscular Force : </h3>
+                
+                <div class="subsection">
+                <p>One of the most common contact forces we experience is muscular force. Every physical activity we perform - walking, running, lifting, pushing, jumping, or even simple actions like writing - involves muscular force.</p>
+
+                <div class="definition-box">
+                    <strong>Muscular Force:</strong> The force resulting from the action of muscles is known as muscular force. This force occurs when muscles contract and elongate while performing any activity.
+                </div>
+
+                <div class="image-placeholder">
+                    <div>📷</div>
+                    <div>Figure 5.3: Use of muscular force by living beings</div>
+                </div>
+
+                <p><strong>Muscular Force in Living Beings:</strong></p>
+                <p>All living beings use muscular force for movement and survival. Animals, birds, fish, and insects depend on their muscular systems to move, find food, escape from predators, and carry out essential life functions.</p>
+
+                <div class="image-placeholder">
+                    <div>📷</div>
+                    <div>Figure 5.4: Use of muscular force of animals to assist with human tasks</div>
+                </div>
+
+                <p>Throughout history, humans have utilized the muscular force of animals like horses, oxen, elephants, and camels to carry out various tasks such as transportation, farming, and construction work.</p>
+
+                <div class="step-further-box">
+                    <h4>💡 Muscular Force Inside Our Body</h4>
+                    <p>Muscular force is not just for external movements - it plays crucial roles inside our body too:</p>
+                    <ul>
+                        <li><strong>Digestion:</strong> Muscles help chew food and push it through the alimentary canal</li>
+                        <li><strong>Circulation:</strong> Heart muscles contract and expand to pump blood throughout the body</li>
+                        <li><strong>Breathing:</strong> Diaphragm muscles help us breathe in and out</li>
+                        <li><strong>Other functions:</strong> Muscles help in blinking, speaking, and many other involuntary actions</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <strong>Categories of Muscular Force:</strong>
+                    <ul>
+                        <li><strong>External Activities:</strong> Walking, running, lifting objects, writing, playing sports, dancing</li>
+                        <li><strong>Internal Body Functions:</strong> Heartbeat, digestion, breathing, blood circulation</li>
+                        <li><strong>Animal Applications:</strong> Birds flying, fish swimming, animals running, carrying loads</li>
+                        <li><strong>Human-Animal Cooperation:</strong> Horses pulling carts, oxen plowing fields, elephants lifting heavy logs</li>
+                    </ul>
+                </div>
+            </div>
+<br>
+            <div class="subsection">
+                <h3>⚡ Friction</h3>
+                <div class="definition-box">
+                    <strong>Friction:</strong> The force that comes into play when an object moves or tries to move over another surface is called the force of friction, or simply friction. Friction always acts in a direction opposite to the direction in which the object is moving or trying to move. Since friction arises due to contact between two surfaces, it is a contact force.
+                </div>
+
+                <div class="image-placeholder">
+                    <div>📷</div>
+                    <div>Figure 5.5: Friction acts between two surfaces and opposes the motion of the object</div>
+                </div>
+
+                <h4>🔍 Why Does Friction Occur?</h4>
+                <p>Friction arises due to the irregularities present in the two surfaces that are in contact. Even surfaces that appear perfectly smooth to our eyes have numerous tiny irregularities when observed under a microscope. When two surfaces are placed in contact, these irregularities interlock with each other, creating resistance to any attempt to slide one surface over the other.</p>
+
+                <div class="image-placeholder">
+                    <div>📷</div>
+                    <div>Figure 5.6: Friction between two surfaces due to irregularities showing microscopic view</div>
+                </div>
+
+                <h4>📊 How Does Surface Type Affect Friction?</h4>
+                <p>The amount of friction depends greatly on the nature of the surfaces in contact. Different surface combinations produce different amounts of friction.</p>
+
+                <table>
+                    <tr>
+                        <th>Surface Type</th>
+                        <th>Friction Level</th>
+                        <th>Examples</th>
+                        <th>Practical Application</th>
+                    </tr>
+                    <tr>
+                        <td>Very Rough Surfaces</td>
+                        <td>Very High Friction</td>
+                        <td>Sandpaper, concrete, gravel</td>
+                        <td>Road surfaces for better grip</td>
+                    </tr>
+                    <tr>
+                        <td>Moderately Rough</td>
+                        <td>High Friction</td>
+                        <td>Wood, carpet, rubber</td>
+                        <td>Shoe soles, tire treads</td>
+                    </tr>
+                    <tr>
+                        <td>Smooth Surfaces</td>
+                        <td>Low Friction</td>
+                        <td>Glass, ceramic tiles</td>
+                        <td>Sliding doors, smooth floors</td>
+                    </tr>
+                    <tr>
+                        <td>Very Smooth Surfaces</td>
+                        <td>Very Low Friction</td>
+                        <td>Ice, polished metal, wet soap</td>
+                        <td>Ice skating, lubricated parts</td>
+                    </tr>
+                </table>
+
+                <div class="important-note">
+                    <strong>Key Understanding:</strong> The rougher the surfaces, the greater the friction between them. This is why it's easier to slip on smooth, wet surfaces compared to rough, dry surfaces.
+                </div>
+
+                <div class="step-further-box">
+                    <h4>🤔 Friction in Liquids and Gases</h4>
+                    <p><strong>Question:</strong> Does friction act only when objects move on solid surfaces?</p>
+                    <p><strong>Answer:</strong> No! Air, water, and other liquids also exert friction on objects moving through them. This is why:</p>
+                    <ul>
+                        <li><strong>Aeroplanes</strong> are designed with streamlined shapes to reduce air friction</li>
+                        <li><strong>Ships and boats</strong> have special hull designs to cut through water efficiently</li>
+                        <li><strong>High-speed trains</strong> have pointed fronts to minimize air resistance</li>
+                        <li><strong>Racing cars</strong> have aerodynamic designs to reduce drag</li>
+                    </ul>
+                    <p>The friction from air and water is often called "drag" or "resistance."</p>
+                </div>
+
+                <div class="example-box">
+                    <strong>Friction in Everyday Life:</strong>
+                    <ul>
+                        <li><strong>Helpful Friction:</strong> Walking (grip between shoes and ground), writing (pen on paper), car brakes</li>
+                        <li><strong>Problematic Friction:</strong> Wear and tear of machine parts, heat generation in engines</li>
+                        <li><strong>Reducing Friction:</strong> Using oil in engines, ball bearings in wheels, smooth surfaces for sliding</li>
+                        <li><strong>Increasing Friction:</strong> Rough tire treads, anti-slip mats, sandpaper</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5.4.2 Non-Contact Forces -->
+        <div class="content-section" id="non-contact-forces">
+            <h2 class="section-title">5.4.2 Non-Contact Forces</h2>
+
+            <p>Now let's explore forces that can act even when objects are not physically touching each other. These forces can work across empty space and are responsible for many fascinating phenomena we observe in nature.</p>
+
+            <div class="definition-box">
+                <strong>Non-Contact Forces:</strong> Forces whose effects can be experienced even when the objects are not in physical contact with each other are called non-contact forces.
+            </div>
+
+            <div class="subsection">
+                <h3>🧲 Magnetic Force</h3>
+                
+                <p>You may remember learning about magnets in earlier grades. A magnet can attract objects made of iron, nickel, and cobalt (magnetic materials) without touching them. When two magnets are brought close to each other, they can either attract or repel each other depending on which poles are facing each other.</p>
+
+                <div class="definition-box">
+                    <strong>Magnetic Force:</strong> The force exerted by a magnet on another magnet or a magnetic material is called magnetic force. Since a magnet can exert force from a distance without physical contact, it is classified as a non-contact force.
+                </div>
+
+                <div class="important-note">
+                    <strong>Rules of Magnetic Force:</strong>
+                    <ul>
+                        <li><strong>Like poles repel:</strong> North-North or South-South poles push each other away</li>
+                        <li><strong>Unlike poles attract:</strong> North-South poles pull each other together</li>
+                        <li><strong>Magnetic materials:</strong> Iron, nickel, cobalt, and their alloys are attracted to magnets</li>
+                        <li><strong>Non-magnetic materials:</strong> Wood, plastic, glass, paper are not affected by magnets</li>
+                    </ul>
+                </div>
+
+                <div class="image-placeholder">
+                    <div>📷</div>
+                    <div>Figure 5.7: Force between two ring magnets showing repulsion when like poles face each other</div>
+                </div>
+
+                <p>An interesting demonstration of magnetic force is when you place two ring magnets on a wooden stick with like poles facing each other. The upper magnet appears to "float" in air because the magnetic force of repulsion balances the gravitational force pulling it down.</p>
+
+                <div class="example-box">
+                    <strong>Applications of Magnetic Force:</strong>
+                    <ul>
+                        <li><strong>Compass:</strong> Earth's magnetic field aligns compass needles</li>
+                        <li><strong>Electric motors:</strong> Use magnetic forces to create rotation</li>
+                        <li><strong>Speakers:</strong> Convert electrical signals to sound using magnetic forces</li>
+                        <li><strong>MRI machines:</strong> Use strong magnetic fields for medical imaging</li>
+                        <li><strong>Maglev trains:</strong> Use magnetic levitation for high-speed transportation</li>
+                        <li><strong>Electromagnets:</strong> Used in cranes, doorbells, and electric circuits</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>⚡ Electrostatic Force</h3>
+                
+                <p>Have you ever rubbed a plastic ruler with cloth and then brought it near small pieces of paper? The paper pieces jump toward the ruler as if attracted by some invisible force. This happens due to electrostatic force.</p>
+
+                <div class="definition-box">
+                    <strong>Static Charges:</strong> When two objects made of certain materials are rubbed together, electrical charges build up on their surfaces. These charges are called static charges because they do not move by themselves. An object that has acquired these static charges is said to be a charged object.
+                </div>
+
+                <p>A charged object can attract uncharged objects made of certain materials, like small pieces of paper. This attraction occurs even when the objects are not touching, making electrostatic force a non-contact force.</p>
+
+                <div class="image-placeholder">
+                    <div>📷</div>
+                    <div>Figure 5.8: Charged plastic scale attracting small paper pieces</div>
+                </div>
+
+                <p>Let's understand how charged objects behave with each other. When we rub two balloons with woollen cloth, both balloons acquire similar charges. If we hang them near each other, they repel (move away from) each other. However, if we bring the woollen cloth near one of the balloons, they attract each other.</p>
+
+                <div class="image-placeholder">
+                    <div>📷</div>
+                    <div>Figure 5.9: (a) Two uncharged balloons hanging normally (b) Two charged balloons repelling each other</div>
+                </div>
+
+                <div class="important-note">
+                    <strong>Rules of Electrostatic Force:</strong>
+                    <ul>
+                        <li><strong>Like charges repel:</strong> Two positive or two negative charges push each other away</li>
+                        <li><strong>Unlike charges attract:</strong> Positive and negative charges pull each other together</li>
+                        <li><strong>Charged objects attract uncharged objects:</strong> A charged ruler attracts neutral paper pieces</li>
+                        <li><strong>Two types of charges:</strong> Scientists call them 'positive' and 'negative' charges</li>
+                    </ul>
+                </div>
+
+                <div class="definition-box">
+                    <strong>Electrostatic Force:</strong> The force exerted by a charged object on another charged object or an uncharged object is called electrostatic force. Since this force can act without physical contact, it is a non-contact force.
+                </div>
+
+                <div class="step-further-box">
+                    <h4>⚡ From Static to Current</h4>
+                    <p>When static charges are made to move through a conductor (like a wire), they form an electric current. This is the same current that:</p>
+                    <ul>
+                        <li>Makes light bulbs glow</li>
+                        <li>Generates heat in electric heaters</li>
+                        <li>Creates magnetic effects in electromagnets</li>
+                        <li>Powers all our electrical devices</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <strong>Examples of Electrostatic Force:</strong>
+                    <ul>
+                        <li><strong>Lightning:</strong> Buildup of charges in clouds creating massive electrical discharge</li>
+                        <li><strong>Static cling:</strong> Clothes sticking together after coming out of dryer</li>
+                        <li><strong>Hair standing up:</strong> When you touch a Van de Graaff generator</li>
+                        <li><strong>Dust attraction:</strong> Charged surfaces attracting dust particles</li>
+                        <li><strong>Photocopying:</strong> Uses electrostatic forces to transfer toner to paper</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>🌍 Gravitational Force</h3>
+                
+                <p>Here's a simple experiment you can try: throw a ball vertically upward. No matter how hard you throw it, it will always come back down to Earth. This happens because Earth exerts an attractive force on all objects, pulling them toward itself.</p>
+
+                <div class="image-placeholder">
+                    <div>📷</div>
+                    <div>Figure 5.10: Objects of different sizes falling towards Earth due to gravitational force</div>
+                </div>
+
+                <p>Whether you drop a feather, a stone, a book, or any other object, they all fall toward the ground (though at different rates due to air resistance). This universal behavior tells us that Earth attracts all objects regardless of their size, shape, or material.</p>
+
+                <div class="definition-box">
+                    <strong>Gravitational Force:</strong> The force with which Earth attracts objects toward itself is called gravitational force. This force is also known as the force of gravity or simply gravity.
+                </div>
+
+                <div class="important-note">
+                    <strong>Key Characteristics of Gravitational Force:</strong>
+                    <ul>
+                        <li><strong>Always attractive:</strong> Unlike magnetic or electrostatic forces, gravity never repels - it only attracts</li>
+                        <li><strong>Acts on all objects:</strong> Every object with mass experiences gravitational force</li>
+                        <li><strong>Non-contact force:</strong> Works without physical contact between Earth and the object</li>
+                        <li><strong>Acts toward Earth's center:</strong> The force is always directed toward the center of Earth</li>
+                        <li><strong>Universal force:</strong> Every object in the universe attracts every other object</li>
+                    </ul>
+                </div>
+
+                <h4>📈 Vertical Motion Under Gravity</h4>
+                <p>When objects move under the influence of gravitational force alone, they exhibit what we call vertical motion:</p>
+
+                <div class="image-placeholder">
+                    <div>📷</div>
+                    <div>Figure 5.11: (a) Object dropped from height following straight vertical path (b) Object thrown vertically upward - going up, stopping, then falling down</div>
+                </div>
+
+                <div class="example-box">
+                    <strong>Behavior of Objects in Vertical Motion:</strong>
+                    <ul>
+                        <li><strong>Dropped objects:</strong> Fall straight down, gaining speed as they fall</li>
+                        <li><strong>Thrown upward objects:</strong> Slow down while going up, stop momentarily at the top, then speed up while falling down</li>
+                        <li><strong>Direction change:</strong> Objects thrown upward change their direction of motion at the highest point</li>
+                        <li><strong>Straight path:</strong> All vertical motion follows a straight line toward Earth's center</li>
+                    </ul>
+                </div>
+
+                <div class="step-further-box">
+                    <h4>🌌 Gravity Beyond Earth</h4>
+                    <p>Gravitational force is not unique to Earth. Every celestial body - the Moon, Sun, planets, and stars - has its own gravitational field. This is why:</p>
+                    <ul>
+                        <li>The Moon orbits around Earth</li>
+                        <li>Earth and other planets orbit around the Sun</li>
+                        <li>Tides are caused by Moon's gravity pulling on Earth's oceans</li>
+                        <li>Astronauts experience different gravity on different planets</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5.5 Weight and Its Measurement -->
+        <div class="content-section" id="weight">
+            <h2 class="section-title">5.5 Weight and Its Measurement</h2>
+
+            <p>Now that we understand gravitational force, let's learn about a related concept that we use every day - weight. Weight is directly related to the gravitational force that Earth exerts on objects.</p>
+
+            <div class="definition-box">
+                <strong>Weight:</strong> The force with which Earth pulls an object toward itself is called the weight of the object. Weight measures how strongly an object is pulled by Earth's gravitational force.
+            </div>
+
+            <div class="formula-box">
+                Since weight is a force, it is measured in the same unit as force.<br>
+                <strong>SI Unit of Weight = Newton (N)</strong>
+            </div>
+
+            <h4>🤔 Does Earth Pull All Objects with Equal Force?</h4>
+            <p>This is an interesting question. Let's think about it logically. If we hang different objects from a spring, we can observe how much the spring stretches for each object.</p>
+
+            <div class="image-placeholder">
+                <div>📷</div>
+                <div>Figure 5.12: (a) A hanging spring in normal position (b) Two different objects hung from spring showing different amounts of stretch</div>
+            </div>
+
+            <p>When different objects are hung from the same spring, the spring stretches by different amounts. This tells us that Earth pulls different objects with different forces - in other words, different objects have different weights.</p>
+
+            <div class="important-note">
+                <strong>Key Observation:</strong> The stretch in the spring is directly related to the weight of the object. Heavier objects cause more stretch, while lighter objects cause less stretch.
+            </div>
+
+            <div class="subsection">
+                <h3>⚖️ Spring Balance - A Tool for Measuring Weight</h3>
+                
+                <p>A spring balance is a simple but effective device used to measure the weight (force) acting on objects. Understanding how to use it properly is important for accurate measurements.</p>
+
+                <div class="step-further-box">
+                    <h4>🔧 Components of a Spring Balance</h4>
+                    <p>A spring balance consists of:</p>
+                    <ul>
+                        <li><strong>A spring:</strong> Fixed at one end, which stretches when force is applied</li>
+                        <li><strong>A hook:</strong> Attached to the free end of the spring for hanging objects</li>
+                        <li><strong>A scale:</strong> Marked to show weight (force) in newtons (N)</li>
+                        <li><strong>Additional scale:</strong> Often shows corresponding mass values in grams (g), calibrated for Earth's gravity</li>
+                    </ul>
+                </div>
+
+                <div class="image-placeholder">
+                    <div>📷</div>
+                    <div>Figure 5.13: A spring balance showing detailed scale markings and close-up view</div>
+                </div>
+
+                <h4>📏 How to Read a Spring Balance</h4>
+                <p>Before using any measuring instrument, we must understand its range and precision:</p>
+
+                <table>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>How to Determine</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Maximum Range</strong></td>
+                        <td>Look at the highest value on the scale</td>
+                        <td>0 to 10 N</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Major Division Value</strong></td>
+                        <td>Difference between two consecutive major marks</td>
+                        <td>1 N (between 0-1N, 1-2N, etc.)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Number of Minor Divisions</strong></td>
+                        <td>Count small marks between two major marks</td>
+                        <td>5 divisions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Least Count</strong></td>
+                        <td>Major division ÷ Number of minor divisions</td>
+                        <td>1N ÷ 5 = 0.2 N</td>
+                    </tr>
+                </table>
+
+                <div class="example-box">
+                    <strong>Example Calculation:</strong><br>
+                    If a spring balance has major marks at 0N, 1N, 2N, etc., and there are 5 small divisions between each major mark, then:
+                    <ul>
+                        <li>Range: 0 to 10N (assuming maximum is 10N)</li>
+                        <li>Major division: 1N</li>
+                        <li>Minor divisions: 5</li>
+                        <li>Least count: 1N ÷ 5 = 0.2N</li>
+                    </ul>
+                    This means the spring balance can measure weight to the nearest 0.2N.
+                </div>
+
+                <h4>📊 Using a Spring Balance</h4>
+                <p>To measure the weight of an object using a spring balance:</p>
+                <ol>
+                    <li><strong>Check the range:</strong> Ensure the object's weight is within the spring balance's capacity</li>
+                    <li><strong>Zero the balance:</strong> Make sure it reads zero when nothing is hanging</li>
+                    <li><strong>Hang the object:</strong> Attach it securely to the hook</li>
+                    <li><strong>Wait for stability:</strong> Allow the spring to settle and stop oscillating</li>
+                    <li><strong>Read the scale:</strong> Note where the pointer aligns with the scale</li>
+                    <li><strong>Record the measurement:</strong> Write down the reading with proper units</li>
+                </ol>
+
+                <div class="image-placeholder">
+                    <div>📷</div>
+                    <div>Figure 5.14: Object suspended from a spring balance showing proper measurement technique</div>
+                </div>
+
+                <table>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Object</th>
+                        <th>Weight (N)</th>
+                        <th>Observation</th>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>Pencil Box (empty)</td>
+                        <td>0.8 N</td>
+                        <td>Light object, small stretch</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Partially filled water bottle</td>
+                        <td>3.2 N</td>
+                        <td>Heavier object, more stretch</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Small stone</td>
+                        <td>1.5 N</td>
+                        <td>Dense object, moderate weight</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="subsection">
+                <h3>⚖️ Weight vs Mass - Understanding the Difference</h3>
+                
+                <p>One of the most common confusions in science is between weight and mass. While we often use these terms interchangeably in daily life, they are actually quite different concepts in physics.</p>
+
+                <table>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Mass</th>
+                        <th>Weight</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Definition</strong></td>
+                        <td>Amount of matter in an object</td>
+                        <td>Gravitational force acting on an object</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nature</strong></td>
+                        <td>Scalar quantity (only magnitude)</td>
+                        <td>Vector quantity (has direction - toward Earth's center)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SI Unit</strong></td>
+                        <td>Kilogram (kg) or gram (g)</td>
+                        <td>Newton (N)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Variability</strong></td>
+                        <td>Remains constant everywhere</td>
+                        <td>Changes with location and gravity</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Measurement Tool</strong></td>
+                        <td>Beam balance (comparison method)</td>
+                        <td>Spring balance (direct force measurement)</td>
+                    </tr>
+                </table>
+
+                <div class="important-note">
+                    <strong>Key Understanding:</strong> Mass is an intrinsic property of matter and doesn't change regardless of location. Weight, being a force, depends on the gravitational field strength at that location.
+                </div>
+
+                <div class="weight-comparison-table">
+                    <h4>🌍 Weight of Same Object on Different Celestial Bodies</h4>
+                    <table>
+                        <tr>
+                            <th>Celestial Body</th>
+                            <th>Mass of Object</th>
+                            <th>Weight of Object</th>
+                            <th>Gravity Strength</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Earth</strong></td>
+                            <td>1 kg</td>
+                            <td>10 N</td>
+                            <td>Strong</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Moon</strong></td>
+                            <td>1 kg</td>
+                            <td>1.6 N</td>
+                            <td>Much weaker than Earth</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mars</strong></td>
+                            <td>1 kg</td>
+                            <td>3.8 N</td>
+                            <td>Weaker than Earth</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Venus</strong></td>
+                            <td>1 kg</td>
+                            <td>9 N</td>
+                            <td>Similar to Earth</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Jupiter</strong></td>
+                            <td>1 kg</td>
+                            <td>25.4 N</td>
+                            <td>Much stronger than Earth</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="example-box">
+                    <strong>Real-life Examples:</strong>
+                    <ul>
+                        <li><strong>Astronaut on Moon:</strong> Same mass as on Earth, but weighs only 1/6th as much</li>
+                        <li><strong>Object in space:</strong> Same mass, but weightless due to no significant gravitational field</li>
+                        <li><strong>Deep ocean vs mountain top:</strong> Same mass, slightly different weight due to distance from Earth's center</li>
+                    </ul>
+                </div>
+
+                <div class="step-further-box">
+                    <h4>💡 Practical Note</h4>
+                    <p>In everyday life, especially for goods we commonly buy and sell, we are more interested in the amount of matter (mass) rather than the gravitational force (weight). However, people often use the term "weight" when they actually mean "mass."</p>
+                    <p><strong>Example:</strong> When we say "the weight of this bag is 10 kg," we are actually referring to its mass. Scientifically, we should say "the mass of this bag is 10 kg" and "the weight of this bag is 100 N" (on Earth).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5.6 Floating and Sinking -->
+        <div class="content-section" id="floating">
+            <h2 class="section-title">5.6 Floating and Sinking</h2>
+
+            <p>Have you ever noticed that when you take water out of a bucket using a mug, the mug feels lighter when it's inside the water? Or wondered why some objects float on water while others sink to the bottom, even though gravity acts on all objects?</p>
+
+            <div class="important-note">
+                <strong>Key Question:</strong> If gravitational force acts on all objects pulling them downward, why don't all objects fall to the bottom when placed in water? What prevents some objects from sinking?
+            </div>
+
+            <div class="subsection">
+                <h3>🌊 Buoyant Force (Upthrust)</h3>
+                
+                <p>When you try to push an empty plastic bottle (with lid tightly closed) into water, you can feel an upward push from the water. If you release the bottle, it bounces back to the surface. This demonstrates that water applies an upward force on objects placed in it.</p>
+
+                <div class="definition-box">
+                    <strong>Buoyant Force (Upthrust):</strong> The upward force applied by a liquid on an object placed in it is called buoyant force or upthrust. This force acts vertically upward, opposing the downward gravitational force.
+                </div>
+
+                <div class="image-placeholder">
+                    <div>📷</div>
+                    <div>Figure 5.15: Plastic bottle in water showing upward buoyant force</div>
+                </div>
+
+                <h4>🤔 Why Does Buoyant Force Exist?</h4>
+                <p>Buoyant force exists because liquids have weight and exert pressure. When an object is placed in a liquid:</p>
+                <ul>
+                    <li>The liquid exerts pressure on all sides of the object</li>
+                    <li>Pressure increases with depth</li>
+                    <li>The bottom of the object experiences greater upward pressure than the top experiences downward pressure</li>
+                    <li>This difference in pressure creates a net upward force - the buoyant force</li>
+                </ul>
+
+                <h4>⚖️ The Battle of Forces</h4>
+                <p>When an object is placed in a liquid, two main forces act on it:</p>
+                <ul>
+                    <li><strong>Gravitational Force:</strong> Acts downward, pulling the object toward Earth's center</li>
+                    <li><strong>Buoyant Force:</strong> Acts upward, pushing the object away from the liquid's bottom</li>
+                </ul>
+
+                <div class="example-box">
+                    <strong>Outcome of Force Competition:</strong>
+                    <ul>
+                        <li><strong>Object Sinks:</strong> When gravitational force > buoyant force</li>
+                        <li><strong>Object Floats:</strong> When gravitational force = buoyant force</li>
+                        <li><strong>Object Rises:</strong> When buoyant force > gravitational force (like an air bubble in water)</li>
+                    </ul>
+                </div>
+
+                <div class="step-further-box">
+                    <h4>🔬 Archimedes' Principle</h4>
+                    <p>Archimedes, a famous Greek scientist, discovered an important principle about buoyant force:</p>
+                    <p><strong>"When an object is fully or partially immersed in a liquid, it experiences an upward force which is equal to the weight of the liquid it displaces."</strong></p>
+                    
+                    <p><strong>Understanding Archimedes' Principle:</strong></p>
+                    <ul>
+                        <li>If the weight of displaced liquid < weight of object → Object sinks</li>
+                        <li>If the weight of displaced liquid = weight of object → Object floats</li>
+                        <li>If the weight of displaced liquid > weight of object → Object rises to surface</li>
+                    </ul>
+                </div>
+
+                <h4>📊 Factors Affecting Buoyant Force</h4>
+                <p>The strength of buoyant force depends on several factors:</p>
+                <ul>
+                    <li><strong>Density of the liquid:</strong> Denser liquids provide greater buoyant force</li>
+                    <li><strong>Volume of object immersed:</strong> More immersion means more displaced liquid</li>
+                    <li><strong>Shape of the object:</strong> Affects how much liquid is displaced</li>
+                </ul>
+
+                <div class="example-box">
+                    <strong>Examples of Buoyancy in Action:</strong>
+                    <ul>
+                        <li><strong>Ships:</strong> Steel ships float because their hollow design displaces enough water</li>
+                        <li><strong>Ice cubes:</strong> Float in water because ice is less dense than liquid water</li>
+                        <li><strong>Hot air balloons:</strong> Float in air because hot air is less dense than cold air</li>
+                        <li><strong>Submarines:</strong> Control buoyancy by adjusting water in ballast tanks</li>
+                        <li><strong>Human body:</strong> Most people can float in water due to body's average density</li>
+                    </ul>
+                </div>
+
+                <div class="step-further-box">
+                    <h4>🪨 Floating Rocks?</h4>
+                    <p><strong>Pumice Stone:</strong> Yes, some rocks can float on water! Pumice is formed during volcanic eruptions when lava with lots of gas and water vapor cools quickly. This traps tiny bubbles of gas inside, creating a light, porous rock filled with air pockets. Because of these air spaces, pumice is less dense than water and floats on it.</p>
+                    <p>This shows that floating or sinking depends on density, not just the material type!</p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>⚖️ Density and Floating</h3>
+                
+                <p>The key to understanding floating and sinking lies in comparing the densities of objects and liquids. Density is the amount of mass packed into a given volume.</p>
+
+                <div class="definition-box">
+                    <strong>Density Rule:</strong>
+                    <ul>
+                        <li><strong>Object density < Liquid density:</strong> Object floats</li>
+                        <li><strong>Object density = Liquid density:</strong> Object remains suspended</li>
+                        <li><strong>Object density > Liquid density:</strong> Object sinks</li>
+                    </ul>
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Object/Material</th>
+                        <th>Density (approximate)</th>
+                        <th>Behavior in Water</th>
+                        <th>Explanation</th>
+                    </tr>
+                    <tr>
+                        <td>Cork</td>
+                        <td>0.24 g/cm³</td>
+                        <td>Floats</td>
+                        <td>Much less dense than water</td>
+                    </tr>
+                    <tr>
+                        <td>Wood (oak)</td>
+                        <td>0.75 g/cm³</td>
+                        <td>Floats</td>
+                        <td>Less dense than water</td>
+                    </tr>
+                    <tr>
+                        <td>Ice</td>
+                        <td>0.92 g/cm³</td>
+                        <td>Floats</td>
+                        <td>Slightly less dense than water</td>
+                    </tr>
+                    <tr>
+                        <td>Water</td>
+                        <td>1.00 g/cm³</td>
+                        <td>Reference</td>
+                        <td>Standard comparison</td>
+                    </tr>
+                    <tr>
+                        <td>Plastic (typical)</td>
+                        <td>1.20 g/cm³</td>
+                        <td>Sinks</td>
+                        <td>Slightly more dense than water</td>
+                    </tr>
+                    <tr>
+                        <td>Iron</td>
+                        <td>7.87 g/cm³</td>
+                        <td>Sinks</td>
+                        <td>Much more dense than water</td>
+                    </tr>
+                    <tr>
+                        <td>Gold</td>
+                        <td>19.3 g/cm³</td>
+                        <td>Sinks</td>
+                        <td>Very dense metal</td>
+                    </tr>
+                </table>
+
+                <div class="example-box">
+                    <strong>Practical Examples:</strong>
+                    <ul>
+                        <li><strong>Why does a small coin sink but a large wooden log float?</strong> The coin is made of dense metal, while wood has lower density than water, regardless of size.</li>
+                        <li><strong>Why does ice float in water?</strong> When water freezes, it expands and becomes less dense than liquid water.</li>
+                        <li><strong>Why can large ships float?</strong> Though made of steel, ships are hollow with lots of air space, making their overall density less than water.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="content-section">
+            <h2 class="section-title">📝 Chapter Summary</h2>
+
+            <div class="step-further-box">
+                <h4>🔑 Key Concepts Learned</h4>
+                <ul>
+                    <li><strong>Force:</strong> A push or pull resulting from interaction between objects, measured in Newton (N)</li>
+                    <li><strong>Effects of Force:</strong> Can start motion, stop motion, change speed, change direction, or change shape</li>
+                    <li><strong>Force Interaction:</strong> Always involves at least two objects interacting with each other</li>
+                    <li><strong>Contact Forces:</strong> Require physical contact (muscular force, friction)</li>
+                    <li><strong>Non-contact Forces:</strong> Act without contact (magnetic, electrostatic, gravitational)</li>
+                    <li><strong>Friction:</strong> Always opposes motion, depends on surface roughness</li>
+                    <li><strong>Gravity:</strong> Universal attractive force, always acts downward on Earth</li>
+                    <li><strong>Weight vs Mass:</strong> Weight is force (N), mass is amount of matter (kg)</li>
+                    <li><strong>Buoyancy:</strong> Upward force by liquids, determines floating or sinking</li>
+                </ul>
+            </div>
+
+            <div class="important-note">
+                <h4>🎯 Answers to Opening Questions</h4>
+                <ul>
+                    <li><strong>Why harder to pedal uphill?</strong> Gravity acts against the motion, requiring more muscular force to overcome it.</li>
+                    <li><strong>Why easier to slip on wet surfaces?</strong> Water reduces friction between surfaces, making it harder to grip.</li>
+                    <li><strong>Why feel light on swing?</strong> At the highest point, you briefly experience reduced gravitational effect due to motion.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Practice Questions -->
+        <div class="quiz-section">
+            <h2 style="text-align: center; margin-bottom: 30px;">🧠 Practice Questions</h2>
+
+            <div class="subsection">
+                <h3>📝 Objective Questions</h3>
+
+                <div class="question">
+                    <p><strong>1.</strong> Which of the following is NOT a contact force?</p>
+                    <p>a) Muscular force &nbsp;&nbsp; b) Friction &nbsp;&nbsp; c) Magnetic force &nbsp;&nbsp; d) Normal force</p>
+                    <button class="show-answer" onclick="toggleAnswer('ans1')">Show Answer</button>
+                    <div class="answer" id="ans1">
+                        <strong>Answer: c) Magnetic force</strong><br>
+                        <strong>Explanation:</strong> Magnetic force is a non-contact force because magnets can attract or repel other magnetic materials without physically touching them. Muscular force, friction, and normal force all require physical contact between objects.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>2.</strong> The SI unit of force is:</p>
+                    <p>a) Kilogram (kg) &nbsp;&nbsp; b) Newton (N) &nbsp;&nbsp; c) Meter (m) &nbsp;&nbsp; d) Joule (J)</p>
+                    <button class="show-answer" onclick="toggleAnswer('ans2')">Show Answer</button>
+                    <div class="answer" id="ans2">
+                        <strong>Answer: b) Newton (N)</strong><br>
+                        <strong>Explanation:</strong> Newton (N) is the SI unit of force, named after Sir Isaac Newton. Kilogram is the unit of mass, meter is the unit of length, and joule is the unit of energy.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>3.</strong> Friction always acts:</p>
+                    <p>a) In the direction of motion &nbsp;&nbsp; b) Opposite to the direction of motion &nbsp;&nbsp; c) Perpendicular to motion &nbsp;&nbsp; d) At 45° to motion</p>
+                    <button class="show-answer" onclick="toggleAnswer('ans3')">Show Answer</button>
+                    <div class="answer" id="ans3">
+                        <strong>Answer: b) Opposite to the direction of motion</strong><br>
+                        <strong>Explanation:</strong> Friction is a force that opposes motion. It always acts in the direction opposite to the direction of motion or attempted motion, which is why it slows down moving objects.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>4.</strong> Two objects with like charges will:</p>
+                    <p>a) Attract each other &nbsp;&nbsp; b) Repel each other &nbsp;&nbsp; c) Have no effect on each other &nbsp;&nbsp; d) Neutralize each other</p>
+                    <button class="show-answer" onclick="toggleAnswer('ans4')">Show Answer</button>
+                    <div class="answer" id="ans4">
+                        <strong>Answer: b) Repel each other</strong><br>
+                        <strong>Explanation:</strong> Like charges (both positive or both negative) repel each other, while unlike charges (positive and negative) attract each other. This is a fundamental rule of electrostatic force.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>5.</strong> An object will float in a liquid when:</p>
+                    <p>a) Its weight is greater than buoyant force &nbsp;&nbsp; b) Its weight equals buoyant force &nbsp;&nbsp; c) Its density is greater than liquid &nbsp;&nbsp; d) It has no mass</p>
+                    <button class="show-answer" onclick="toggleAnswer('ans5')">Show Answer</button>
+                    <div class="answer" id="ans5">
+                        <strong>Answer: b) Its weight equals buoyant force</strong><br>
+                        <strong>Explanation:</strong> When the upward buoyant force exactly balances the downward gravitational force (weight), the object floats. This typically happens when the object's density is less than or equal to the liquid's density.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>6.</strong> The gravitational force is:</p>
+                    <p>a) Always repulsive &nbsp;&nbsp; b) Always attractive &nbsp;&nbsp; c) Sometimes attractive, sometimes repulsive &nbsp;&nbsp; d) Only acts on heavy objects</p>
+                    <button class="show-answer" onclick="toggleAnswer('ans6')">Show Answer</button>
+                    <div class="answer" id="ans6">
+                        <strong>Answer: b) Always attractive</strong><br>
+                        <strong>Explanation:</strong> Unlike magnetic or electrostatic forces which can be either attractive or repulsive, gravitational force is always attractive. It always pulls objects toward each other, never pushes them apart.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>7.</strong> Which factor does NOT affect the amount of friction between two surfaces?</p>
+                    <p>a) Roughness of surfaces &nbsp;&nbsp; b) Weight of the object &nbsp;&nbsp; c) Color of the surfaces &nbsp;&nbsp; d) Area of contact</p>
+                    <button class="show-answer" onclick="toggleAnswer('ans7')">Show Answer</button>
+                    <div class="answer" id="ans7">
+                        <strong>Answer: c) Color of the surfaces</strong><br>
+                        <strong>Explanation:</strong> The color of surfaces does not affect friction. Friction depends on the roughness of surfaces, the normal force (related to weight), and to some extent the area of contact, but not on optical properties like color.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>8.</strong> Mass and weight differ in that:</p>
+                    <p>a) They have different units &nbsp;&nbsp; b) Mass changes with location but weight doesn't &nbsp;&nbsp; c) They are exactly the same &nbsp;&nbsp; d) Weight is always greater than mass</p>
+                    <button class="show-answer" onclick="toggleAnswer('ans8')">Show Answer</button>
+                    <div class="answer" id="ans8">
+                        <strong>Answer: a) They have different units</strong><br>
+                        <strong>Explanation:</strong> Mass is measured in kilograms (kg) while weight is measured in Newtons (N). Also, mass remains constant everywhere while weight changes with gravitational field strength. Weight is the gravitational force acting on mass.
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>✍️ Subjective Questions</h3>
+
+                <div class="question">
+                    <p><strong>1.</strong> Explain why it is difficult to walk on a wet, slippery surface. What can be done to make it safer?</p>
+                    <button class="show-answer" onclick="toggleAnswer('subj1')">Show Answer</button>
+                    <div class="answer" id="subj1">
+                        <strong>Answer:</strong><br>
+                        Walking becomes difficult on wet, slippery surfaces because friction between our shoes and the ground is greatly reduced. When surfaces are wet, a thin layer of water acts as a lubricant, reducing the contact between the irregularities of our shoe soles and the ground surface.
+                        <br><br><strong>Why this happens:</strong>
+                        <br>• Water fills the tiny gaps and irregularities between surfaces
+                        <br>• This reduces the interlocking of surface irregularities
+                        <br>• Less interlocking means less friction
+                        <br>• Without adequate friction, our feet cannot grip the surface properly
+                        <br><br><strong>Safety measures:</strong>
+                        <br>• Use shoes with good treads or anti-slip soles
+                        <br>• Walk slowly and take smaller steps
+                        <br>• Use anti-slip mats or carpets
+                        <br>• Add sand or salt to icy surfaces to increase roughness
+                        <br>• Install handrails for support
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>2.</strong> A astronaut's weight on the Moon is much less than on Earth, but their mass remains the same. Explain this statement with scientific reasons.</p>
+                    <button class="show-answer" onclick="toggleAnswer('subj2')">Show Answer</button>
+                    <div class="answer" id="subj2">
+                        <strong>Answer:</strong><br>
+                        This happens because mass and weight are fundamentally different quantities:
+                        <br><br><strong>Mass:</strong>
+                        <br>• Represents the amount of matter in an object
+                        <br>• Is an intrinsic property that doesn't change with location
+                        <br>• Measured in kilograms (kg)
+                        <br>• Remains constant whether on Earth, Moon, or anywhere else
+                        <br><br><strong>Weight:</strong>
+                        <br>• Is the gravitational force acting on an object
+                        <br>• Depends on both mass and local gravitational field strength
+                        <br>• Measured in Newtons (N)
+                        <br>• Changes with location because gravitational strength varies
+                        <br><br><strong>Moon vs Earth:</strong>
+                        <br>• Moon's gravity is about 1/6th of Earth's gravity
+                        <br>• Same mass experiences 1/6th the gravitational force
+                        <br>• Example: 60 kg astronaut weighs 600 N on Earth but only 100 N on Moon
+                        <br>• The astronaut feels lighter but still has the same amount of matter (mass)
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>3.</strong> Why do racing cars and airplanes have streamlined shapes? Explain in terms of forces and provide examples.</p>
+                    <button class="show-answer" onclick="toggleAnswer('subj3')">Show Answer</button>
+                    <div class="answer" id="subj3">
+                        <strong>Answer:</strong><br>
+                        Racing cars and airplanes have streamlined shapes to minimize air resistance (friction with air), which allows them to move more efficiently at high speeds.
+                        <br><br><strong>The Physics:</strong>
+                        <br>• When objects move through air, air molecules exert friction force opposite to motion
+                        <br>• This air resistance increases dramatically with speed
+                        <br>• Streamlined shapes allow air to flow smoothly around the object
+                        <br>• Smooth airflow reduces turbulence and drag
+                        <br><br><strong>Benefits of streamlining:</strong>
+                        <br>• <strong>Higher speeds:</strong> Less energy wasted fighting air resistance
+                        <br>• <strong>Better fuel efficiency:</strong> Less power needed to maintain speed
+                        <br>• <strong>Improved stability:</strong> Reduced turbulence means better control
+                        <br>• <strong>Reduced noise:</strong> Smooth airflow is quieter
+                        <br><br><strong>Examples:</strong>
+                        <br>• <strong>Formula 1 cars:</strong> Pointed nose, smooth curves, low height
+                        <br>• <strong>Commercial aircraft:</strong> Tapered fuselage, swept wings
+                        <br>• <strong>Bullet trains:</strong> Long, pointed front end
+                        <br>• <strong>Submarines:</strong> Torpedo-like shape for moving through water
+                        <br>• <strong>Birds and fish:</strong> Natural streamlining for efficient movement
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>4.</strong> Describe an experiment to demonstrate that force can change the shape of an object. Include materials, procedure, and expected observations.</p>
+                    <button class="show-answer" onclick="toggleAnswer('subj4')">Show Answer</button>
+                    <div class="answer" id="subj4">
+                        <strong>Answer:</strong><br>
+                        <strong>Experiment:</strong> Demonstrating Shape Change Due to Force
+                        <br><br><strong>Materials needed:</strong>
+                        <br>• Inflated balloon
+                        <br>• Soft modeling clay or play dough
+                        <br>• Rubber ball or stress ball
+                        <br>• Metal spring
+                        <br>• Soft sponge
+                        <br><br><strong>Procedure:</strong>
+                        <br>1. <strong>Balloon test:</strong> Gently press the inflated balloon with your hands from different sides
+                        <br>2. <strong>Clay test:</strong> Take the clay and squeeze, stretch, twist, and roll it
+                        <br>3. <strong>Ball test:</strong> Squeeze the rubber ball firmly with your hand
+                        <br>4. <strong>Spring test:</strong> Pull the spring to stretch it, then push to compress it
+                        <br>5. <strong>Sponge test:</strong> Press the sponge and then release it
+                        <br><br><strong>Observations:</strong>
+                        <br>• <strong>Balloon:</strong> Changes shape when pressed, returns to original when released
+                        <br>• <strong>Clay:</strong> Permanently changes shape, retains new form
+                        <br>• <strong>Rubber ball:</strong> Deforms when squeezed, springs back when released
+                        <br>• <strong>Spring:</strong> Stretches and compresses, returns to original length
+                        <br>• <strong>Sponge:</strong> Compresses easily, expands back when released
+                        <br><br><strong>Conclusion:</strong> Force can change the shape of objects. Some materials return to original shape (elastic), while others retain the new shape (plastic deformation).
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>5.</strong> Compare gravitational force with magnetic force. Give three similarities and three differences with examples.</p>
+                    <button class="show-answer" onclick="toggleAnswer('subj5')">Show Answer</button>
+                    <div class="answer" id="subj5">
+                        <strong>Answer:</strong><br>
+                        <strong>SIMILARITIES:</strong>
+                        <br>1. <strong>Non-contact forces:</strong> Both can act without objects touching each other
+                        <br>   - Gravity pulls objects to Earth without contact
+                        <br>   - Magnets attract iron objects from a distance
+                        <br><br>2. <strong>Act over distance:</strong> Both forces can work across empty space
+                        <br>   - Moon's gravity affects Earth's tides across space
+                        <br>   - Magnetic fields extend beyond the visible magnet
+                        <br><br>3. <strong>Involve interaction:</strong> Both require two or more objects to exist
+                        <br>   - Gravity needs mass of Earth and mass of object
+                        <br>   - Magnetic force needs two magnetic objects or fields
+                        <br><br><strong>DIFFERENCES:</strong>
+                        <br>1. <strong>Nature of force:</strong>
+                        <br>   - Gravity is ALWAYS attractive (only pulls)
+                        <br>   - Magnetic force can be attractive OR repulsive (like poles repel, unlike attract)
+                        <br><br>2. <strong>Objects affected:</strong>
+                        <br>   - Gravity acts on ALL objects with mass (universal)
+                        <br>   - Magnetic force acts only on magnetic materials (iron, nickel, cobalt)
+                        <br><br>3. <strong>Strength variation:</strong>
+                        <br>   - Gravity is relatively constant near Earth's surface
+                        <br>   - Magnetic force varies greatly with distance and can be easily blocked by materials
+                        <br><br><strong>Examples:</strong>
+                        <br>• A plastic bottle falls due to gravity but isn't affected by magnets
+                        <br>• Two north poles of magnets repel, but two masses always attract gravitationally
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>6.</strong> Explain why ships made of iron and steel can float on water while a small iron nail sinks. Use the concept of density and buoyancy in your answer.</p>
+                    <button class="show-answer" onclick="toggleAnswer('subj6')">Show Answer</button>
+                    <div class="answer" id="subj6">
+                        <strong>Answer:</strong><br>
+                        This apparent contradiction can be explained using the concepts of density and Archimedes' principle:
+                        <br><br><strong>Why an iron nail sinks:</strong>
+                        <br>• Iron has a density of about 7.87 g/cm³
+                        <br>• Water has a density of 1.00 g/cm³
+                        <br>• Since iron density > water density, the nail sinks
+                        <br>• The small nail displaces very little water, so buoyant force is small
+                        <br>• Weight of nail > buoyant force, so it sinks
+                        <br><br><strong>Why iron ships float:</strong>
+                        <br>• Ships are not solid iron - they have a hollow structure
+                        <br>• The hollow spaces contain air (density ≈ 0.001 g/cm³)
+                        <br>• <strong>Average density</strong> of entire ship (iron + air) < density of water
+                        <br>• Large volume displaces massive amount of water
+                        <br>• Weight of displaced water = buoyant force > weight of ship
+                        <br><br><strong>Key concept - Effective Density:</strong>
+                        <br>• What matters is not the material density, but the average density of the entire object
+                        <br>• Ship's effective density = (mass of ship) ÷ (total volume including air spaces)
+                        <br>• This effective density is less than water's density
+                        <br><br><strong>Design features that help:</strong>
+                        <br>• Hull design maximizes internal air volume
+                        <br>• Watertight compartments prevent flooding
+                        <br>• Wide, flat bottom increases water displacement
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+            } else {
+                answer.style.display = 'none';
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all content sections
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

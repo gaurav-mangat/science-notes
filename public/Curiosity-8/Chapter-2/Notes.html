@@ -3,8 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curiosity Chapter 2: The Invisible Living World : Beyond Our Naked Eyes - Notes</title>
+    <title>Curiosity Notes | The Invisible Living World: Beyond Our Naked Eyes Class 8</title>
+    <meta name="description" content="Curiosity Class 8 Science Notes of Chapter 2 - The Invisible Living World: Beyond Our Naked Eyes. Beautifully Designed, Easy explanations, with diagrams for exam preparation.">
+
     <style>
+        
+    /* ===== WEBSITE HEADER STYLES ===== */
+    .website-header {
+        background: linear-gradient(135deg, #059669 0%, #0f766e 100%);
+        color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .header-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    
+    /* Match site navbar spacing under fixed header */
+    body {
+        padding-top: 6rem;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 4rem;
+    }
+
+    .logo-section {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .logo-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: white;
+        transition: opacity 0.2s;
+    }
+
+    .logo-link:hover {
+        opacity: 0.8;
+    }
+
+    .logo-icon {
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+    }
+
+    .logo-text {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.2s;
+        font-weight: 500;
+    }
+
+    .nav-links a:hover {
+        color: #e0f2fe;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: relative;
+        z-index: 1001;
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-menu-btn:focus {
+        outline: none;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 4rem;
+        right: 1rem;
+        background: #10b981;
+        border-radius: 0.375rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        min-width: 8rem;
+        padding: 0.5rem 0;
+    }
+
+    .mobile-menu.show {
+        display: block;
+    }
+
+    .mobile-menu a {
+        display: block;
+        padding: 0.75rem 1rem;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.2s;
+        font-weight: 500;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-menu a:last-child {
+        border-bottom: none;
+    }
+
+    .mobile-menu a:hover {
+        background-color: #059669;
+    }
+
+    @media (min-width: 768px) {
+        .nav-links {
+            display: flex;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+        }
+
+        .mobile-menu {
+            display: none !important;
+        }
+    }
+
         * {
             margin: 0;
             padding: 0;
@@ -20,6 +180,8 @@
         }
         
         .container {
+            padding-top: 5rem;
+           
             max-width: 1200px;
             margin: 0 auto;
             background: white;
@@ -404,8 +566,36 @@
                 font-size: 0.9rem;
             }
         }
+        
     </style>
     <script>
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    if (mobileMenu.style.display === 'block') {
+                        mobileMenu.style.display = 'none';
+                    } else {
+                        mobileMenu.style.display = 'block';
+                    }
+                });
+
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                        mobileMenu.style.display = 'none';
+                    }
+                });
+            }
+        });
+
         function showAnswer(button) {
             const answer = button.nextElementSibling;
             if (answer.style.display === 'block') {
@@ -420,9 +610,66 @@
                 button.classList.add('hide-answer-btn');
             }
         }
+
+        function navigateToHome() {
+            // Check if we're running locally (file:// protocol) or on a server
+            if (window.location.protocol === 'file:') {
+                // If opened as local file, try to open the Next.js app
+                window.open('http://localhost:3001', '_blank');
+            } else {
+                // If on a server, navigate normally
+                window.location.href = '/';
+            }
+            // Close mobile menu
+            document.getElementById('mobile-menu').style.display = 'none';
+        }
+
+        function navigateToAbout() {
+            // Check if we're running locally (file:// protocol) or on a server
+            if (window.location.protocol === 'file:') {
+                // If opened as local file, try to open the Next.js app
+                window.open('http://localhost:3001/about', '_blank');
+            } else {
+                // If on a server, navigate normally
+                window.location.href = '/about';
+            }
+            // Close mobile menu
+            document.getElementById('mobile-menu').style.display = 'none';
+        }
     </script>
 </head>
 <body>
+    <!-- Website Header -->
+    <header class="website-header">
+        <div class="header-container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <a href="/" class="logo-link">
+                        <svg class="logo-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                        <span class="logo-text">myCBSEnotes</span>
+                    </a>
+                </div>
+                <nav class="nav-links">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-btn" id="mobile-menu-button" aria-label="Toggle menu">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <div class="mobile-menu" id="mobile-menu">
+                    <a href="#" onclick="navigateToHome()">Home</a>
+                    <a href="#" onclick="navigateToAbout()">About</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <div class="container">
         <div class="header">
             <h1>Chapter 2 <br> The Invisible Living World : Beyond Our Naked Eye</h1>
@@ -467,7 +714,7 @@
                         <img src="images/Fig2.2.png" alt="Three scientific illustrations: (a) circular microscope view showing cork cells with honeycomb-like structure, (b) antique microscope and spherical lens setup on a wooden base, and (c) feather and leaf drawings. Below, text reads: Fig 2.2: (a) Micrographia book; (b) Microscope of Robert Hooke; (c) Cork cells as published in the Micrographia. The scene is educational and historical, highlighting early discoveries in cell biology.">
                      </div>
                 </div>
-                
+                <br>
                 <h3>Antonie van Leeuwenhoek (1660s)</h3>
                 <div class="scientist-box">
                     <h4>Father of Microbiology</h4>
@@ -481,121 +728,137 @@
                 </div>
             </div>
 
-            <!-- Cell Structure -->
-            <div class="section">
-                <h2>🏗️ What is a Cell? - Detailed Structure</h2>
-                
-                <div class="definition">
-                    <strong>Cell:</strong> A cell is the basic structural and functional unit of life. All living organisms are composed of one or more cells, similar to how bricks form the structure of a wall.
-                </div>
-                
-                <p>When we observe onion peel under a microscope, we see nearly rectangular structures closely arranged without any space between them. These are plant cells. Similarly, when we observe our cheek cells under a microscope, we see polygon-shaped structures that form the inner lining of our mouth.</p>
-                
-                <div class="image-container">
-    <div class="image-wrapper">
-        <img src="images/Fig2.3&2.4.png" alt="(a) Microscopic view of onion peel cells showing rectangular shapes closely packed together; (b) Microscopic view of human cheek cells showing polygonal shapes forming the inner lining of the mouth. Both images highlight the cellular structure of plants and animals, emphasizing the basic unit of life - the cell.">
+<!-- Cell Structure -->
+<div class="section">
+    <h2>🏗️ What is a Cell?</h2>
+    
+    <div class="definition">
+        <strong>Cell:</strong> The cell is the basic structural and functional unit of life. 
+        Just as bricks form a wall, cells form the body of living organisms. 
+        All plants and animals are made up of cells.
+    </div>
+    
+    <p>When observed under a microscope:</p>
+    <ul>
+        <li><strong>Onion peel cells:</strong> Appear rectangular and closely packed, showing plant cell structure.</li>
+        <li><strong>Cheek cells:</strong> Appear polygonal, forming the inner lining of our mouth, showing animal cell structure.</li>
+    </ul>
+    
+    <div class="image-container">
+        <div class="image-wrapper">
+            <img src="images/Fig2.3&2.4.png" alt="Microscopic view of onion peel cells (rectangular) and cheek cells (polygonal), highlighting plant and animal cells.">
+        </div>
     </div>
 </div>
-                
-                <h3>Basic Components of a Cell</h3>
-                <div class="key-point">
-                    <strong>Three Main Parts of Every Cell:</strong> <br><br>
 
-                    <ol>
-                        <li><strong>Cell Membrane:</strong> Thin outer lining that encloses cytoplasm and nucleus</li>
-                        <li><strong>Cytoplasm:</strong> Space between cell membrane and nucleus, filled with various substances</li>
-                        <li><strong>Nucleus:</strong> Small round structure covered by thin membrane</li>
-                    </ol>
-                </div>
-                
-                <h4>Functions of Cell Components:</h4>
-                <ul>
-                    <li><strong>Cell Membrane:</strong>
-                        <ul>
-                            <li>Separates one cell from another</li>
-                            <li>Porous structure allows entry of essential materials</li>
-                            <li>Allows exit of waste materials</li>
-                        </ul>
-                    </li>
-                    <li><strong>Cytoplasm:</strong>
-                        <ul>
-                            <li>Contains carbohydrates, proteins, fats, mineral salts</li>
-                            <li>Most life processes take place within cytoplasm</li>
-                        </ul>
-                    </li>
-                    <li><strong>Nucleus:</strong>
-                        <ul>
-                            <li>Regulates all activities within the cell</li>
-                            <li>Controls growth</li>
-                        </ul>
-                    </li>
-                    <li><strong>Cell Wall (Plants only):</strong>
-                        <ul>
-                            <li>Provides rigidity and strength</li>
-                            <li>Keeps cells arranged compactly</li>
-                            <li>Gives firm structure to plants</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+<!-- Basic Cell Components -->
+<div class="section">
+    <h2>🔑 Basic Components of a Cell</h2>
+    
+    <ol>
+        <li><strong>Cell Membrane:</strong> 
+            <br>Definition: A thin, flexible boundary around the cell that gives it shape and protection.  
+            <br>Functions: 
+            <ul>
+                <li>Separates one cell from another</li>
+                <li>Allows useful materials to enter</li>
+                <li>Removes waste materials</li>
+            </ul>
+        </li>
 
-            <!-- Advanced Cell Structures -->
-            <div class="section">
-                <h2>🔬 Advanced Cell Structures</h2>
-                
-                <div class="key-point">
-                    <strong>Additional Plant Cell Components:</strong><br><br>
-                    <ul>
-                        <li><strong>Plastids:</strong> Tiny rod-shaped structures in all plant parts</li>
-                        <li><strong>Chloroplasts:</strong> Special plastids containing chlorophyll for photosynthesis</li>
-                        <li><strong>Vacuole:</strong> Large, empty-looking space for storage, waste removal, and maintaining cell shape</li>
-                    </ul>
-                </div>
-                
-                <div class="comparison-table">
-                    <table>
-                        <tr>
-                            <th>Component</th>
-                            <th>Plant Cell</th>
-                            <th>Animal Cell</th>
-                        </tr>
-                        <tr>
-                            <td>Cell Wall</td>
-                            <td>Present - provides rigidity</td>
-                            <td>Absent</td>
-                        </tr>
-                        <tr>
-                            <td>Chloroplasts</td>
-                            <td>Present - for photosynthesis</td>
-                            <td>Absent</td>
-                        </tr>
-                        <tr>
-                            <td>Vacuole</td>
-                            <td>Large - for storage and support</td>
-                            <td>Small or absent</td>
-                        </tr>
-                        <tr>
-                            <td>Cell Membrane</td>
-                            <td>Present</td>
-                            <td>Present</td>
-                        </tr>
-                        <tr>
-                            <td>Nucleus</td>
-                            <td>Present</td>
-                            <td>Present</td>
-                        </tr>
-                        <tr>
-                            <td>Cytoplasm</td>
-                            <td>Present</td>
-                            <td>Present</td>
-                        </tr>
-                    </table>
-                </div>
-                
-                <div class="image-placeholder">
-                    [Insert image: Detailed comparison of plant cell and animal cell with all labeled components]
-                </div>
-            </div>
+        <li><strong>Cytoplasm:</strong> 
+            <br>Definition: Jelly-like fluid inside the cell between the membrane and nucleus.  
+            <br>Functions:
+            <ul>
+                <li>Holds organelles (cell parts)</li>
+                <li>Contains nutrients like proteins, fats, and minerals</li>
+                <li>Site of most life processes</li>
+            </ul>
+        </li>
+
+        <li><strong>Nucleus:</strong> 
+            <br>Definition: A round, membrane-covered structure that acts as the control center of the cell.  
+            <br>Functions: 
+            <ul>
+                <li>Controls all cell activities</li>
+                <li>Regulates growth and reproduction</li>
+                <li>Contains genetic material (DNA)</li>
+            </ul>
+        </li>
+
+        <li><strong>Cell Wall (Plants only):</strong> 
+            <br>Definition: A thick, rigid outer covering present only in plant cells.  
+            <br>Functions:
+            <ul>
+                <li>Provides rigidity and strength</li>
+                <li>Gives firm shape to the plant body</li>
+                <li>Keeps plant cells arranged compactly</li>
+            </ul>
+        </li>
+    </ol>
+</div>
+
+<!-- Advanced Plant Cell Structures -->
+<div class="section">
+    <h2>🌱 Advanced Plant Cell Structures</h2>
+    
+    <ul>
+        <li><strong>Plastids:</strong> Small structures found only in plants; they store food or help in photosynthesis.</li>
+        <li><strong>Chloroplasts:</strong> A special type of plastid that contains chlorophyll, which captures sunlight for photosynthesis.</li>
+        <li><strong>Vacuole:</strong> Large, fluid-filled space in plant cells that stores water, food, and waste, and helps maintain shape.</li>
+    </ul>
+</div>
+
+<!-- Plant vs Animal Cell -->
+<div class="section">
+    <h2>📊 Plant Cell vs. Animal Cell</h2>
+    
+    <table border="1" cellspacing="0" cellpadding="8">
+        <tr>
+            <th>Component</th>
+            <th>Plant Cell</th>
+            <th>Animal Cell</th>
+        </tr>
+        <tr>
+            <td>Cell Wall</td>
+            <td>Present – provides rigidity</td>
+            <td>Absent</td>
+        </tr>
+        <tr>
+            <td>Chloroplasts</td>
+            <td>Present – for photosynthesis</td>
+            <td>Absent</td>
+        </tr>
+        <tr>
+            <td>Vacuole</td>
+            <td>Large – for storage and support</td>
+            <td>Small or absent</td>
+        </tr>
+        <tr>
+            <td>Cell Membrane</td>
+            <td>Present</td>
+            <td>Present</td>
+        </tr>
+        <tr>
+            <td>Nucleus</td>
+            <td>Present</td>
+            <td>Present</td>
+        </tr>
+        <tr>
+            <td>Cytoplasm</td>
+            <td>Present</td>
+            <td>Present</td>
+        </tr>
+    </table>
+    
+        <div class="image-container">
+    <div class="image-wrapper">
+        <img src="images/Plant vs Animal Cell.png" alt="A schematic drawing of (a) An animal cell and (b) A plant cell. 
+(The colours are to show different parts of the cell)" width="100%" height="auto">
+    </div>
+</div>
+</div>
+
 
             <!-- Cell Shape Variations -->
             <div class="section">
@@ -725,7 +988,7 @@
     <h2>🦠 Introduction to Microorganisms</h2>
     
     <div class="definition highlight-box">
-        <strong>Microorganisms (Microbes):</strong> Tiny living organisms that are so small they cannot be seen with the naked eye. They usually require a microscope for observation.  
+        <strong>Microorganisms (Microbes):</strong> Tiny living organisms that are so small they cannot be seen with the naked eye and usually require a microscope for observation.  
         <em>(Micro = very small, Organisms = living beings)</em>
     </div>
     
@@ -742,12 +1005,13 @@
     <h3>🌍 Where Are They Found?</h3>
     <p>Microorganisms exist almost everywhere in nature:</p>
     <ul class="styled-list">
+        <li>Air</li>
         <li>Water (rivers, ponds, oceans)</li>
         <li>Soil and soil suspension</li>
-        <li>Air</li>
+
+        <li>In food items</li>
         <li>Inside our bodies (especially gut)</li>
         <li>On plant surfaces (leaves, stems, roots)</li>
-        <li>In food items</li>
         <li>Extreme environments (hot springs, snow-cold zones)</li>
     </ul>
     
@@ -789,7 +1053,7 @@
             </ul>
         </div>
         <div class="image">
-            <img src="images/Protozoa.png" alt="Protozoa Examples: Amoeba and Paramecium">
+            <img src="images/Protozoa.png" alt="Protozoa Examples: Amoeba and Paramecium" width="100%" height="auto">
         </div>
     </div>
 
@@ -864,10 +1128,65 @@
             </ul>
         </div>
         <div class="image">
-            <img src="images/virus.jpg" alt="Structure of Virus">
+            <img src="images/Virus.png" alt="Structure of Virus">
         </div>
     </div>
 </div>
+
+<div class="section">
+    <h2> How Are We Connected to Microbes?</h2>
+    <p>
+        Microorganisms are present all around us – in soil, water, air, and even on the food we eat. 
+        They can grow on the surfaces of fruits, leaves, stems, roots, and other parts of plants. 
+        Some microbes are so adaptable that they survive in extreme conditions such as hot springs, 
+        snow-covered regions, and deep oceans. Even inside our own bodies, especially in the gut, 
+        helpful microorganisms play a vital role in processes like digestion. 
+        Since microbes are everywhere, they are closely connected to our daily lives in many ways. 
+        Let us now explore their importance in the environment, food industry, and other fields.
+    </p>
+</div>
+
+
+
+<div class="section">
+    <h2>🌍Key players in cleaning the environment</h2>
+    
+    <ul>
+        <li>Microorganisms (fungi and bacteria) decompose dead plants and animals.</li>
+        <li>They break down complex waste into simple nutrients (manure).</li>
+        <li>Manure enriches soil fertility and helps crops grow better.</li>
+        <li>Thus, microbes recycle nutrients and maintain balance in nature.</li>
+    </ul>
+
+    <div class="key-point">
+        <strong>Examples:</strong>
+        <ul>
+            <li>Rotting leaves and food wastes → decomposed into nutrient-rich manure.</li>
+            <li>Bacteria and fungi act as natural cleaners of our surroundings.</li>
+            <li>Animal waste (like dung) also decomposed by microbes.</li>
+        </ul>
+    </div>
+     <div class="image-container">
+    <div class="image-wrapper">
+        <img src="images/Manure.png" alt="Recycling of nutrients by making 
+manure from animal and plant waste.">
+    </div>
+</div>
+    <!-- A Step Further -->
+<div class="fun-fact">
+    <h4>Microbes as a Source of Biogas</h4>
+    <p>Many bacteria and fungi can live without oxygen (anaerobic). They decompose plant and animal waste to release a mixture of gases called biogas.</p>
+    
+    <ul>
+        <li>Main gas released: <strong>Methane</strong></li>
+        <li>Other gases: Carbon dioxide and small amounts of others</li>
+        <li>Biogas is used as a fuel for cooking, heating, electricity, and even vehicles</li>
+    </ul>
+</div>
+</div>
+
+
+
 
 
             <!-- Microorganisms and Food -->
@@ -887,17 +1206,24 @@
                 </ul>
                 
                 <h4>How Yeast Works in Bread Making:</h4>
-                <div class="key-point">
-                    <strong>The Fermentation Process:</strong>
-                    <ol>
-                        <li>Yeast feeds on sugar in the dough</li>
-                        <li>During respiration, it breaks down sugar</li>
-                        <li>Releases carbon dioxide gas as byproduct</li>
-                        <li>CO₂ forms bubbles that make dough rise and become fluffy</li>
-                        <li>Also produces small amount of alcohol (evaporates during baking)</li>
-                        <li>Gives bread its characteristic smell and soft texture</li>
-                    </ol>
-                </div>
+               <div class="key-point">
+    <strong>The Fermentation Process:</strong>
+    <ol>
+        <li>Yeast feeds on sugar in the dough</li>
+        <li>During respiration, it breaks down sugar</li>
+        <li>Releases carbon dioxide gas as a byproduct</li>
+        <li>CO₂ forms bubbles that make dough rise and become fluffy</li>
+        <li>Also produces a small amount of alcohol (which evaporates during baking)</li>
+        <li>Gives bread its characteristic smell and soft texture</li>
+    </ol>
+
+    <p><strong>Word Equation:</strong></p>
+    <p style="margin-left:20px;">
+        Glucose &nbsp; → &nbsp; Alcohol + Carbon dioxide
+    </p>
+</div>
+
+
                 
                 <h4>Other Uses of Yeast:</h4>
                 <ul>
@@ -907,81 +1233,59 @@
                 </ul>
                 <br>
                 <h3>2. Role of Bacteria in Food</h3>
-                
-                <h4>Lactobacillus Bacteria:</h4>
-                <ul>
-                    <li><strong>Main function:</strong> Converts milk into curd</li>
-                    <li><strong>Process:</strong> Feeds on lactose (milk sugar)</li>
-                    <li><strong>Product:</strong> Produces lactic acid instead of alcohol</li>
-                    <li><strong>Result:</strong> Makes curd sour and thick</li>
-                    <li><strong>Condition:</strong> Works best in warm temperatures</li>
-                </ul>
-                
-                <div class="key-point">
-                    <strong>Curd Formation Process:</strong>
-                    <ul>
-                        <li>Curd contains several types of beneficial bacteria</li>
-                        <li>Lactobacillus multiplies and ferments milk</li>
-                        <li>Warm conditions promote faster curd formation</li>
-                        <li>Cold conditions slow down or prevent curd formation</li>
-                    </ul>
-                </div>
-                
-                <div class="image-placeholder">
-                    [Insert image: Bread making process with yeast and curd formation process]
-                </div>
-            </div>
 
-            <!-- Agricultural Benefits -->
-            <div class="section">
-                <h2>🌾 Microorganisms in Agriculture</h2>
+<h4>Lactobacillus Bacteria:</h4>
+<ul>
+    <li>Converts milk into curd by feeding on lactose (milk sugar)</li>
+    <li>Produces lactic acid, which makes curd sour and thick</li>
+    <li>Works best in warm conditions</li>
+</ul>
+
+<div class="key-point">
+    <strong>Curd Formation Process:</strong>
+    <ul>
+        <li>Lactobacillus bacteria multiply in milk</li>
+        <li>They ferment lactose into lactic acid</li>
+        <li>Lactic acid thickens milk and gives curd its taste</li>
+    </ul>
+</div>
+
                 
-                <h3>Rhizobium Bacteria - Nature's Fertilizer Factory</h3>
-                
-                <h4>What is Rhizobium?</h4>
-                <ul>
-                    <li>Special type of bacteria that lives in plant roots</li>
-                    <li>Forms swollen regions called <strong>root nodules</strong></li>
-                    <li>Lives symbiotically with legume plants</li>
-                </ul>
-                
-                <h4>Where is Rhizobium Found?</h4>
-                <ul>
-                    <li>Root nodules of legumes like:</li>
-                    <ul>
-                        <li>Beans</li>
-                        <li>Peas</li>
-                        <li>Lentils</li>
-                        <li>Cowpea</li>
-                        <li>Other leguminous crops</li>
-                    </ul>
-                </ul>
-                
-                <h4>How Rhizobium Helps Plants:</h4>
-                <div class="key-point">
-                    <strong>Nitrogen Fixation Process:</strong>
-                    <ol>
-                        <li>Rhizobium bacteria trap nitrogen gas from air</li>
-                        <li>Convert atmospheric nitrogen into useful compounds</li>
-                        <li>Make nitrogen available for plant nutrition</li>
-                        <li>Help plants grow better without chemical fertilizers</li>
-                        <li>Increase soil fertility naturally</li>
-                    </ol>
-                </div>
-                
-                <h4>Benefits for Farmers:</h4>
-                <ul>
-                    <li>Reduces need for expensive chemical fertilizers</li>
-                    <li>Farmers grow legumes in rotation with other crops</li>
-                    <li>Naturally increases nitrogen content in soil</li>
-                    <li>Keeps soil healthy for next crop</li>
-                    <li>Sustainable farming practice</li>
-                </ul>
-                
-                <div class="image-placeholder">
-                    [Insert image: Root nodules of legume plants containing Rhizobium bacteria]
-                </div>
-            </div>
+                           </div>
+
+           <!-- Agricultural Benefits -->
+<div class="section">
+    <h2>🌾 Microorganisms in Agriculture</h2>
+    
+    <h3>Rhizobium Bacteria – Nature’s Fertilizer</h3>
+    
+    <p><strong>Rhizobium</strong> is a special bacteria that lives inside the roots of legume plants (like beans, peas, lentils, and cowpea). It forms swollen parts called <strong>root nodules</strong> and lives in a symbiotic relationship with the plant.</p>
+    
+    <div class="key-point">
+        <strong>How Rhizobium Helps (Nitrogen Fixation):</strong>
+        <ol>
+            <li>Traps nitrogen gas from the air</li>
+            <li>Converts it into nitrogen compounds usable by plants</li>
+            <li>Supplies essential nutrition for plant growth</li>
+            <li>Enriches soil with nitrogen naturally</li>
+        </ol>
+    </div>
+    
+    <h4>Benefits:</h4>
+    <ul>
+        <li>Improves growth of legume crops without chemical fertilizers</li>
+        <li>Increases soil fertility for the next crop</li>
+        <li>Reduces cost of farming (less fertilizer needed)</li>
+        <li>Promotes sustainable and eco-friendly agriculture</li>
+    </ul>
+    
+    <div class="image-container">
+    <div class="image-wrapper">
+        <img src="images/Rhizobium.png" alt="Rhizobium bacteria in root nodules of legume plants" width="100%" height="auto">
+    </div>
+</div>
+</div>
+
 
             <!-- Microalgae -->
             <div class="section">
@@ -1055,9 +1359,7 @@
                     </ul>
                 </div>
                 
-                <div class="image-placeholder">
-                    [Insert image: Spirulina cultivation setup and harvested Spirulina]
-                </div>
+                
             </div>
 
             <!-- Why Cell is Basic Unit -->
@@ -1081,30 +1383,7 @@
                     <li>Contains components for survival and reproduction</li>
                     <li>Can perform metabolism, growth, and response to environment</li>
                 </ul>
-                <br>
-                <h3>Classification Based on Cell Number:</h3>
                 
-                <h4>Multicellular Organisms:</h4>
-                <ul>
-                    <li>Made up of many cells</li>
-                    <li>Cells carry out specialized functions</li>
-                    <li>Cells cooperate to increase survival chances</li>
-                    <li>Examples: Plants, animals, humans</li>
-                </ul>
-                
-                <h4>Unicellular Organisms:</h4>
-                <ul>
-                    <li>Made up of just one cell</li>
-                    <li>Single cell performs all necessary functions</li>
-                    <li>Examples: Bacteria, protozoa (Amoeba, Paramecium)</li>
-                </ul>
-                
-                <h4>Variable Cell Number:</h4>
-                <ul>
-                    <li><strong>Algae and Fungi:</strong> Can be unicellular or multicellular</li>
-                    <li><strong>Yeast:</strong> Unicellular fungus</li>
-                    <li><strong>Mold:</strong> Multicellular fungus</li>
-                </ul>
                 <br>
                 <h3>Cell Structure in Different Organisms:</h3>
                 
@@ -1123,9 +1402,12 @@
                     <li><strong>Animal cells:</strong> No cell wall, small or no vacuoles</li>
                 </ul>
                 
-                <div class="image-placeholder">
-                    [Insert image: Bacterial cell showing nucleoid region and comparison of different cell types]
-                </div>
+                <div class="image-container">
+    <div class="image-wrapper">
+        <img src="images/Nucleoid.png" alt="A bacterial cell showing the 
+nucleoid region" width="100%" height="auto">
+    </div>
+</div>
                 
                 <h3>Advanced Microscopy:</h3>
                 <div class="key-point">

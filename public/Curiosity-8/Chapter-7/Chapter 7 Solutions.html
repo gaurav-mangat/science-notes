@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7: Particulate Nature of Matter - Q&A</title>
+    <style>
+        /* ===== WEBSITE HEADER STYLES ===== */
+        .website-header {
+            background: linear-gradient(135deg, #059669 0%, #0f766e 100%);
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Match site navbar spacing under fixed header */
+        body {
+            padding-top: 6rem;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 4rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: white;
+            transition: opacity 0.2s;
+        }
+
+        .logo-link:hover {
+            opacity: 0.8;
+        }
+
+        .logo-icon {
+            width: 2rem;
+            height: 2rem;
+            flex-shrink: 0;
+        }
+
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: none;
+        }
+
+        .nav-links.show {
+            display: flex;
+        }
+
+        .nav-links ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #e0f2fe;
+        }
+
+        .mobile-menu-btn {
+            display: block;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-btn:focus {
+            outline: none;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 4rem;
+            right: 1rem;
+            background: #10b981;
+            border-radius: 0.375rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            min-width: 8rem;
+            padding: 0.5rem 0;
+        }
+
+        .mobile-menu.show {
+            display: block;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.2s;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-menu a:hover {
+            background-color: #059669;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: none !important;
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-top: 6rem;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+        .header {
+            background: linear-gradient(135deg, #055d73 0%, #0b618d 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .question-container {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border-left: 4px solid #0891b2;
+        }
+        .question {
+            background: #e3f2fd;
+            padding: 15px 20px;
+            font-weight: bold;
+            color: #1565c0;
+            border-bottom: 2px solid #2196F3;
+        }
+        .answer {
+            padding: 20px;
+            background: white;
+        }
+        .image-container {
+            width: 100%;
+            margin: 20px auto;
+            padding: 10px;
+        }
+        .image-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-wrapper img {
+            width: 65%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .sub-question {
+            margin: 10px 0;
+            font-weight: bold;
+            color: #1976d2;
+        }
+        .answer-point {
+            margin: 8px 0;
+            padding-left: 15px;
+        }
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .true-false {
+            background: #f3e5f5;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 3px solid #9c27b0;
+        }
+        .calculation {
+            background: #e8f5e8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #4caf50;
+        }
+        .weather-explanation {
+            background: #f0f8ff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #2196F3;
+        }
+        .activity-box {
+            background: #fff8e1;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #ff9800;
+        }
+        @media (max-width: 768px) {
+            body { padding: 10px; padding-top: 6rem; }
+            .header { padding: 15px; }
+            .header h1 { font-size: 1.2rem; }
+            .header p { font-size: 1rem; }
+
+            .question { font-size: 1rem; padding: 12px; }
+            .answer { font-size: 0.95rem; padding: 15px; }
+            th, td { padding: 8px; font-size: 0.9rem; }
+            .image-wrapper img { width: 90%; }
+        }
+        @media (max-width: 480px) {
+            .header { padding: 12px; }
+            .header h1 { font-size: 1.3rem; }
+            .header p { font-size: 0.9rem; }
+            .question { font-size: 0.95rem; }
+            .answer { font-size: 0.9rem; padding: 12px; }
+            .image-wrapper img { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Website Header -->
+    <header class="website-header">
+        <div class="header-container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <a href="/" class="logo-link">
+                        <svg class="logo-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                        <span class="logo-text">myCBSEnotes</span>
+                    </a>
+                </div>
+                <nav class="nav-links">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-btn" id="mobile-menu-button" aria-label="Toggle menu">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <div class="mobile-menu" id="mobile-menu">
+                    <a href="#" onclick="navigateToHome()">Home</a>
+                    <a href="#" onclick="navigateToAbout()">About</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="header">
+        <h1>Chapter 7 <br> Particulate Nature of Matter</h1>
+        <p>Curiosity Book - Exercises</p>
+    </div>
+
+        <div class="question-container">
+            <div class="question">1. Choose the correct option. The primary difference between solids and liquids is that the constituent particles are:
+                <div class="sub-question">(i) closely packed in solids, while they are stationary in liquids.</div>
+                <div class="sub-question">(ii) far apart in solids and have fixed position in liquids.</div>
+                <div class="sub-question">(iii) always moving in solids and have fixed position in liquids.</div>
+                <div class="sub-question">(iv) closely packed in solids and move past each other in liquids.</div>
+            </div>
+            <div class="answer">
+                
+                <div class="highlight">
+                    <strong>Answer:</strong> (iv) closely packed in solids and move past each other in liquids.
+                </div>
+                <div class="answer-point">
+                    <strong>Explanation:</strong> In solids, particles are closely packed and vibrate at fixed positions. In liquids, particles can move past each other, allowing flow.
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <div class="question">2. Which of the following statements are true? Correct the false statements.</div>
+            <div class="answer">
+                <div class="sub-question">(i) Melting ice into water is an example of the transformation of a solid into a liquid.</div>
+                <div class="true-false">
+                    <strong>Answer:</strong> True <br>
+                    <strong>Explanation:</strong> This is correct. Melting is the process where solid changes to liquid state.
+                </div>
+                <br>
+                <div class="sub-question">(ii) Melting process involves a decrease in interparticle attractions during the transformation.</div>
+                <div class="true-false">
+                    <strong>Answer:</strong> True <br>
+                    <strong>Explanation:</strong> Heat energy weakens forces between particles during melting.
+                </div>
+                <br>
+                <div class="sub-question">(iii) Solids have a fixed shape and a fixed volume.</div>
+                <div class="true-false">
+                    <strong>Answer:</strong> True <br>
+                    <strong>Explanation:</strong> This is correct. Solids maintain both fixed shape and volume.
+                </div>
+                <br>
+                <div class="sub-question">(iv) The interparticle interactions in solids are very strong, and the interparticle spaces are very small.</div>
+                <div class="true-false">
+                    <strong>Answer:</strong> True <br>
+                    <strong>Explanation:</strong> This is correct. Strong forces keep particles closely packed in solids.
+                </div>
+                <br>
+                <div class="sub-question">(v) When we heat camphor in one corner of a room, the fragrance reaches all corners of the room.</div>
+                <div class="true-false">
+                    <strong>Answer:</strong> True <br>
+                    <strong>Explanation:</strong> This shows diffusion of camphor vapour particles in air.
+                </div>
+                <br>
+                <div class="sub-question">(vi) On heating, we are adding energy to the camphor, and the energy is released as a smell.</div>
+                <div class="true-false">
+                    <strong>Answer:</strong> False <br>
+                    <strong>Correction:</strong> On heating, camphor sublimates (changes from solid to gas) and releases vapour particles that we detect as smell.
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <div class="question">3. Choose the correct answer with justification. If we could remove all the constituent particles from a chair, what would happen?</div>
+            <div class="answer">
+                <div class="sub-question">(i) Nothing will change.</div>
+                <div class="sub-question">(ii) The chair will weigh less due to lost particles.</div>
+                <div class="sub-question">(iii) Nothing of the chair will remain.</div>
+                <div class="highlight">
+                    <strong>Answer:</strong> (iii) Nothing of the chair will remain.
+                </div>
+                <div class="answer-point">
+                    <strong>Explanation:</strong> All matter is made up of particles. If we remove all particles from a chair, no matter would be left to form the chair. Without particles, the chair cannot exist.
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <div class="question">4. Why do gases mix easily, while solids do not?</div>
+            <div class="answer">
+                <div class="answer-point">
+                    Gases mix easily because gas particles are far apart with weak intermolecular forces and move freely in all directions. They can easily occupy spaces between other gas particles.
+                </div>
+                <div class="answer-point">
+                    Solids do not mix because solid particles are tightly packed with strong intermolecular forces. Particles can only vibrate at fixed positions with no space for other solid particles to move between them.
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <div class="question">5. When spilled on the table, milk in a glass tumbler flows and spreads out, but the glass tumbler stays in the same shape. Justify this statement.</div>
+            <div class="answer">
+                <div class="answer-point">
+                    Milk flows because liquid particles can move past each other and have no fixed shape. Liquids take the shape of their container due to weaker intermolecular forces.
+                </div>
+                <div class="answer-point">
+                    Glass tumbler maintains its shape because solid particles are rigidly arranged at fixed positions with strong intermolecular forces. Solids have both fixed shape and volume.
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <div class="question">6. Represent diagrammatically the changes in the arrangement of particles as ice melts and transforms into water vapour.</div>
+            <div class="answer">
+                <div class="answer-point">
+                    <strong>Draw three diagrams showing:</strong>
+                </div>
+                <div class="image-container">
+                    <div class="image-wrapper">
+                        <div style="background: #f9f9f9; border: 1px dashed #ccc; padding: 20px; text-align: center; border-radius: 4px; color: #666;">
+                            <strong>ICE:</strong> Particles very close together in regular pattern
+                        </div>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <div class="image-wrapper">
+                        <div style="background: #f9f9f9; border: 1px dashed #ccc; padding: 20px; text-align: center; border-radius: 4px; color: #666;">
+                            <strong>WATER:</strong> Particles close but irregular arrangement
+                        </div>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <div class="image-wrapper">
+                        <div style="background: #f9f9f9; border: 1px dashed #ccc; padding: 20px; text-align: center; border-radius: 4px; color: #666;">
+                            <strong>WATER VAPOUR:</strong> Particles far apart and scattered
+                        </div>
+                    </div>
+                </div>
+                <div class="answer-point">
+                    <strong>Changes:</strong> Ice → Water (particles become less organized), Water → Vapour (particles become free and spread far apart). As temperature increases, particle movement and spacing increases.
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <div class="question">7. Draw a picture representing particles present in the following:</div>
+            <div class="answer">
+                <div class="sub-question">(i) Aluminium foil:</div>
+                <div class="image-container">
+                    <div class="image-wrapper">
+                        <div style="background: #f9f9f9; border: 1px dashed #ccc; padding: 20px; text-align: center; border-radius: 4px; color: #666;">
+                            Draw particles very close together in regular pattern (solid state)
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-question">(ii) Glycerin:</div>
+                <div class="image-container">
+                    <div class="image-wrapper">
+                        <div style="background: #f9f9f9; border: 1px dashed #ccc; padding: 20px; text-align: center; border-radius: 4px; color: #666;">
+                            Draw particles close but irregular arrangement (liquid state)
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-question">(iii) Methane gas:</div>
+                <div class="image-container">
+                    <div class="image-wrapper">
+                        <div style="background: #f9f9f9; border: 1px dashed #ccc; padding: 20px; text-align: center; border-radius: 4px; color: #666;">
+                            Draw particles far apart and scattered (gas state)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <div class="question">8. Observe Fig. 7.16a which shows the image of a candle that was just extinguished after burning for some time. Identify the different states of wax in the figure and match them with Fig. 7.16b showing the arrangement of particles.</div>
+            <div class="answer">
+                <div class="image-container">
+                    <div class="image-wrapper">
+                        <div style="background: #f9f9f9; border: 1px dashed #ccc; padding: 20px; text-align: center; border-radius: 4px; color: #666;">
+                            [Insert Figure 7.16a and 7.16b here]
+                        </div>
+                    </div>
+                </div>
+                <div class="answer-point">
+                    <strong>Different states of wax observed:</strong>
+                </div>
+                <div class="answer-point">
+                    <strong>Solid wax:</strong> Main body of candle - particles closely packed in regular arrangement
+                </div>
+                <div class="answer-point">
+                    <strong>Liquid wax:</strong> Melted wax around wick - particles close but can move
+                </div>
+                <div class="answer-point">
+                    <strong>Gaseous wax:</strong> Smoke/vapour after extinguishing - particles far apart and moving freely
+                </div>
+                <div class="answer-point">
+                    <strong>Matching with Fig. 7.16b:</strong> Tightly packed circles = Solid wax, Loosely arranged circles = Liquid wax, Scattered dots = Gaseous wax
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <div class="question">9. Why does the water in the ocean taste salty, even though the salt is not visible? Explain.</div>
+            <div class="answer">
+                <div class="answer-point">
+                    Ocean water tastes salty because salt dissolves in water at the particle level. When salt dissolves, its particles separate and mix uniformly with water particles. These dissolved salt particles are too small to be seen but spread evenly throughout the water, making every drop taste salty.
+                </div>
+                <div class="answer-point">
+                    The salt particles occupy spaces between water particles through the process of dissolution. Although invisible, the salt is still present in dissolved form.
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <div class="question">10. Grains of rice and rice flour take the shape of the container when placed in different jars. Are they solids or liquids? Explain.</div>
+            <div class="answer">
+                <div class="answer-point">
+                    Both rice grains and rice flour are <strong>solids</strong> even though they appear to take the shape of containers.
+                </div>
+                <div class="answer-point">
+                    <strong>Why they are solids:</strong> Each grain of rice and each particle of flour maintains its own fixed shape and volume. They don't flow like liquids but pour due to gravity acting on individual solid pieces.
+                </div>
+                <div class="answer-point">
+                    <strong>Why they seem to take container shape:</strong> The spaces between solid particles allow them to settle and fill the container. This is different from liquids where particles actually flow and change positions. Think of marbles in a jar - marbles collectively take the jar's shape, but each marble remains a solid sphere.
+                </div>
+            </div>
+    </div>
+    <script>
+        // Mobile menu toggle for header
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('show');
+        });
+
+        // Navigation functions for mobile menu links
+        function navigateToHome() {
+            window.location.href = '/';
+        }
+
+        function navigateToAbout() {
+            window.location.href = '/about';
+        }
+    </script>
+ </body>
+ </html>

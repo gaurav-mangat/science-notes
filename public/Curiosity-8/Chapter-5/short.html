@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5 - Exploring Forces</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content-section {
+            background: white;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .section-title {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .subsection {
+            margin-bottom: 25px;
+        }
+
+        .subsection h3 {
+            color: #764ba2;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+            border-radius: 8px;
+        }
+
+        .definition-box {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            border-left: 5px solid #e17055;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        .important-note {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .example-box {
+            background: linear-gradient(135deg, #55efc4 0%, #00b894 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #00a085;
+        }
+
+        .image-placeholder {
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            padding: 40px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 8px;
+            color: #6c757d;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .image-placeholder i {
+            font-size: 3em;
+            margin-bottom: 10px;
+            opacity: 0.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .quiz-section {
+            background: linear-gradient(135deg, #fd79a8 0%, #fdcb6e 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 40px;
+            color: white;
+        }
+
+        .question {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .answer {
+            background: rgba(255,255,255,0.9);
+            color: #333;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .show-answer {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .show-answer:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .force-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .force-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid #667eea;
+        }
+
+        .formula-box {
+            background: linear-gradient(135deg, #e17055 0%, #f39c12 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content-section {
+                padding: 20px;
+            }
+            
+            .force-types {
+                grid-template-columns: 1fr;
+            }
+            
+            table {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔬 Exploring Forces</h1>
+            <p>Class 8 Science - Chapter 5 Study Notes</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">What is a Force? 🤔</h2>
+            
+            <div class="definition-box">
+                <strong>Force:</strong> A push or pull applied on an object resulting from the object's interaction with another object.
+            </div>
+
+            <p>Think about your daily activities - when you open a door, ride a bicycle, or throw a ball, you're applying force! Force is everywhere around us.</p>
+
+            <div class="image-placeholder">
+                <div>📷</div>
+                <div>Image: Different ways of moving a box (Pushing, Pulling, Lifting)</div>
+            </div>
+
+            <div class="important-note">
+                <strong>Key Point:</strong> The SI unit of force is newton (N), named after Sir Isaac Newton.
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">What Can Forces Do? ⚡</h2>
+
+            <p>Forces can create amazing changes in objects. Let's explore what forces can accomplish:</p>
+
+            <ol>
+                <li><strong>Start motion:</strong> Make a stationary object move</li>
+                <li><strong>Stop motion:</strong> Bring a moving object to rest</li>
+                <li><strong>Change speed:</strong> Make objects move faster or slower</li>
+                <li><strong>Change direction:</strong> Alter the path of moving objects</li>
+                <li><strong>Change shape:</strong> Deform or reshape objects</li>
+            </ol>
+
+            <div class="example-box">
+                <strong>Real-life Examples:</strong>
+                <ul>
+                    <li>Kicking a football changes its direction and speed</li>
+                    <li>Pressing a balloon changes its shape</li>
+                    <li>Applying brakes stops a moving bicycle</li>
+                </ul>
+            </div>
+
+            <div class="image-placeholder">
+                <div>📷</div>
+                <div>Image: Effects of force on different objects</div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Forces Need Interaction! 🤝</h2>
+
+            <p>An important concept to understand is that forces always involve interaction between at least two objects. You cannot have a force acting on just one object alone!</p>
+
+            <div class="important-note">
+                <strong>Remember:</strong> At least two objects must interact for a force to come into play.
+            </div>
+
+            <div class="example-box">
+                When you push a table, your hand (object 1) applies force on the table (object 2). Both objects are interacting!
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Types of Forces 📊</h2>
+
+            <p>Forces can be broadly classified into two main categories based on whether the objects need to touch each other or not.</p>
+
+            <div class="force-types">
+                <div class="force-card">
+                    <h3 style="color: #e17055;">🤲 Contact Forces</h3>
+                    <p>Forces that act only when objects are physically touching each other.</p>
+                    <ul>
+                        <li>Muscular Force</li>
+                        <li>Friction</li>
+                    </ul>
+                </div>
+
+                <div class="force-card">
+                    <h3 style="color: #00b894;">🌟 Non-Contact Forces</h3>
+                    <p>Forces that can act even when objects are not touching.</p>
+                    <ul>
+                        <li>Magnetic Force</li>
+                        <li>Electrostatic Force</li>
+                        <li>Gravitational Force</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Contact Forces 🤲</h2>
+
+            <div class="subsection">
+                <h3>💪 Muscular Force</h3>
+                <p>The force that results from the action of muscles in our body. When we walk, run, lift objects, or even chew food, we use muscular force.</p>
+
+                <div class="image-placeholder">
+                    <div>📷</div>
+                    <div>Image: Examples of muscular force in humans and animals</div>
+                </div>
+
+                <div class="example-box">
+                    <strong>Examples:</strong>
+                    <ul>
+                        <li>Lifting a school bag</li>
+                        <li>Animals pulling carts</li>
+                        <li>Heart pumping blood</li>
+                        <li>Chewing and digesting food</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>⚡ Friction</h3>
+                <p>The force that comes into play when an object moves or tries to move over another surface. It always acts in the direction opposite to motion.</p>
+
+                <div class="definition-box">
+                    <strong>Friction:</strong> The force that opposes the motion of objects sliding over each other.
+                </div>
+
+                <div class="image-placeholder">
+                    <div>📷</div>
+                    <div>Image: Friction between surfaces showing irregularities</div>
+                </div>
+
+                <h4>Why does friction occur?</h4>
+                <p>Even smooth surfaces have tiny irregularities. When two surfaces come in contact, these irregularities lock into each other, creating resistance to movement.</p>
+
+                <table>
+                    <tr>
+                        <th>Surface Type</th>
+                        <th>Friction Level</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>Rough surfaces</td>
+                        <td>High friction</td>
+                        <td>Sandpaper, concrete</td>
+                    </tr>
+                    <tr>
+                        <td>Smooth surfaces</td>
+                        <td>Low friction</td>
+                        <td>Ice, polished floor</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Non-Contact Forces 🌟</h2>
+
+            <div class="subsection">
+                <h3>🧲 Magnetic Force</h3>
+                <p>The force exerted by a magnet on another magnet or magnetic material. Magnets can attract or repel each other without touching!</p>
+
+                <div class="important-note">
+                    <strong>Magnetic Rules:</strong>
+                    <ul>
+                        <li>Like poles repel each other (N-N, S-S)</li>
+                        <li>Unlike poles attract each other (N-S)</li>
+                    </ul>
+                </div>
+
+                <div class="image-placeholder">
+                    <div>📷</div>
+                    <div>Image: Ring magnets showing magnetic force</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>⚡ Electrostatic Force</h3>
+                <p>The force between charged objects. When certain materials are rubbed together, they acquire electric charges and can attract or repel other objects.</p>
+
+                <div class="example-box">
+                    <strong>Simple Experiment:</strong> Rub a plastic ruler with cloth and bring it near small pieces of paper. The paper pieces will be attracted to the ruler!
+                </div>
+
+                <div class="important-note">
+                    <strong>Charge Rules:</strong>
+                    <ul>
+                        <li>Like charges repel each other (+ and +, - and -)</li>
+                        <li>Unlike charges attract each other (+ and -)</li>
+                    </ul>
+                </div>
+
+                <div class="image-placeholder">
+                    <div>📷</div>
+                    <div>Image: Charged balloons repelling each other</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>🌍 Gravitational Force</h3>
+                <p>The force with which Earth attracts objects toward itself. This is why everything falls down when dropped!</p>
+
+                <div class="definition-box">
+                    <strong>Gravity:</strong> The force that pulls all objects toward the center of the Earth.
+                </div>
+
+                <div class="important-note">
+                    <strong>Key Features of Gravity:</strong>
+                    <ul>
+                        <li>Always acts downward (toward Earth's center)</li>
+                        <li>Always attractive (never repulsive)</li>
+                        <li>Acts on all objects regardless of their size</li>
+                    </ul>
+                </div>
+
+                <div class="image-placeholder">
+                    <div>📷</div>
+                    <div>Image: Objects falling toward Earth</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Weight and Its Measurement ⚖️</h2>
+
+            <div class="definition-box">
+                <strong>Weight:</strong> The force with which Earth pulls an object toward itself.
+            </div>
+
+            <div class="formula-box">
+                Weight is measured in Newtons (N) - the same unit as force!
+            </div>
+
+            <div class="subsection">
+                <h3>🔍 Measuring Weight - Spring Balance</h3>
+                <p>A spring balance is a simple device used to measure weight. When an object is hung from it, the spring stretches proportionally to the object's weight.</p>
+
+                <div class="image-placeholder">
+                    <div>📷</div>
+                    <div>Image: Spring balance with scale markings</div>
+                </div>
+
+                <h4>How to read a spring balance:</h4>
+                <ol>
+                    <li>Check the maximum weight it can measure (range)</li>
+                    <li>Count divisions between major marks</li>
+                    <li>Calculate the smallest measurable value</li>
+                    <li>Read the scale where the pointer stops</li>
+                </ol>
+            </div>
+
+            <div class="subsection">
+                <h3>⚖️ Weight vs Mass</h3>
+                <p>Many people confuse weight and mass, but they're different!</p>
+
+                <table>
+                    <tr>
+                        <th>Mass</th>
+                        <th>Weight</th>
+                    </tr>
+                    <tr>
+                        <td>Amount of matter in an object</td>
+                        <td>Force of gravity on an object</td>
+                    </tr>
+                    <tr>
+                        <td>Measured in kg or g</td>
+                        <td>Measured in N (Newtons)</td>
+                    </tr>
+                    <tr>
+                        <td>Remains same everywhere</td>
+                        <td>Changes on different planets</td>
+                    </tr>
+                </table>
+
+                <div class="example-box">
+                    <strong>Example:</strong> A 1 kg object has different weights on different planets:
+                    <ul>
+                        <li>Earth: 10 N</li>
+                        <li>Moon: 1.6 N</li>
+                        <li>Mars: 3.8 N</li>
+                        <li>Jupiter: 25.4 N</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Floating and Sinking 🛟</h2>
+
+            <div class="subsection">
+                <h3>🌊 Buoyant Force</h3>
+                <p>When you place an object in water, the water pushes back with an upward force called buoyant force or upthrust.</p>
+
+                <div class="definition-box">
+                    <strong>Buoyant Force:</strong> The upward force applied by a liquid on an object placed in it.
+                </div>
+
+                <div class="image-placeholder">
+                    <div>📷</div>
+                    <div>Image: Plastic bottle floating in water showing buoyant force</div>
+                </div>
+
+                <h4>Why do some objects float while others sink?</h4>
+                <ul>
+                    <li><strong>Object floats:</strong> When buoyant force = gravitational force</li>
+                    <li><strong>Object sinks:</strong> When gravitational force > buoyant force</li>
+                </ul>
+
+                <div class="important-note">
+                    <strong>Archimedes' Principle:</strong> When an object is placed in a liquid, it experiences an upward force equal to the weight of liquid it displaces.
+                </div>
+            </div>
+        </div>
+
+        <div class="quiz-section">
+            <h2 style="text-align: center; margin-bottom: 30px;">🧠 Practice Questions</h2>
+
+            <div class="subsection">
+                <h3>📝 Objective Questions</h3>
+
+                <div class="question">
+                    <p><strong>1.</strong> Which of the following is NOT a contact force?</p>
+                    <p>a) Muscular force &nbsp;&nbsp; b) Friction &nbsp;&nbsp; c) Magnetic force &nbsp;&nbsp; d) Push</p>
+                    <button class="show-answer" onclick="toggleAnswer('ans1')">Show Answer</button>
+                    <div class="answer" id="ans1">
+                        <strong>Answer: c) Magnetic force</strong><br>
+                        Explanation: Magnetic force is a non-contact force as magnets can attract or repel without touching.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>2.</strong> The SI unit of force is:</p>
+                    <p>a) Kilogram &nbsp;&nbsp; b) Newton &nbsp;&nbsp; c) Meter &nbsp;&nbsp; d) Joule</p>
+                    <button class="show-answer" onclick="toggleAnswer('ans2')">Show Answer</button>
+                    <div class="answer" id="ans2">
+                        <strong>Answer: b) Newton</strong><br>
+                        Explanation: Newton (N) is the SI unit of force, named after Sir Isaac Newton.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>3.</strong> Friction always acts:</p>
+                    <p>a) In the direction of motion &nbsp;&nbsp; b) Opposite to the direction of motion &nbsp;&nbsp; c) Perpendicular to motion &nbsp;&nbsp; d) At 45° to motion</p>
+                    <button class="show-answer" onclick="toggleAnswer('ans3')">Show Answer</button>
+                    <div class="answer" id="ans3">
+                        <strong>Answer: b) Opposite to the direction of motion</strong><br>
+                        Explanation: Friction opposes motion, so it always acts in the opposite direction to the motion of the object.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>4.</strong> Like charges:</p>
+                    <p>a) Attract each other &nbsp;&nbsp; b) Repel each other &nbsp;&nbsp; c) Have no effect &nbsp;&nbsp; d) Neutralize each other</p>
+                    <button class="show-answer" onclick="toggleAnswer('ans4')">Show Answer</button>
+                    <div class="answer" id="ans4">
+                        <strong>Answer: b) Repel each other</strong><br>
+                        Explanation: Like charges (both positive or both negative) repel each other, while unlike charges attract.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>5.</strong> An object will float in water when:</p>
+                    <p>a) Its weight is greater than buoyant force &nbsp;&nbsp; b) Its weight equals buoyant force &nbsp;&nbsp; c) Its mass is zero &nbsp;&nbsp; d) There is no gravity</p>
+                    <button class="show-answer" onclick="toggleAnswer('ans5')">Show Answer</button>
+                    <div class="answer" id="ans5">
+                        <strong>Answer: b) Its weight equals buoyant force</strong><br>
+                        Explanation: When the upward buoyant force equals the downward gravitational force, the object floats.
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>✍️ Subjective Questions</h3>
+
+                <div class="question">
+                    <p><strong>1.</strong> Explain why it is difficult to walk on a wet, slippery surface. What type of force is involved?</p>
+                    <button class="show-answer" onclick="toggleAnswer('subj1')">Show Answer</button>
+                    <div class="answer" id="subj1">
+                        <strong>Answer:</strong><br>
+                        It is difficult to walk on wet, slippery surfaces because friction is greatly reduced. When surfaces are wet, a thin layer of water acts as a lubricant between our shoes and the ground, reducing the irregularities that normally create friction. The force involved is friction (or lack of sufficient friction). Without adequate friction, our feet cannot grip the surface properly, causing us to slip. This is why we need to be extra careful on wet floors, ice, or oily surfaces.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>2.</strong> A astronaut's weight on the Moon is much less than on Earth, but their mass remains the same. Explain this statement with reasons.</p>
+                    <button class="show-answer" onclick="toggleAnswer('subj2')">Show Answer</button>
+                    <div class="answer" id="subj2">
+                        <strong>Answer:</strong><br>
+                        This happens because weight and mass are different quantities:
+                        <br>• <strong>Mass</strong> is the amount of matter in an object and remains constant everywhere
+                        <br>• <strong>Weight</strong> is the gravitational force acting on an object
+                        <br><br>The Moon has much weaker gravity than Earth (about 1/6th). So while the astronaut's mass stays the same, the gravitational pull (and hence weight) is much less on the Moon. For example, a 60 kg astronaut weighs 600 N on Earth but only 100 N on the Moon.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>3.</strong> Why do racing cars have a streamlined shape? Explain in terms of forces.</p>
+                    <button class="show-answer" onclick="toggleAnswer('subj3')">Show Answer</button>
+                    <div class="answer" id="subj3">
+                        <strong>Answer:</strong><br>
+                        Racing cars have streamlined shapes to reduce air friction (also called air resistance or drag). When a car moves at high speed, air exerts friction force in the opposite direction of motion. A streamlined shape allows air to flow smoothly over the car's surface with minimal turbulence, reducing this friction force. This means:
+                        <br>• Less energy is needed to overcome air resistance
+                        <br>• The car can achieve higher speeds
+                        <br>• Better fuel efficiency
+                        <br>• More stable movement
+                        <br><br>The same principle is used in designing airplanes, ships, and high-speed trains.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>4.</strong> Describe an experiment to show that force can change the shape of an object. Include materials needed and observations.</p>
+                    <button class="show-answer" onclick="toggleAnswer('subj4')">Show Answer</button>
+                    <div class="answer" id="subj4">
+                        <strong>Answer:</strong><br>
+                        <strong>Experiment:</strong> Changing shape with force
+                        <br><br><strong>Materials needed:</strong>
+                        <br>• Balloon (inflated)
+                        <br>• Soft clay or play dough
+                        <br>• Rubber ball
+                        <br>• Spring
+                        <br><br><strong>Procedure:</strong>
+                        <br>1. Press the inflated balloon with your hands
+                        <br>2. Squeeze and stretch the clay
+                        <br>3. Compress the rubber ball
+                        <br>4. Pull or push the spring
+                        <br><br><strong>Observations:</strong>
+                        <br>• Balloon changes shape when pressed
+                        <br>• Clay can be molded into different shapes
+                        <br>• Rubber ball deforms when squeezed
+                        <br>• Spring stretches or compresses
+                        <br><br><strong>Conclusion:</strong> Force can change the shape of objects, especially flexible and elastic materials.
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p><strong>5.</strong> Compare and contrast gravitational force with magnetic force. Give three similarities and three differences.</p>
+                    <button class="show-answer" onclick="toggleAnswer('subj5')">Show Answer</button>
+                    <div class="answer" id="subj5">
+                        <strong>Answer:</strong><br>
+                        <strong>Similarities:</strong>
+                        <br>1. Both are non-contact forces (act without touching)
+                        <br>2. Both can act over a distance
+                        <br>3. Both involve interaction between objects
+                        <br><br><strong>Differences:</strong>
+                        <br>1. <strong>Nature:</strong> Gravity is always attractive, magnetic force can be attractive or repulsive
+                        <br>2. <strong>Objects affected:</strong> Gravity acts on all objects, magnetic force only on magnetic materials
+                        <br>3. <strong>Strength variation:</strong> Gravity is relatively constant near Earth's surface, magnetic force varies greatly with distance and materials involved
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+            } else {
+                answer.style.display = 'none';
+            }
+        }
+
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

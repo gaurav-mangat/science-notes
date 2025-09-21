@@ -74,7 +74,7 @@ export default function About() {
         </div>
       </nav>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             About <span className="text-emerald-600">myCBSEnotes</span>
@@ -157,11 +157,27 @@ We want to make learning simple, clear, and stress-free for every student. Our g
         </div>
       </main>
 
-      <footer className="bg-emerald-900 text-white py-12 mt-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-emerald-100/80">
-            &copy; 2023 myCBSEnotes. All rights reserved.
-          </p>
+      <footer className="bg-emerald-900 text-white py-8 md:py-12 mt-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div>
+              <h3 className="text-lg font-semibold mb-4">myCBSEnotes</h3>
+              <p className="text-emerald-100/80 text-sm md:text-base">Empowering students with quality education resources since 2023.</p>
+              <p className="text-emerald-100/80 text-sm mt-2">Simple notes, clear solutions, and comprehensive study materials for CBSE students.</p>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Resources</h4>
+              <ul className="space-y-2">
+                <li><Link href="/" className="text-emerald-100/80 hover:text-white text-sm md:text-base transition">Home</Link></li>
+                <li><a href="https://cbse.nic.in" target="_blank" rel="noopener noreferrer" className="text-emerald-100/80 hover:text-white text-sm md:text-base transition">Official CBSE Website</a></li>
+                <li><a href="https://ncert.nic.in/textbook.php?hecu1=0-12" target="_blank" rel="noopener noreferrer" className="text-emerald-100/80 hover:text-white text-sm md:text-base transition">NCERT Textbooks (Classes 1-12)</a></li>
+                <li><a href="https://www.ncert.nic.in" target="_blank" rel="noopener noreferrer" className="text-emerald-100/80 hover:text-white text-sm md:text-base transition">NCERT Official Website</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-gray-700 text-xs md:text-sm text-gray-400 text-center">
+            &copy; 2025 myCBSEnotes. All rights reserved.
+          </div>
         </div>
       </footer>
     </>

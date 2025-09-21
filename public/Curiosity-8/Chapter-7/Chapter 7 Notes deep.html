@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7: Particulate Nature of Matter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e9ecef;
+        }
+        
+        .header h1 {
+            color: #495057;
+            font-size: 3em;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #495057, #6c757d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: #6c757d;
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+        
+        .content {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e9ecef;
+        }
+        
+        .section {
+            margin-bottom: 60px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #e9ecef;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+        
+        h2 {
+            color: #343a40;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, #6c757d, #495057);
+            border-radius: 2px;
+        }
+        
+        h3 {
+            color: #495057;
+            font-size: 1.6em;
+            margin: 35px 0 20px 0;
+            position: relative;
+            padding-left: 25px;
+            font-weight: 600;
+        }
+        
+        h3:before {
+            content: '▸';
+            color: #6c757d;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        h4 {
+            color: #495057;
+            font-size: 1.3em;
+            margin: 20px 0 15px 0;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            text-align: justify;
+            color: #495057;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.1em;
+            color: #495057;
+        }
+        
+        .definition-box {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-left: 5px solid #6c757d;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .definition-box strong {
+            color: #495057;
+            font-size: 1.2em;
+        }
+        
+        .image-container {
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .image-caption {
+            font-style: italic;
+            color: #6c757d;
+            margin-top: 10px;
+        }
+        
+        .key-points {
+            background: linear-gradient(135deg, #f1f3f4, #e8eaed);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #dee2e6;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+        }
+        
+        .key-points h4 {
+            color: #495057;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .point-item {
+            display: flex;
+            align-items: start;
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f1f3f4;
+        }
+        
+        .point-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-color: #dee2e6;
+        }
+        
+        .point-icon {
+            background: linear-gradient(45deg, #6c757d, #495057);
+            color: white;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        
+        .states-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .state-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 5px solid #6c757d;
+            border: 1px solid #f1f3f4;
+        }
+        
+        .state-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            border-color: #dee2e6;
+        }
+        
+        .state-type {
+            background: linear-gradient(45deg, #6c757d, #495057);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.95em;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .scientist-highlight {
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border-left: 6px solid #ffc107;
+            box-shadow: 0 8px 25px rgba(255, 193, 7, 0.15);
+            border: 1px solid #ffe8a1;
+        }
+        
+        .scientist-highlight h4 {
+            color: #856404;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #6c757d, #495057);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(108, 117, 125, 0.2);
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .expandable-content {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #dee2e6;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 25px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        
+        th {
+            background: linear-gradient(45deg, #6c757d, #495057);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #dee2e6;
+            color: #495057;
+        }
+        
+        tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+            color: #721c24;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 8px 25px rgba(220, 53, 69, 0.15);
+            border: 1px solid #f1aeb5;
+        }
+        
+        .warning-box h4 {
+            color: #721c24;
+            margin-bottom: 15px;
+        }
+        
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #6c757d, #495057);
+            z-index: 1000;
+            transition: width 0.1s ease;
+        }
+        
+        .practice-section {
+            background: linear-gradient(135deg, #e8f4fd, #d1ecf1);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px 0;
+            border: 2px solid #bee5eb;
+            box-shadow: 0 10px 30px rgba(23, 162, 184, 0.1);
+        }
+        
+        .practice-section h2 {
+            color: #0c5460;
+        }
+        
+        .question-container {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #d1ecf1;
+        }
+        
+        .question-type {
+            background: linear-gradient(45deg, #17a2b8, #138496);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .question {
+            color: #495057;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .options {
+            margin: 15px 0;
+        }
+        
+        .option {
+            background: #f8f9fa;
+            padding: 10px 15px;
+            margin: 8px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid #dee2e6;
+        }
+        
+        .option:hover {
+            background: #e9ecef;
+            border-color: #ced4da;
+        }
+        
+        .answer {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            display: none;
+        }
+        
+        .answer.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .show-answer-btn {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        .show-answer-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2.2em;
+            }
+            
+            .states-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .practice-section {
+                padding: 25px;
+            }
+            
+            h2 {
+                font-size: 2em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header {
+                padding: 25px;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .subtitle {
+                font-size: 1em;
+            }
+            
+            h2 {
+                font-size: 1.6em;
+            }
+            
+            h3 {
+                font-size: 1.3em;
+            }
+            
+            .point-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .point-icon {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+        }
+        
+        .section-divider {
+            height: 3px;
+            background: linear-gradient(90deg, #6c757d, #495057, #6c757d);
+            margin: 40px 0;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Particulate Nature of Matter</h1>
+            <p class="subtitle">Chapter 7 - Complete Study Notes for Grade 8 Science</p>
+        </div>
+
+        <div class="content">
+            <!-- Section 1: Introduction -->
+            <div class="section">
+                <h2>Introduction to Matter</h2>
+                
+                <div class="definition-box">
+                    <strong>Matter Definition:</strong> Anything that has mass and occupies space. All matter is composed of tiny particles that are constantly in motion.
+                </div>
+
+                <div class="image-container">
+                    <img src="https://placehold.co/800x400/4f5d75/ffffff?text=Fig+7.1:+Breakdown+of+rocks+into+smaller+particles" alt="Breakdown of rocks into smaller particles" class="responsive-img">
+                    <p class="image-caption">Fig. 7.1: Breakdown of rocks into smaller particles over time</p>
+                </div>
+
+                <div class="key-points">
+                    <h4>Key Concepts</h4>
+                    <div class="point-item">
+                        <div class="point-icon">🧱</div>
+                        <div><strong>Constituent Particles:</strong> All matter is made up of extremely small building blocks called constituent particles</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">🔬</div>
+                        <div><strong>Physical Change:</strong> Breaking or grinding matter changes its size but not its composition</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">⚗️</div>
+                        <div><strong>Dissolution:</strong> When substances dissolve, their particles occupy spaces between solvent particles</div>
+                    </div>
+                </div>
+
+                <h3>Ancient Indian Philosophy</h3>
+                <div class="scientist-highlight">
+                    <h4>Acharya Kanad and Parmanu</h4>
+                    <p>Ancient Indian philosopher Acharya Kanad first proposed the idea of <em>Parmanu</em> (atoms) - tiny, indivisible eternal particles that make up all matter. This concept was documented in his work <em>Vaisheshika Sutras</em>.</p>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <!-- Section 2: States of Matter -->
+            <div class="section">
+                <h2>States of Matter</h2>
+
+                <div class="definition-box">
+                    <strong>States of Matter:</strong> Matter exists in three primary states - solid, liquid, and gas - based on the arrangement and movement of their particles.
+                </div>
+
+                <div class="image-container">
+                    <img src="https://placehold.co/800x400/4f5d75/ffffff?text=Fig+7.2:+Three+states+of+matter+with+particle+arrangement" alt="Three states of matter with particle arrangement" class="responsive-img">
+                    <p class="image-caption">Fig. 7.2: Particle arrangement in solids, liquids, and gases</p>
+                </div>
+
+                <h3>Comparison of States</h3>
+                <div class="states-grid">
+                    <div class="state-card">
+                        <div class="state-type">Solid State</div>
+                        <h4>Solids</h4>
+                        <p><strong>Particle Arrangement:</strong> Tightly packed in fixed positions</p>
+                        <p><strong>Movement:</strong> Particles vibrate but don't move freely</p>
+                        <p><strong>Properties:</strong> Definite shape and volume</p>
+                        <p><strong>Examples:</strong> Iron, rock salt, wood, aluminum</p>
+                    </div>
+                    
+                    <div class="state-card">
+                        <div class="state-type">Liquid State</div>
+                        <h4>Liquids</h4>
+                        <p><strong>Particle Arrangement:</strong> Loosely packed, can move past each other</p>
+                        <p><strong>Movement:</strong> Particles flow within contained space</p>
+                        <p><strong>Properties:</strong> Definite volume, no definite shape</p>
+                        <p><strong>Examples:</strong> Water, oil, milk</p>
+                    </div>
+                    
+                    <div class="state-card">
+                        <div class="state-type">Gaseous State</div>
+                        <h4>Gases</h4>
+                        <p><strong>Particle Arrangement:</strong> Far apart, random arrangement</p>
+                        <p><strong>Movement:</strong> Particles move freely in all directions</p>
+                        <p><strong>Properties:</strong> No definite shape or volume</p>
+                        <p><strong>Examples:</strong> Air, oxygen, carbon dioxide</p>
+                    </div>
+                </div>
+
+                <h3>Melting Points of Common Solids</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Material</th>
+                                <th>Melting Point</th>
+                                <th>Interparticle Forces</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ice</td>
+                                <td>0°C</td>
+                                <td>Moderate</td>
+                            </tr>
+                            <tr>
+                                <td>Urea</td>
+                                <td>133°C</td>
+                                <td>Strong</td>
+                            </tr>
+                            <tr>
+                                <td>Iron</td>
+                                <td>1538°C</td>
+                                <td>Very Strong</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <!-- Section 3: Interparticle Forces and Spaces -->
+            <div class="section">
+                <h2>Interparticle Forces and Spaces</h2>
+
+                <div class="definition-box">
+                    <strong>Interparticle Forces:</strong> Attractive forces between particles that hold matter together. The strength of these forces determines the state of matter.
+                </div>
+
+                <div class="image-container">
+                    <img src="https://placehold.co/800x400/4f5d75/ffffff?text=Fig+7.3:+Interparticle+spaces+in+different+states" alt="Interparticle spaces in different states" class="responsive-img">
+                    <p class="image-caption">Fig. 7.3: Interparticle spaces in solids, liquids, and gases</p>
+                </div>
+
+                <h3>Key Concepts</h3>
+                <div class="key-points">
+                    <h4>Interparticle Relationships</h4>
+                    <div class="point-item">
+                        <div class="point-icon">📏</div>
+                        <div><strong>Spacing:</strong> Distance between particles determines force strength</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">🔗</div>
+                        <div><strong>Forces:</strong> Stronger in solids, moderate in liquids, weak in gases</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">🌡️</div>
+                        <div><strong>Temperature Effect:</strong> Heating increases particle movement and spacing</div>
+                    </div>
+                </div>
+
+                <h3>Demonstration Experiments</h3>
+                <div class="scientist-highlight">
+                    <h4>Syringe Experiment</h4>
+                    <p>When air in a syringe is compressed, particles are forced closer together, demonstrating that gases have significant interparticle spaces. Liquids like water are nearly incompressible, showing minimal interparticle spaces.</p>
+                </div>
+
+                <div class="scientist-highlight">
+                    <h4>Sugar Dissolution</h4>
+                    <p>When sugar dissolves in water, the solution volume is less than the sum of individual volumes, proving that sugar particles occupy spaces between water particles.</p>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <!-- Section 4: Particle Movement -->
+            <div class="section">
+                <h2>Particle Movement in Different States</h2>
+
+                <div class="definition-box">
+                    <strong>Brownian Motion:</strong> The random movement of particles suspended in a fluid, resulting from their collision with fast-moving molecules in the fluid.
+                </div>
+
+                <div class="image-container">
+                    <img src="https://placehold.co/800x400/4f5d75/ffffff?text=Fig+7.4:+Particle+movement+in+different+states" alt="Particle movement in different states" class="responsive-img">
+                    <p class="image-caption">Fig. 7.4: Particle movement patterns in solids, liquids, and gases</p>
+                </div>
+
+                <h3>Demonstrating Particle Movement</h3>
+                <div class="states-grid">
+                    <div class="state-card">
+                        <h4>Potassium Permanganate</h4>
+                        <p>When added to water, purple streaks spread gradually until the entire solution is uniformly colored, demonstrating liquid particle movement.</p>
+                        <p><strong>Temperature Effect:</strong> Spreads faster in hot water than cold water</p>
+                    </div>
+                    
+                    <div class="state-card">
+                        <h4>Incense Stick</h4>
+                        <p>Fragrance spreads throughout a room from a single source, demonstrating gas particle movement and diffusion.</p>
+                        <p><strong>Observation:</strong> Smell detected throughout room within minutes</p>
+                    </div>
+                </div>
+
+                <h3>Temperature and Particle Movement</h3>
+                <div class="key-points">
+                    <h4>Heat Energy Effects</h4>
+                    <div class="point-item">
+                        <div class="point-icon">🔥</div>
+                        <div><strong>Increased Energy:</strong> Heating provides energy for particles to move faster</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">📈</div>
+                        <div><strong>Faster Diffusion:</strong> Higher temperature increases rate of particle movement</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">💧</div>
+                        <div><strong>State Changes:</strong> Enough energy allows particles to overcome attractive forces</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <!-- Section 5: Applications and Examples -->
+            <div class="section">
+                <h2>Applications and Real-World Examples</h2>
+
+                <div class="definition-box">
+                    <strong>Diffusion:</strong> The process by which particles spread from areas of high concentration to areas of low concentration due to random particle movement.
+                </div>
+
+                <div class="image-container">
+                    <img src="https://placehold.co/800x400/4f5d75/ffffff?text=Fig+7.5:+Soap+particles+cleaning+oil+stains" alt="Soap particles cleaning oil stains" class="responsive-img">
+                    <p class="image-caption">Fig. 7.5: How soap particles interact with oil and water for cleaning</p>
+                </div>
+
+                <h3>Everyday Applications</h3>
+                <div class="key-points">
+                    <h4>Particulate Nature in Daily Life</h4>
+                    <div class="point-item">
+                        <div class="point-icon">🧼</div>
+                        <div><strong>Cleaning Action:</strong> Soap particles surround oil stains, with one end attaching to oil and the other to water</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">👃</div>
+                        <div><strong>Smell Detection:</strong> Fragrance particles diffuse through air to reach our nose</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">🍶</div>
+                        <div><strong>Dissolution:</strong> Salt particles disperse between water particles in cooking</div>
+                    </div>
+                </div>
+
+                <h3>Industrial Applications</h3>
+                <div class="scientist-highlight">
+                    <h4>Suspended Particulate Matter (SPM)</h4>
+                    <p>In environmental science, SPM refers to tiny dust particles suspended in air. While much larger than constituent particles, these too are composed of countless atoms and molecules, demonstrating the particulate nature of matter at different scales.</p>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <!-- Section 6: Summary of Particle Properties -->
+            <div class="section">
+                <h2>Summary of Particle Properties</h2>
+
+                <div class="definition-box">
+                    <strong>Thermal Energy:</strong> The energy possessed by particles due to their motion. This energy determines the state of matter and how particles behave.
+                </div>
+
+                <div class="image-container">
+                    <img src="https://placehold.co/800x400/4f5d75/ffffff?text=Fig+7.6:+Summary+of+particle+properties+in+three+states" alt="Summary of particle properties in three states" class="responsive-img">
+                    <p class="image-caption">Fig. 7.6: Comparative properties of particles in different states</p>
+                </div>
+
+                <h3>Comparative Analysis</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Solid</th>
+                                <th>Liquid</th>
+                                <th>Gas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Interparticle Spacing</td>
+                                <td>Minimum</td>
+                                <td>Moderate</td>
+                                <td>Maximum</td>
+                            </tr>
+                            <tr>
+                                <td>Particle Packing</td>
+                                <td>Closely packed</td>
+                                <td>Loosely packed</td>
+                                <td>Very loose</td>
+                            </tr>
+                            <tr>
+                                <td>Interparticle Attraction</td>
+                                <td>Maximum</td>
+                                <td>Moderate</td>
+                                <td>Minimum (Negligible)</td>
+                            </tr>
+                            <tr>
+                                <td>Particle Movement</td>
+                                <td>Vibrations only</td>
+                                <td>Within limited space</td>
+                                <td>Free in all directions</td>
+                            </tr>
+                            <tr>
+                                <td>Shape</td>
+                                <td>Fixed</td>
+                                <td>Not fixed</td>
+                                <td>Not fixed</td>
+                            </tr>
+                            <tr>
+                                <td>Volume</td>
+                                <td>Fixed</td>
+                                <td>Fixed</td>
+                                <td>Not fixed</td>
+                            </tr>
+                            <tr>
+                                <td>Compressibility</td>
+                                <td>Almost incompressible</td>
+                                <td>Almost incompressible</td>
+                                <td>Highly compressible</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>State Changes</h3>
+                <div class="key-points">
+                    <h4>Energy and State Transitions</h4>
+                    <div class="point-item">
+                        <div class="point-icon">❄️→💧</div>
+                        <div><strong>Melting:</strong> Solids → Liquids (energy increases, particles gain mobility)</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">💧→💨</div>
+                        <div><strong>Evaporation/Boiling:</strong> Liquids → Gases (energy overcomes attractive forces)</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">💨→💧</div>
+                        <div><strong>Condensation:</strong> Gases → Liquids (energy decreases, particles come closer)</div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon">💧→❄️</div>
+                        <div><strong>Freezing:</strong> Liquids → Solids (energy decreases, particles fixed in position)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Practice Questions Section -->
+            <div class="practice-section">
+                <h2>Practice Questions</h2>
+                <p>Test your understanding with these practice questions. Click "Show Answer" to reveal the solutions.</p>
+
+                <!-- Objective Questions -->
+                <div class="question-container">
+                    <div class="question-type">Multiple Choice</div>
+                    <div class="question">1. What is the primary difference between solids and liquids?</div>
+                    <div class="options">
+                        <div class="option">a) Particles are closely packed in solids, while they are stationary in liquids</div>
+                        <div class="option">b) Particles are far apart in solids and have fixed position in liquids</div>
+                        <div class="option">c) Particles are always moving in solids and have fixed position in liquids</div>
+                        <div class="option">d) Particles are closely packed in solids and move past each other in liquids</div>
+                    </div>
+                    <button class="show-answer-btn" onclick="toggleAnswer('answer1')">Show Answer</button>
+                    <div class="answer" id="answer1">
+                        <strong>Answer: d) Particles are closely packed in solids and move past each other in liquids</strong><br>
+                        Explanation: In solids, particles are tightly packed and vibrate in fixed positions. In liquids, particles are still close together but can move past each other, allowing liquids to flow.
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-type">Multiple Choice</div>
+                    <div class="question">2. Why can we compress gases but not liquids or solids?</div>
+                    <div class="options">
+                        <div class="option">a) Gas particles are larger</div>
+                        <div class="option">b) Gas particles have more energy</div>
+                        <div class="option">c) Gas particles have large spaces between them</div>
+                        <div class="option">d) Gas particles are lighter</div>
+                    </div>
+                    <button class="show-answer-btn" onclick="toggleAnswer('answer2')">Show Answer</button>
+                    <div class="answer" id="answer2">
+                        <strong>Answer: c) Gas particles have large spaces between them</strong><br>
+                        Explanation: Gases are compressible because their particles are far apart with significant empty space between them. Solids and liquids have particles much closer together with minimal compressibility.
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-type">True/False</div>
+                    <div class="question">3. Melting ice into water is an example of the transformation of a solid into a liquid.</div>
+                    <button class="show-answer-btn" onclick="toggleAnswer('answer3')">Show Answer</button>
+                    <div class="answer" id="answer3">
+                        <strong>Answer: True</strong><br>
+                        Explanation: Melting is indeed the process where a solid changes to a liquid state when enough thermal energy is added to overcome the interparticle forces holding the solid structure together.
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-type">Fill in the Blank</div>
+                    <div class="question">4. The tiny particles that make up all matter are called __________.</div>
+                    <button class="show-answer-btn" onclick="toggleAnswer('answer4')">Show Answer</button>
+                    <div class="answer" id="answer4">
+                        <strong>Answer: constituent particles</strong><br>
+                        Explanation: All matter is composed of extremely small building blocks called constituent particles, which include atoms and molecules.
+                    </div>
+                </div>
+
+                <!-- Subjective Questions -->
+                <div class="question-container">
+                    <div class="question-type">Short Answer</div>
+                    <div class="question">5. Why do gases mix easily, while solids do not?</div>
+                    <button class="show-answer-btn" onclick="toggleAnswer('answer5')">Show Answer</button>
+                    <div class="answer" id="answer5">
+                        <strong>Answer:</strong><br>
+                        Gases mix easily because:
+                        <ul>
+                            <li>Gas particles have high kinetic energy and move rapidly in all directions</li>
+                            <li>There are negligible attractive forces between gas particles</li>
+                            <li>Particles are far apart with plenty of space to move and mix</li>
+                        </ul>
+                        Solids do not mix easily because:
+                        <ul>
+                            <li>Solid particles have fixed positions and vibrate but don't move freely</li>
+                            <li>Strong interparticle forces hold particles in place</li>
+                            <li>Particles are closely packed with minimal space between them</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-type">Short Answer</div>
+                    <div class="question">6. Why does the water in the ocean taste salty, even though the salt is not visible?</div>
+                    <button class="show-answer-btn" onclick="toggleAnswer('answer6')">Show Answer</button>
+                    <div class="answer" id="answer6">
+                        <strong>Answer:</strong><br>
+                        Ocean water tastes salty because:
+                        <ul>
+                            <li>Salt particles have dissolved in the water</li>
+                            <li>When salt dissolves, it breaks down into its constituent particles (ions)</li>
+                            <li>These particles are extremely small and dispersed between water particles</li>
+                            <li>Although invisible to the naked eye, these particles stimulate taste receptors</li>
+                            <li>The dissolution process allows salt particles to occupy spaces between water molecules</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-type">Long Answer</div>
+                    <div class="question">7. Explain how the particulate nature of matter helps in cleaning action of soap.</div>
+                    <button class="show-answer-btn" onclick="toggleAnswer('answer7')">Show Answer</button>
+                    <div class="answer" id="answer7">
+                        <strong>Answer:</strong><br>
+                        The cleaning action of soap demonstrates the particulate nature of matter:
+                        <br><br>
+                        <strong>1. Molecular Structure:</strong> Soap molecules have two distinct ends:
+                        <ul>
+                            <li>Hydrophobic (water-repelling) end that attaches to oil and grease particles</li>
+                            <li>Hydrophilic (water-attracting) end that interacts with water molecules</li>
+                        </ul>
+                        
+                        <strong>2. Mechanism:</strong>
+                        <ul>
+                            <li>Soap particles surround oil and dirt particles on fabric</li>
+                            <li>The hydrophobic ends embed themselves in the oil particles</li>
+                            <li>The hydrophilic ends face outward toward the water</li>
+                            <li>This forms structures called micelles that trap the oil particles</li>
+                        </ul>
+                        
+                        <strong>3. Removal:</strong>
+                        <ul>
+                            <li>When agitated (during washing), the micelles break away from the fabric</li>
+                            <li>The hydrophilic ends allow the micelles to be dispersed throughout the water</li>
+                            <li>Rinsing carries away the micelles containing the trapped oil and dirt</li>
+                        </ul>
+                        
+                        This process works because of the particulate nature of matter - the ability of soap particles to interact with both water particles and oil particles at the molecular level.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Scroll indicator
+        window.onscroll = function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("scrollIndicator").style.width = scrolled + "%";
+        };
+        
+        // Toggle answer visibility
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            answer.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
