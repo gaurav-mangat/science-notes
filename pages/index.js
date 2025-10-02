@@ -154,8 +154,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>myCBSEnotes - Interactive Learning Platform</title>
-        <meta name="description" content="Access comprehensive study materials for classes 6-12" />
+        <title>myCBSEnotes – CBSE Syllabus Notes, NCERT Solutions & Practice Material</title>
+        <meta name="description" content="Access comprehensive study materials for classes 6-8" />
         {/* Google AdSense */}
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID" crossOrigin="anonymous"></script>
       </Head>
@@ -226,8 +226,8 @@ export default function Home() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Ace Your CBSE <span className="text-emerald-600">Exams</span> with Confidence
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover detailed notes, step-by-step solutions, and comprehensive study materials for CBSE Science and Mathematics across Classes 6-8.
+            <p className="text-base md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+              Discover detailed notes, step-by-step solutions, and comprehensive study materials for CBSE Students across Classes 6-8.
             </p>
             {/* Clean hero without search; student-focused */}
           </div>
@@ -473,36 +473,40 @@ export default function Home() {
       {filteredChapters.map(([id, chapter]) => (
         <li key={id}>
       <div className="px-4 py-5 sm:px-6 bg-gray-100 dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-700 dark:border-gray-700 rounded-md mb-2">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <div className="flex-shrink-0 flex items-center justify-center">
-          <span className="text-gray-600 dark:text-gray-300 text-lg font-medium">{chapter.chapterNumber || id}</span>
-        </div>
-<div className="ml-4">
-  <h3 className="text-gray-600 dark:text-gray-300 text-lg font-medium">{chapter.title}</h3>
-</div>
-      </div>
-      <div className="flex space-x-3">
-        {chapter.notesUrl && (
-          <a
-            href={chapter.notesUrl}
-            className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-full shadow-sm text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
-          >
-            View Notes
-          </a>
-        )}
-        {chapter.solutionsUrl && (
-          <a
-            href={chapter.solutionsUrl}
-            className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-full shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
-          >
-            View Solutions
-          </a>
-        )}
-        {!chapter.notesUrl && !chapter.solutionsUrl && (
-          <span className="text-gray-400 dark:text-gray-500 text-sm">No files uploaded</span>
-        )}
-      </div>
+            {/* Mobile-first responsive layout */}
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-3">
+              {/* Chapter info section */}
+              <div className="flex items-center flex-1 min-w-0">
+                <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-emerald-100 dark:bg-emerald-900 rounded-full">
+                  <span className="text-emerald-700 dark:text-emerald-300 font-bold text-sm sm:text-lg">{chapter.chapterNumber || id}</span>
+                </div>
+                <div className="ml-3 sm:ml-4 flex-1 min-w-0">
+                  <h3 className="text-gray-600 dark:text-gray-300 text-base sm:text-lg font-bold sm:font-medium leading-tight break-words">{chapter.title}</h3>
+                </div>
+              </div>
+              
+              {/* Action buttons section - centered on mobile, right-aligned on desktop */}
+              <div className="flex justify-center sm:justify-end gap-3">
+                {chapter.notesUrl && (
+                  <a
+                    href={chapter.notesUrl}
+                    className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-full shadow-sm text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 flex-shrink-0"
+                  >
+                    View Notes
+                  </a>
+                )}
+                {chapter.solutionsUrl && (
+                  <a
+                    href={chapter.solutionsUrl}
+                    className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-full shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 flex-shrink-0"
+                  >
+                    View Exercise
+                  </a>
+                )}
+                {!chapter.notesUrl && !chapter.solutionsUrl && (
+                  <span className="text-gray-400 dark:text-gray-500 text-xs sm:text-sm flex-shrink-0">No files uploaded</span>
+                )}
+              </div>
             </div>
           </div>
         </li>
